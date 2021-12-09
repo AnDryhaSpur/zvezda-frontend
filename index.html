@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Zvezda</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body x-data="{ y_coord:0, y_coef:0, is_hidden: false, top: 0}">
+    <header       
+    :style="{ 'background-color': `rgba(0, 0, 0, ${Math.min(y_coef, 0.8)})` }" style="transition: all 0.2s ease">
+        <div class="bc-menu-hor workhours" :class="is_hidden ? 'hidden' : ''" style="width: 100%; transition: all 0.2s ease;">
+            <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>
+        </div>
+        <nav class="bc-menu-hor top" 
+        @scroll.window.throttle.50ms="
+        y_coord=window.pageYOffset; 
+        y_coef=(y_coord/500).toFixed(1);
+        top=$el.getBoundingClientRect().top;
+        is_hidden=(window.pageYOffset-top>300 ? true : false)">
+            <a href="/"><img src="img/Layer 1.png" alt="logo" class="bc-logo"></a>
+            <div class="bc-submenu-hor top-menu">
+                <h2 x-text="y_coord.toFixed(1)"></h2>
+                <a :href="window.location.href" class="bc-link top-menu-item">Главное</a>
+                <a href="#" class="bc-link top-menu-item">Каталог</a>
+                <a href="/details.html" class="bc-link top-menu-item">О Zvezda</a>
+                <a href="#" class="bc-link top-menu-item">Полезное</a>
+                <a href="#" class="bc-link top-menu-item">Контакты</a>
+            </div>
+            <div class="bc-submenu-hor top-phone">
+                <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
+                <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="page_nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        </nav>
+
+        <section class="first">
+            <div class="first-slider">           
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (1).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 1</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (2).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 2</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (3).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 3</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (4).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 4</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (5).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 5</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <span style="background-image: url('img/load (6).jpg');"></span>
+                            <div class="slide-content">
+                                <h3>Погрузчик 6</h3>
+                                <a href="#" class="bc-button">Подробнее</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="second">
+        <span x-text="(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)"></span>
+        </section>
+        <section class="third">
+        <span x-text="(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)"></span>
+        </section>
+        <section class="fourth">
+        <span x-text="(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)"></span>
+        </section>
+        
+    </main>
+
+    <footer>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+    let swiper= new Swiper('.first-slider .swiper', {
+        loop: true,
+        speed: 500,
+        autoplay: true,
+        pagination: {
+            type: 'bullets',
+            clickable: true,
+            el: '.first-slider .swiper-pagination',
+        },        
+    });
+    </script>
+</body>
+
+
+
+</html>

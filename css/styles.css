@@ -1,0 +1,371 @@
+@font-face {
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2-VariableFont_wght.ttf");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Exo2';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+}
+
+img {
+  width: 20rem;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+menu {
+  padding: 0;
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+nav,
+section {
+  width: 100%;
+  padding: 0 8%;
+}
+
+.bc-menu-hor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+  gap: 0.7rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bc-menu-ver {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+  gap: 0.7rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bc-submenu-hor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bc-submenu-ver {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bc-link {
+  color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.bc-link:hover {
+  color: #aaa;
+}
+
+.bc-button {
+  text-decoration: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+  line-height: 1em;
+  color: #000;
+  padding: 0.3em;
+  border: 1px solid #000;
+  border-radius: 0.2em;
+  background-color: #eee;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.bc-button:hover {
+  background-color: #fff;
+}
+
+.bc-button:active {
+  background-color: #aaa;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.bc-logo {
+  height: 3rem;
+  width: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bc-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.bc-card-wrapper a {
+  text-decoration: none;
+  color: #000;
+}
+
+.bc-card {
+  display: -ms-grid;
+  display: grid;
+  width: clamp(7rem, 20%, 14rem);
+  padding: 0.7rem;
+  border: 1px solid #aaa;
+  border-radius: 0.2rem;
+}
+
+.bc-card:hover {
+  background-color: #eee;
+}
+
+.bc-card img {
+  width: 100%;
+  height: clamp(3rem, 100%, 15rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  background: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 10;
+}
+
+.top {
+  height: 5rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  padding-left: 15%;
+  padding-right: 15%;
+  color: #fff;
+}
+
+.top-menu-item, .top-phone-number {
+  color: #fff;
+}
+
+.workhours {
+  height: 3rem;
+}
+
+.first {
+  margin-top: -8rem;
+  padding: 0;
+  height: 100vh;
+}
+
+.first-slider {
+  height: 100%;
+  width: 100%;
+}
+
+.first-slider .swiper {
+  height: 100%;
+}
+
+.first-slider .swiper-slide {
+  position: relative;
+}
+
+.first-slider .swiper-slide span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.first-slider .swiper-slide .slide-content {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first-slider .swiper-slide .slide-content h3 {
+  position: relative;
+  color: #fff;
+}
+
+.first-slider .swiper-slide .slide-content a {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.first-slider .swiper-pagination-bullet-active {
+  background-color: yellow;
+}
+
+.hidden {
+  padding: 0;
+  height: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.page_nav {
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.second {
+  height: 100vh;
+  width: 100%;
+  background-color: gray;
+}
+
+.third {
+  height: 100vh;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.fourth {
+  height: 100vh;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */

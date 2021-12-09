@@ -1,0 +1,238 @@
+@import '_base_styles.scss';
+
+$menu_height: 5rem;
+$page_padding: 15%;
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background: none;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    z-index: 10;
+}
+
+.top {
+    height: $menu_height;
+    width: 100%;
+    justify-content: space-between;
+    border: none;
+    padding-left: $page_padding;
+    padding-right: $page_padding;
+    color: #fff;
+    
+    &-menu-item,
+    &-phone-number {
+        color: #fff;
+    }
+}
+
+.workhours {    
+    height: 3rem;
+}
+
+.first {
+    margin-top: -(3rem+$menu_height);
+    padding: 0;    
+    height: 100vh;
+
+    &-slider {
+        height: 100%;
+        width: 100%;
+
+        .swiper {
+            height: 100%;
+
+            &-slide {
+                position: relative;                
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-position: center;
+                    background-size: cover;
+                    filter: brightness(0.5);
+                }
+
+                .slide-content {
+                    height: 100%;
+                    width: 100%;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3 {
+                        position: relative;
+                        color: #fff;
+                    }
+    
+                    a {
+                        position: relative;
+                        height: fit-content;
+                        width: fit-content;
+                    }
+                }
+            }
+
+            &-pagination-bullet-active {
+                background-color: yellow;
+            }
+        }
+    }
+}
+
+.hidden {
+    padding: 0;
+    height: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.page_nav {
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    z-index: 2;
+    color: #fff;   
+}
+
+.second {
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+.third {
+    height: 100vh;
+    width: 100%;
+    background-color: lightblue;
+}
+.fourth {
+    height: 100vh;
+    width: 100%;
+}
+
+// .carousel {
+//     display: grid;
+//     padding: 5rem 7%;
+// }
+
+// .carousel-slider {
+//     display: grid;
+//     grid-column: 1/2;
+//     height: 30rem;
+//     width: 40rem;
+//     position: relative;
+//     margin: 0 auto;    
+// }
+
+// .carousel-pagination {
+//     display: flex;
+//     flex-wrap: wrap;
+//     height: fit-content;
+//     width: 20rem;
+//     grid-column: 2/3;
+//     gap: 0.4rem;
+//     margin: 0 auto;
+
+//     div {        
+//         height: 4.5rem;
+//         width: 6rem;
+//         cursor: pointer;
+//         user-select: none;
+//     }
+    
+//     img {
+//         height: 100%;
+//         width: 100%;
+//         object-fit: cover;
+//         pointer-events: none;
+//     }
+// }
+
+// .active-pag {
+//     outline: 0.2rem solid lightskyblue;
+// }
+
+// .swiper { 
+//     height: 100%;
+//     width: 100%;           
+// }       
+
+// .swiper-slide {                      
+//     position: relative;
+//     cursor: grab;
+// }
+
+// .swiper-slide:active {
+//     cursor: grabbing;
+// }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+//     color: lightskyblue;
+// }
+
+// .slide-bg {
+//     position: absolute;
+//     background-position: center;
+//     background-size: 150%;
+//     filter: blur(0.3rem) brightness(0.9);
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+// }        
+
+// .swiper-slide img {
+//     height: 100%;
+//     width: 100%;
+
+//     pointer-events: none;
+//     user-select: none;
+    
+//     object-fit: contain;
+//     position: relative;
+// }
+
+// .swiper-pagination-bullets {            
+//     position: relative;
+//     top: 0;
+//     display: flex;
+//     gap: 0.5rem;
+//     justify-content: center;
+//     flex-wrap: wrap;
+// }
+
+// .swiper-pagination-bullet {
+//     flex-shrink: 0;
+//     height: 5rem;            
+//     width: 8rem;
+//     margin: 0 !important;
+    
+//     opacity: 1;
+//     border-radius: 0.5em;
+//     user-select: none;
+// }
+
+// .swiper-pagination-bullet img {
+//     height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+//     pointer-events: none;
+// }
+
+// .swiper-pagination-bullet-active {
+//     opacity: 0.5;
+// }
