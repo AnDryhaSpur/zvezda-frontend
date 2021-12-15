@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Zvezda</title>
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body>
+
+<body x-data="{ y_coord:0, y_coef:0, is_hidden: false, top: 0, sections: [] }">
+    <header       
+    :style="{ 'background-color': `rgba(0, 0, 0, ${Math.min(y_coef, 0.8)})` }" style="transition: all 0.2s ease">
+        <div class="bc-menu-hor workhours" :class="is_hidden ? 'hidden' : ''" style="width: 100%; transition: all 0.2s ease;">
+            <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>
+        </div>
+        <nav class="bc-menu-hor top" 
+        @scroll.window.throttle.50ms="
+        y_coord=window.pageYOffset; 
+        y_coef=(y_coord/500).toFixed(1);
+        top=$el.getBoundingClientRect().top;
+        is_hidden=(window.pageYOffset-top>300 ? true : false)">
+            <a href="/"><img src="img/Layer 1.png" alt="logo" class="bc-logo"></a>
+            <div class="bc-submenu-hor top-menu">
+                <h2 x-text="y_coord.toFixed(1)"></h2>
+                <a href="/index.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'active' : ''">Главное</a>
+                <a href="#" class="bc-link top-menu-item">Каталог</a>
+                <a href="/details.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'active' : ''">О Zvezda</a>
+                <a href="#" class="bc-link top-menu-item">Полезное</a>
+                <a href="#" class="bc-link top-menu-item">Контакты</a>
+            </div>
+            <div class="bc-submenu-hor top-phone">
+                <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
+                <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
+            </div>
+        </nav>
+    </header>
     
 </body>
 </html>
