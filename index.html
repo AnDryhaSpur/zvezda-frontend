@@ -3,30 +3,39 @@
 
 <head>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css"/>
     <title>Zvezda</title>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 
-<body x-data="{ y_coord:0, y_coef:0, is_hidden: false, top: 0, sections: [] }">
-    <header :style="{ 'background-color': `rgba(0, 0, 0, ${Math.min(y_coef, 0.75)})` }">
-        <div class="bc-menu-hor workhours" :class="is_hidden ? 'hidden' : ''">
-            <a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>
+<body x-data="{ y_coord:0, upper_hidden: false, top: 0, sections: [] }">
+    <header :class="upper_hidden ? 'state_dark' : ''">
+        <div class="bc-menu-hor upper" :class="upper_hidden ? 'state_hidden' : ''">
+            <div class="logo_desc">
+                <span>СПЕЦТЕХНИКА</span>                
+                <span class="logo_desc-text">Надежная и доступная техника из Китая</span>            
+            </div>            
+            <a href="https://good-work.biz/" style="font-size: 0.8rem">
+            <img src="img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>            
         </div>
         <nav class="bc-menu-hor top"
-        @scroll.window.throttle.25ms="
-        y_coord=window.pageYOffset; 
-        y_coef=(y_coord/500).toFixed(1);
+        @scroll.window.throttle.50ms="
+        y_coord=window.pageYOffset;        
         top=$el.getBoundingClientRect().top;
-        is_hidden=(window.pageYOffset-top>150 ? true : false)">
-            <a href="/" class="bc-logo"><img src="img/zvezda.svg" alt="logo"></a>
-            <ul class="bc-submenu-hor top-menu">                
-                <li><a href="/" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'top-menu-item--active' : ''">Главная</a></li>
-                <li><a href="/catalog.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'top-menu-item--active' : ''">Каталог</a></li>
-                <li><a href="/details.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'top-menu-item--active' : ''">О Zvezda</a></li>
-                <li><a href="/info.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'top-menu-item--active' : ''">Полезное</a></li>
-                <li><a href="/contacts.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'top-menu-item--active' : ''">Контакты</a></li>
-            </ul>
+        upper_hidden=(window.pageYOffset-top>200 ? true : false)">
+            <a href="/" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
+            <div class="bc-submenu-hor top-menu">                
+                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Главная</a></div>
+                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Каталог</a>                
+                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Погрузчики</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Навесное оборудование</a></div>
+                    </div>                
+                </div>
+                <div class="item-wrapper"><a href="/details.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">О Zvezda</a></div>
+                <div class="item-wrapper"><a href="/info.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Полезное</a></div>
+                <div class="item-wrapper"><a href="/contacts.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Контакты</a></div>
+            </div>
             <div class="bc-submenu-hor top-phone">
                 <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
                 <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
@@ -37,10 +46,10 @@
     <main>
         <nav class="page_nav">
             <ul>
-                <li @click="window.scrollTo({top:sections[0], behavior:'smooth'})" :class="y_coord<sections[1]-200 ? 'active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[1], behavior:'smooth'})" :class="sections[1]-200<y_coord && y_coord<sections[2]-200 ? 'active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[2], behavior:'smooth'})" :class="sections[2]-200<y_coord && y_coord<sections[3]-200 ? 'active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[3], behavior:'smooth'})" :class="sections[3]-200<y_coord ? 'active' : ''"><img src="img/loader-icon.png" alt=""></li>
+                <li @click="window.scrollTo({top:sections[0], behavior:'smooth'})" :class="y_coord<sections[1]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
+                <li @click="window.scrollTo({top:sections[1], behavior:'smooth'})" :class="sections[1]-200<y_coord && y_coord<sections[2]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
+                <li @click="window.scrollTo({top:sections[2], behavior:'smooth'})" :class="sections[2]-200<y_coord && y_coord<sections[3]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
+                <li @click="window.scrollTo({top:sections[3], behavior:'smooth'})" :class="sections[3]-200<y_coord ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
             </ul>
         </nav>
 
@@ -51,34 +60,76 @@
                     
                         <div class="swiper-slide">
                             <img src="img/load-1.jpeg"></img>
-                            <div class="slide-content">                                
-                                <div class="slide-content--bg">
-                                    <h3>Погрузчик 1</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quod et illum facere quaerat ad, ut in quas tempora illo consectetur explicabo deserunt, pariatur mollitia error nostrum culpa repellendus. Temporibus.</p>
-                                    <a href="#" class="bc-button">Подробнее</a>
-                                </div>
+                            <div class="slide-content">
+                                <a href="#">
+                                    <div class="slide-content-textcard">
+                                        <h3>Погрузчик 1</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
+                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
+                                        libero vel laborum! Ea, doloribus dolor repellendus animi
+                                        praesentium inventore neque tenetur et corrupti nam, commodi
+                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
+                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
+                                        Deserunt earum sapiente error assumenda nobis quidem atque
+                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
+                                        dicta maiores aut, similique aspernatur perferendis rerum
+                                        voluptate provident quaerat! Similique officia error odio
+                                        provident, mollitia iste asperiores, maxime laboriosam, iure
+                                        cupiditate perferendis quas.</p>
+                                        <button class="bc-button">Подробнее</button>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     
                         <div class="swiper-slide">
                             <img src="img/load-2.jpeg"></img>
-                            <div class="slide-content">                                
-                                <div class="slide-content--bg">
-                                    <h3>Погрузчик 2</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quod et illum facere quaerat ad, ut in quas tempora illo consectetur explicabo deserunt, pariatur mollitia error nostrum culpa repellendus. Temporibus.</p>
-                                    <a href="#" class="bc-button">Подробнее</a>
-                                </div>
+                            <div class="slide-content">
+                                <a href="#">
+                                    <div class="slide-content-textcard">
+                                        <h3>Погрузчик 2</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
+                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
+                                        libero vel laborum! Ea, doloribus dolor repellendus animi
+                                        praesentium inventore neque tenetur et corrupti nam, commodi
+                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
+                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
+                                        Deserunt earum sapiente error assumenda nobis quidem atque
+                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
+                                        dicta maiores aut, similique aspernatur perferendis rerum
+                                        voluptate provident quaerat! Similique officia error odio
+                                        provident, mollitia iste asperiores, maxime laboriosam, iure
+                                        cupiditate perferendis quas.</p>
+                                        <button class="bc-button">Подробнее</button>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     
                         <div class="swiper-slide">
                             <img src="img/load-3.jpeg"></img>
-                            <div class="slide-content">                                
-                                <div class="slide-content--bg">
-                                    <h3>Погрузчик 3</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quod et illum facere quaerat ad, ut in quas tempora illo consectetur explicabo deserunt, pariatur mollitia error nostrum culpa repellendus. Temporibus.</p>
-                                    <a href="#" class="bc-button">Подробнее</a>
-                                </div>
+                            <div class="slide-content">
+                                <a href="#">
+                                    <div class="slide-content-textcard">
+                                        <h3>Погрузчик 3</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
+                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
+                                        libero vel laborum! Ea, doloribus dolor repellendus animi
+                                        praesentium inventore neque tenetur et corrupti nam, commodi
+                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
+                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
+                                        Deserunt earum sapiente error assumenda nobis quidem atque
+                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
+                                        dicta maiores aut, similique aspernatur perferendis rerum
+                                        voluptate provident quaerat! Similique officia error odio
+                                        provident, mollitia iste asperiores, maxime laboriosam, iure
+                                        cupiditate perferendis quas.</p>
+                                        <button class="bc-button">Подробнее</button>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     
@@ -107,14 +158,14 @@
     <footer>
     </footer>
     
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
     <script>
     let swiper= new Swiper('.first-slider .swiper', {
-        loop: true,
-        speed: 1200,
-        //autoplay: {
-        //    delay: 5000,
-        //},
+        loop: false,
+        speed: 1700,
+        autoplay: {
+            delay: 5000,
+        },
         pagination: {
             type: 'bullets',
             clickable: true,
