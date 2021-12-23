@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 
-<body x-data="{ y_coord:0, upper_hidden: false, top: 0, sections: [] }">
+<body x-data="{ 
+    y_coord:0, 
+    upper_hidden: false, 
+    top: 0, 
+    sections: [],
+    }">
     <header :class="upper_hidden ? 'state_dark' : ''">
         <div class="bc-menu-hor upper" :class="upper_hidden ? 'state_hidden' : ''">
             <div class="logo_desc">
                 <span>СПЕЦТЕХНИКА</span>                
                 <span class="logo_desc-text">Надежная и доступная техника из Китая</span>            
             </div>            
-            <a href="https://good-work.biz/" style="font-size: 0.8rem">
-            <img src="img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>            
+            <a href="https://good-work.biz/" style="font-size: 0.7rem">
+            <img src="/img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>            
         </div>
         <nav class="bc-menu-hor top"
         @scroll.window.throttle.50ms="
@@ -25,16 +30,32 @@
         upper_hidden=(window.pageYOffset-top>200 ? true : false)">
             <a href="/" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
             <div class="bc-submenu-hor top-menu">                
-                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Главная</a></div>
-                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Каталог</a>                
+                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item">Главная</a></div>
+                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item">Каталог</a>                
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Погрузчики</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Навесное оборудование</a></div>
                     </div>                
                 </div>
-                <div class="item-wrapper"><a href="/details.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">О Zvezda</a></div>
-                <div class="item-wrapper"><a href="/info.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Полезное</a></div>
-                <div class="item-wrapper"><a href="/contacts.html" class="bc-link top-menu-item" :class="window.location.href==$el.href ? 'state_active' : ''">Контакты</a></div>
+                <div class="item-wrapper"><a href="/details.html" class="bc-link top-menu-item">О Zvezda</a>
+                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Производство</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Сервис</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Запчасти</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Гарантия</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Лизинг</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Кредит</a></div>
+                    </div>  
+                </div>
+                <div class="item-wrapper"><a href="/info.html" class="bc-link top-menu-item">Полезное</a>
+                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Новости</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Фотогалерея</a></div>
+                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Видео-материалы</a></div>
+                    </div> 
+                </div>
+                <div class="item-wrapper"><a href="/contacts.html" class="bc-link top-menu-item">Контакты</a>
+                </div>
             </div>
             <div class="bc-submenu-hor top-phone">
                 <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
@@ -64,19 +85,9 @@
                                 <a href="#">
                                     <div class="slide-content-textcard">
                                         <h3>Погрузчик 1</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
-                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
-                                        libero vel laborum! Ea, doloribus dolor repellendus animi
-                                        praesentium inventore neque tenetur et corrupti nam, commodi
-                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
-                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
-                                        Deserunt earum sapiente error assumenda nobis quidem atque
-                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
-                                        dicta maiores aut, similique aspernatur perferendis rerum
-                                        voluptate provident quaerat! Similique officia error odio
-                                        provident, mollitia iste asperiores, maxime laboriosam, iure
-                                        cupiditate perferendis quas.</p>
+                                        <p>
+                                        Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1
+                                        </p>
                                         <button class="bc-button">Подробнее</button>
                                     </div>
                                 </a>
@@ -89,19 +100,9 @@
                                 <a href="#">
                                     <div class="slide-content-textcard">
                                         <h3>Погрузчик 2</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
-                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
-                                        libero vel laborum! Ea, doloribus dolor repellendus animi
-                                        praesentium inventore neque tenetur et corrupti nam, commodi
-                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
-                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
-                                        Deserunt earum sapiente error assumenda nobis quidem atque
-                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
-                                        dicta maiores aut, similique aspernatur perferendis rerum
-                                        voluptate provident quaerat! Similique officia error odio
-                                        provident, mollitia iste asperiores, maxime laboriosam, iure
-                                        cupiditate perferendis quas.</p>
+                                        <p>
+                                        Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2
+                                        </p>
                                         <button class="bc-button">Подробнее</button>
                                     </div>
                                 </a>
@@ -114,19 +115,9 @@
                                 <a href="#">
                                     <div class="slide-content-textcard">
                                         <h3>Погрузчик 3</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ea, officiis praesentium incidunt, eius accusamus quasi dicta
-                                        iste nulla sint magni facere harum obcaecati itaque nam, minus
-                                        libero vel laborum! Ea, doloribus dolor repellendus animi
-                                        praesentium inventore neque tenetur et corrupti nam, commodi
-                                        laboriosam iure cum, qui mollitia delectus quas magni a. Error
-                                        ut aperiam commodi impedit quidem non, quod officia aliquam.
-                                        Deserunt earum sapiente error assumenda nobis quidem atque
-                                        quas molestiae itaque corrupti aliquid dolorem, excepturi
-                                        dicta maiores aut, similique aspernatur perferendis rerum
-                                        voluptate provident quaerat! Similique officia error odio
-                                        provident, mollitia iste asperiores, maxime laboriosam, iure
-                                        cupiditate perferendis quas.</p>
+                                        <p>
+                                        Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3
+                                        </p>
                                         <button class="bc-button">Подробнее</button>
                                     </div>
                                 </a>
@@ -143,12 +134,192 @@
             </div>
         </section>
 
-        <section class="second" x-effect="sections[1]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)" >
-        <span x-text="sections[1]"></span>        
+        <section class="lineup" x-effect="sections[1]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
+            <h2>Модельный ряд</h2>
+            <div class="bc-card-wrapper lineup-wrapper">
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+                            
+                <a href="#" class="bc-card vehicle">
+                    <h3>Zvezda ZL20</h3>                    
+                    <ul class="vehicle-props">
+                        <li>
+                            <span class="name">Ковш, м3</span>
+                            <span class="value">1.1</span>
+                        </li>
+                        <li>
+                            <span class="name">Подъем, кг</span>
+                            <span class="value">1200</span>
+                        </li>
+                        <li>
+                            <span class="name">Мощность, л.с.</span>
+                            <span class="value">45</span>
+                        </li>
+                        <li>
+                            <span class="name">Цена, руб</span>
+                            <span class="value">1 400 000</span>
+                        </li>
+                    </ul>                    
+                    <div class="vehicle-img_wrapper">
+                        <img src="/img/load-2.jpeg" alt="">
+                    </div>
+                </a>                       
+            
+            </div>
         </section>
+
         <section class="third" x-effect="sections[2]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
-        <span x-text="sections[2]"></span>
+        <span></span>
         </section>
+
         <section class="fourth" x-effect="sections[3]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
         <span x-text="sections[3]"></span>
         </section>
@@ -161,10 +332,12 @@
     <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
     <script>
     let swiper= new Swiper('.first-slider .swiper', {
-        loop: false,
-        speed: 1700,
+        loop: true,
+        speed: 1000,
         autoplay: {
             delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         pagination: {
             type: 'bullets',
