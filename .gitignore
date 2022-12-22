@@ -1,6 +1,1 @@
-jinja2/_blah.html
-jinja2/details.html
-jinja2/index.html
-context.py
-watch_jinja.py
-__pycache__/context.cpython-39.pyc
+__pycache__/

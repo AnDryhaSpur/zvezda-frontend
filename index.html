@@ -2,40 +2,45 @@
 <html lang="ru">
 
 <head>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/edc1c15fde.js" crossorigin="anonymous"></script>
     <title>Zvezda</title>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 
-<body x-data="{ 
-    y_coord:0, 
-    upper_hidden: false, 
-    top: 0, 
-    sections: [],
+<body x-data="{
+        y_coord:0,
+        upper_hidden: false,
+        once_scrolled: false,
+        sections: [0,],
+        init() {
+            setInterval(() => {
+            this.y_coord = window.pageYOffset;
+            }, 100);
+        },
     }">
+
     <header :class="upper_hidden ? 'state_dark' : ''">
-        <div class="bc-menu-hor upper" :class="upper_hidden ? 'state_hidden' : ''">
+
+        <div class="bc-menu_hor upper" :class="upper_hidden ? 'state_hidden' : ''">
             <div class="logo_desc">
-                <span>СПЕЦТЕХНИКА</span>                
-                <span class="logo_desc-text">Надежная и доступная техника из Китая</span>            
-            </div>            
+                <span>СПЕЦТЕХНИКА</span>
+                <span class="logo_desc-text">Надежная и доступная техника из Китая</span>
+            </div>
             <a href="https://good-work.biz/" style="font-size: 0.7rem">
-            <img src="img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>            
+            <img src="img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>
         </div>
-        <nav class="bc-menu-hor top"
-        @scroll.window.throttle.50ms="
-        y_coord=window.pageYOffset;        
-        top=$el.getBoundingClientRect().top;
-        upper_hidden=(window.pageYOffset-top>200 ? true : false)">
+
+        <nav class="bc-menu_hor top" x-effect="upper_hidden=(y_coord>300 ? true : false)">
             <a href="/" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
-            <div class="bc-submenu-hor top-menu">                
-                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item">Главная</a></div>
-                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item">Каталог</a>                
+            <div class="bc-submenu_hor top-menu">
+                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item" x-text="y_coord">Главная</a></div>
+                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item">Каталог</a>
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Погрузчики</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Навесное оборудование</a></div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="item-wrapper"><a href="/details.html" class="bc-link top-menu-item">О Zvezda</a>
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
@@ -45,27 +50,29 @@
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Гарантия</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Лизинг</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Кредит</a></div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="item-wrapper"><a href="/info.html" class="bc-link top-menu-item">Полезное</a>
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Новости</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Фотогалерея</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Видео-материалы</a></div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="item-wrapper"><a href="/contacts.html" class="bc-link top-menu-item">Контакты</a>
                 </div>
             </div>
-            <div class="bc-submenu-hor top-phone">
+            <div class="bc-submenu_hor top-phone">
                 <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
                 <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
             </div>
         </nav>
+
     </header>
 
     <main>
-        <nav class="page_nav">
+
+        <nav class="page_nav" :class="upper_hidden ? '' : 'state_hidden'">
             <ul>
                 <li @click="window.scrollTo({top:sections[0], behavior:'smooth'})" :class="y_coord<sections[1]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
                 <li @click="window.scrollTo({top:sections[1], behavior:'smooth'})" :class="sections[1]-200<y_coord && y_coord<sections[2]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
@@ -74,72 +81,100 @@
             </ul>
         </nav>
 
-        <section class="first" x-effect="sections[0]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
-            <div class="first-slider">           
+        <section class="first" x-effect="sections[0]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
+            <h1>Фронтальные погрузчики от производителя</h1>
+            <div class="bc-card_wrapper first-merits">
+                
+                <div class="bc-card merit">
+                    <span>МНОГО</span>
+                    <span>0</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
+                </div>
+                
+                <div class="bc-card merit">
+                    <span>МНОГО</span>
+                    <span>1</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
+                </div>
+                
+                <div class="bc-card merit">
+                    <span>МНОГО</span>
+                    <span>2</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
+                </div>
+                
+                <div class="bc-card merit">
+                    <span>МНОГО</span>
+                    <span>3</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
+                </div>
+                
+            </div>
+            <div class="first-slider">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                     
                         <div class="swiper-slide">
-                            <img src="img/load-1.jpeg"><img>
-                            <div class="slide-content">
-                                <a href="#">
-                                    <div class="slide-content-textcard">
-                                        <h3>Погрузчик 1</h3>
-                                        <p>
-                                        Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1Погрузчик 1
-                                        </p>
-                                        <button class="bc-button">Подробнее</button>
-                                    </div>
-                                </a>
-                            </div>
+                            <span class="slide-bg_img" style="background-image: url(img/load-1.jpeg)"></span>
+                            <a href="#">
+                                <div class="slide-img_wrapper">
+                                    <img src="img/load-1.jpeg">
+                                </div>
+                                <div class="slide-textcard">
+                                    <h3>Погрузчик 1</h3>
+                                    <p>
+                                    Lorem ipsum Погрузчик 1, amet consectetur adipisicing elit. A harum Погрузчик 1 consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     
                         <div class="swiper-slide">
-                            <img src="img/load-2.jpeg"><img>
-                            <div class="slide-content">
-                                <a href="#">
-                                    <div class="slide-content-textcard">
-                                        <h3>Погрузчик 2</h3>
-                                        <p>
-                                        Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2Погрузчик 2
-                                        </p>
-                                        <button class="bc-button">Подробнее</button>
-                                    </div>
-                                </a>
-                            </div>
+                            <span class="slide-bg_img" style="background-image: url(img/load-2.jpeg)"></span>
+                            <a href="#">
+                                <div class="slide-img_wrapper">
+                                    <img src="img/load-2.jpeg">
+                                </div>
+                                <div class="slide-textcard">
+                                    <h3>Погрузчик 2</h3>
+                                    <p>
+                                    Lorem ipsum Погрузчик 2, amet consectetur adipisicing elit. A harum Погрузчик 2 consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     
                         <div class="swiper-slide">
-                            <img src="img/load-3.jpeg"><img>
-                            <div class="slide-content">
-                                <a href="#">
-                                    <div class="slide-content-textcard">
-                                        <h3>Погрузчик 3</h3>
-                                        <p>
-                                        Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3Погрузчик 3
-                                        </p>
-                                        <button class="bc-button">Подробнее</button>
-                                    </div>
-                                </a>
-                            </div>
+                            <span class="slide-bg_img" style="background-image: url(img/load-3.jpeg)"></span>
+                            <a href="#">
+                                <div class="slide-img_wrapper">
+                                    <img src="img/load-3.jpeg">
+                                </div>
+                                <div class="slide-textcard">
+                                    <h3>Погрузчик 3</h3>
+                                    <p>
+                                    Lorem ipsum Погрузчик 3, amet consectetur adipisicing elit. A harum Погрузчик 3 consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     
-                    </div>                    
+                    </div>
                 </div>
                 <div class="swiper-navigation">
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>                    
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
 
-        <section class="lineup" x-effect="sections[1]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
+        <section class="lineup" x-effect="sections[1]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
             <h2>Модельный ряд</h2>
-            <div class="bc-card-wrapper lineup-wrapper">
-                            
+            <div class="bc-card_wrapper lineup-wrapper">
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -157,14 +192,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -182,14 +217,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -207,14 +242,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -232,14 +267,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -257,14 +292,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -282,14 +317,14 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
-                            
+                </a>
+            
                 <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>                    
+                    <h3>Zvezda ZL20</h3>
                     <ul class="vehicle-props">
                         <li>
                             <span class="name">Ковш, м3</span>
@@ -307,47 +342,47 @@
                             <span class="name">Цена, руб</span>
                             <span class="value">1 400 000</span>
                         </li>
-                    </ul>                    
+                    </ul>
                     <div class="vehicle-img_wrapper">
                         <img src="img/load-2.jpeg" alt="">
                     </div>
-                </a>                       
+                </a>
             
             </div>
         </section>
 
-        <section class="third" x-effect="sections[2]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
+        <section class="third" x-effect="sections[2]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
         <span></span>
         </section>
 
-        <section class="fourth" x-effect="sections[3]=(y_coord-top+$el.getBoundingClientRect().top).toFixed(1)">
+        <section class="fourth" x-effect="sections[3]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
         <span x-text="sections[3]"></span>
         </section>
-        
+
     </main>
 
     <footer>
     </footer>
-    
+
     <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
     <script>
     let swiper= new Swiper('.first-slider .swiper', {
+        effect: 'fade',
         loop: true,
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
+        speed: 800,
+        //autoplay: {
+        //    delay: 5000,
+        //    disableOnInteraction: false,
+        //    pauseOnMouseEnter: true,
+        //},
         pagination: {
-            type: 'bullets',
-            clickable: true,
+            type: 'fraction',
             el: '.first-slider .swiper-pagination',
         },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },       
+        },
     });
     </script>
 </body>
