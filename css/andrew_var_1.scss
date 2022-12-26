@@ -1,4 +1,5 @@
 @import '_base_styles.scss';
+@import '_navbar.scss';
 
 $darkgray: #5E5E5E;
 $yellow: #ffcc00;
@@ -20,6 +21,7 @@ $trans02: all 0.2s ease;
 
 body {
     font-family: 'Cuprum';
+    height: 20000px;
     margin: 0;
     background-color: #fff;
 }
