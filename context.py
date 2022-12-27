@@ -31,7 +31,7 @@ class Catalog():
 models = ["LX100F", "LX180F", "LX280F", "LX300F",
           "LX330G", "ZL15E", "ZL15G", "ZL20G"]
 catalog_list = [
-    Catalog(img=f"img/catalog/{title}.jpg",
+    Catalog(img=f"img/catalog/{title.lower()}.jpg",
             title=title,
             price=150000*index,
             mass=1000+500*index,
