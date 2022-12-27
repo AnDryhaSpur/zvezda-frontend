@@ -2,7 +2,10 @@ from staticjinja import Site
 import context
 
 environment = {
-    'first_slides': context.first_slides, #Список слайдов
+    'top_slides': context.top_slides_list,
+    'catalog': context.catalog_list,
+    'benefits': context.benefits_list,
+    'merits': context.merits_list,
 }
 
 if __name__ == "__main__":

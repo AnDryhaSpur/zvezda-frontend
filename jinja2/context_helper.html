@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context helper</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 3rem;
+            justify-content: center;
+            border-bottom: 0.5rem solid brown;
+        }
+        .slide {
+            border: 1px solid #000;
+            display: grid;
+            grid-template-columns: 15rem auto;
+            padding: 0.5rem;
+            gap: 0.3rem;
+        }
+        .slide * {
+            grid-column: 1;
+        }
+        .helper_expression,
+        .helper_statement {
+            font-size: 1.2rem;
+            color: darkblue;
+            border: 1px dashed grey;
+            border-radius: 0.2rem;
+            grid-column: 2;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .helper_statement {
+            grid-column: 1/-1;
+            justify-self: start;
+        }
+    </style>
+</head>
+<body>
+    <section>Если возникла ошибка<i>watch_jinja.py</i>(не правильно написана директива, опечатка или забыта парная закрывающая директива), то после исправления ошибки следует перезапустить скрипт в терминале. </section>
+    <h2>1. Секция "Первый экран"</h2>
+    <section>
+        {% for slide in top_slides %}
+        <div class="slide">
+            <span class="helper_statement">{{'{%'}} for slide in top_slides {{'%}'}}</span>
+            <img src="{{ slide.img }}" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{'{{'}} slide.img {{'}}'}}"</span>
+            <h3>{{slide.title}}</h2>
+            <span class="helper_expression">{{'{{'}} slide.title {{'}}'}}</span>
+            <p>{{slide.text}}</p>
+            <span class="helper_expression">{{'{{'}} slide.text {{'}}'}}</span>
+            <span class="helper_statement">{{'{%'}} endfor {{'%}'}}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>2. Секция "Заслуги/Достижения"</h2>
+    <section>
+        {% for merit in merits %}
+        <div class="slide">
+            <span class="helper_statement">{{'{%'}} for merit in merits {{'%}'}}</span>
+            <p>{{merit.prefix}}</p>
+            <span class="helper_expression">src="{{'{{'}} merit.prefix {{'}}'}}"</span>
+            <h3>{{merit.number}}</h2>
+            <span class="helper_expression">{{'{{'}} merit.number {{'}}'}}</span>
+            <h3>{{merit.title}}</h2>
+            <span class="helper_expression">{{'{{'}} merit.title {{'}}'}}</span>
+            <p>{{merit.text}}</p>
+            <span class="helper_expression">{{'{{'}} merit.text {{'}}'}}</span>
+            <span class="helper_statement">{{'{%'}} endfor {{'%}'}}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>3. Секция "Каталог"</h2>
+    <section>
+        {% for item in catalog %}
+        <div class="slide">
+            <span class="helper_statement">{{'{%'}} for item in catalog {{'%}'}}</span>
+            <img src="{{ item.img }}" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{'{{'}} item.img {{'}}'}}"</span>
+            <h3>{{item.title}}</h2>
+            <span class="helper_expression">{{'{{'}} item.title {{'}}'}}</span>
+            <h4>{{item.price}}</h4>
+            <span class="helper_expression">{{'{{'}} item.price {{'}}'}}</span>
+            <p>{{item.mass}}</p>
+            <span class="helper_expression">{{'{{'}} item.mass {{'}}'}}</span>
+            <p>{{item.capacity}}</p>
+            <span class="helper_expression">{{'{{'}} item.capacity {{'}}'}}</span>
+            <p>{{item.bucket_size}}</p>
+            <span class="helper_expression">{{'{{'}} item.bucket_size {{'}}'}}</span>
+            <span class="helper_statement">{{'{%'}} endfor {{'%}'}}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>4. Секция "Наши преимущества"</h2>
+    <section>
+        {% for benefit in benefits %}
+        <div class="slide">
+            <span class="helper_statement">{{'{%'}} for benefit in benefits {{'%}'}}</span>
+            <img src="{{ benefit.img }}" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{'{{'}} benefit.img {{'}}'}}"</span>
+            <h3>{{benefit.title}}</h2>
+            <span class="helper_expression">{{'{{'}} benefit.title {{'}}'}}</span>
+            <p>{{benefit.text}}</p>
+            <span class="helper_expression">{{'{{'}} benefit.text {{'}}'}}</span>
+            <span class="helper_statement">{{'{%'}} endfor {{'%}'}}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+</body>
+</html>

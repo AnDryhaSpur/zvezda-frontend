@@ -29,20 +29,16 @@
                 <span class="logo_desc-text">Надежная и доступная техника из Китая</span>
             </div>
             <a href="https://good-work.biz/" style="font-size: 0.7rem">
-            <img src="img/goodwork_no_r.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>
+            <img src="img/goodwork.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>
         </div>
 
         <nav class="bc-menu_hor top" x-effect="upper_hidden=(y_coord>300 ? true : false)">
             <a href="/" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
             <div class="bc-submenu_hor top-menu">
-                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item" x-text="y_coord">Главная</a></div>
-                <div class="item-wrapper"><a href="/catalog.html" class="bc-link top-menu-item">Каталог</a>
-                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Погрузчики</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Навесное оборудование</a></div>
-                    </div>
+                <div class="item-wrapper"><a href="/" class="bc-link top-menu-item">Главная</a></div>
+                <div class="item-wrapper"><a href="context_helper.html" class="bc-link top-menu-item">Помощник по контексту</a>
                 </div>
-                <div class="item-wrapper"><a href="/details.html" class="bc-link top-menu-item">О Zvezda</a>
+                <div class="item-wrapper"><a href="details.html" class="bc-link top-menu-item">О Zvezda</a>
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Производство</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Сервис</a></div>
@@ -52,14 +48,14 @@
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Кредит</a></div>
                     </div>
                 </div>
-                <div class="item-wrapper"><a href="/info.html" class="bc-link top-menu-item">Полезное</a>
+                <div class="item-wrapper"><a href="info.html" class="bc-link top-menu-item">Полезное</a>
                     <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Новости</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Фотогалерея</a></div>
                         <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Видео-материалы</a></div>
                     </div>
                 </div>
-                <div class="item-wrapper"><a href="/contacts.html" class="bc-link top-menu-item">Контакты</a>
+                <div class="item-wrapper"><a href="contacts.html" class="bc-link top-menu-item">Контакты</a>
                 </div>
             </div>
             <div class="bc-submenu_hor top-phone">
@@ -95,10 +91,10 @@
             <div class="first-slider">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                    {% for i in first_slides %}
+                    {% for i in top_slides %}
                         <div class="swiper-slide">
                             <span class="slide-bg_img" style="background-image: url(img/{{ i.img }})"></span>
-                            <a href="{{ i.link }}">
+                            <a href="/">
                                 <div class="slide-img_wrapper">
                                     <img src="img/{{ i.img }}">
                                 </div>
@@ -188,69 +184,4 @@
     });
     </script>
 </body>
-
-{# <body x-data="slider()">
-    <section class="carousel">
-        <div class="carousel-slider">
-                <div class="swiper">
-                    <div class="swiper-wrapper" @transitionstart="active++">
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (1).jpg');"></span>
-                            <img src="img/load (1).jpg"></div>
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (2).jpg');"></span>
-                            <img src="img/load (2).jpg"></div>
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (3).jpg');"></span>
-                            <img src="img/load (3).jpg"></div>
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (4).jpg');"></span>
-                            <img src="img/load (4).jpg"></div>
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (5).jpg');"></span>
-                            <img src="img/load (5).jpg"></div>
-                        <div class="swiper-slide">
-                            <span class="slide-bg" style="background-image: url('img/load (6).jpg');"></span>
-                            <img src="img/load (6).jpg"></div>
-                    </div>
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-        </div>
-        <div class="carousel-pagination">
-            <div @mouseenter="swiper.slideTo(1)" :class="active==1 || active==7 ? 'active-pag' : '' "><img src="img/load (1).jpg"></div>
-            <div @mouseenter="swiper.slideTo(2)" :class="active==2 ? 'active-pag' : '' "><img src="img/load (2).jpg"></div>
-            <div @mouseenter="swiper.slideTo(3)" :class="active==3 ? 'active-pag' : '' "><img src="img/load (3).jpg"></div>
-            <div @mouseenter="swiper.slideTo(4)" :class="active==4 ? 'active-pag' : '' "><img src="img/load (4).jpg"></div>
-            <div @mouseenter="swiper.slideTo(5)" :class="active==5 ? 'active-pag' : '' "><img src="img/load (5).jpg"></div>
-            <div @mouseenter="swiper.slideTo(6)" :class="active==6 || active==0 ? 'active-pag' : '' "><img src="img/load (6).jpg"></div>
-        </div>
-    </section>
-
-    <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
-    <script>
-    const event = new CustomEvent('slideChange');
-    document.dispatchEvent(event);
-    function slider() {
-        return {
-            swiper: new Swiper('.swiper', {
-                loop: true,
-                pagination: {
-                    type: 'bullets',
-                    clickable: true,
-                    el: '.carousel-pag .swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.carousel .swiper-button-next',
-                    prevEl: '.carousel .swiper-button-prev',
-                },
-            }),
-            get active() {
-                return this.swiper.activeIndex;
-            },
-        }
-    };
-    </script>
-</body> #}
-
 </html>
