@@ -1,26 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <title>Goodwork</title>
+    <link rel="stylesheet" href="../../css/dmitrii/styles-v1.css" />
+  </head>
 
-<head>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css"/>
-    <script src="https://kit.fontawesome.com/edc1c15fde.js" crossorigin="anonymous"></script>
-    <title>Zvezda</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-</head>
-
-<body>
-  <header>
-
-  </header>
-  <main>
-
-  </main>
-  <footer>
-
-  </footer>
-  <script>
+  <body>
+    <header>
+      <div class="container">
+        <nav x-data="" class="main-navigation">
+          <a href="" class="header-logo">
+            <img
+              src="../../img/goodwork.svg"
+              alt="Логотип "
+              width="160"
+              height="65"
+            />
+          </a>
+          <ul class="site-navigation">
+            <li><a href="#" class="current">Компания</a></li>
+            <li><a href="#">Каталог Спецтехники</a></li>
+            <li><a href="catalog.html">Сервис и запчасти</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="user-navigation">
+            <li><a href="tel:+4733378901">+47 333 78 901</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
     
-  </script>
-</body>
+      <section class="">
+        <h1 class=>We are goodwork!</h1>
+        <div class="main-bg"></div>
+      </section>
+      <h2>1. Секция "Первый экран"</h2>
+    <section>
+        {% for slide in top_slides %}
+        <div class="slide">
+            <img src="../{{ slide.img }}" alt="" style="height: 10rem">
+            <h3>{{slide.title}}</h2>
+            <p>{{slide.text}}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>2. Секция "Заслуги/Достижения"</h2>
+    <section>
+        {% for merit in merits %}
+        <div class="slide">
+            <p>{{merit.prefix}}</p>
+            <h3>{{merit.number}}</h2>
+            <h3>{{merit.title}}</h2>
+            <p>{{merit.text}}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>3. Секция "Каталог"</h2>
+    <section>
+        {% for item in catalog %}
+        <div class="slide">
+            <img src="{{ item.img }}" alt="" style="height: 10rem">
+    
+            <h3>{{item.title}}</h2>
+            
+            <h4>{{item.price}}</h4>
+            
+            <p>{{item.mass}}</p>
+            
+            <p>{{item.capacity}}</p>
+            
+            <p>{{item.bucket_size}}</p>
+            
+        </div>
+        {% endfor %}
+    </section>
+
+    <h2>4. Секция "Наши преимущества"</h2>
+    <section>
+        {% for benefit in benefits %}
+        <div class="slide">
+            
+            <img src="{{ benefit.img }}" alt="" style="height: 10rem">
+            
+            <h3>{{benefit.title}}</h2>
+            
+            <p>{{benefit.text}}</p>
+            
+        </div>
+        {% endfor %}
+    </section>
+
+    </main>
+    <footer>
+    </footer>
+    <script></script>
+  </body>
 </html>

@@ -1,385 +1,270 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <title>Goodwork</title>
+    <link rel="stylesheet" href="../../css/dmitrii/styles-v1.css" />
+  </head>
 
-<head>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css"/>
-    <script src="https://kit.fontawesome.com/edc1c15fde.js" crossorigin="anonymous"></script>
-    <title>Zvezda</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-</head>
-
-<body x-data="{
-        y_coord:0,
-        upper_hidden: false,
-        once_scrolled: false,
-        sections: [0,],
-        init() {
-            setInterval(() => {
-            this.y_coord = window.pageYOffset;
-            }, 100);
-        },
-    }">
-
-    <header :class="upper_hidden ? 'state_dark' : ''">
-
-        <div class="bc-menu_hor upper" :class="upper_hidden ? 'state_hidden' : ''">
-            <div class="logo_desc">
-                <span>СПЕЦТЕХНИКА</span>
-                <span class="logo_desc-text">Надежная и доступная техника из Китая</span>
-            </div>
-            <a href="https://good-work.biz/" style="font-size: 0.7rem">
-            <img src="img/goodwork.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>
-        </div>
-
-        <nav class="bc-menu_hor top" x-effect="upper_hidden=(y_coord>300 ? true : false)">
-            <a href="#" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
-            <div class="bc-submenu_hor top-menu">
-                <div class="item-wrapper"><a href="#" class="bc-link top-menu-item">Главная</a></div>
-                <div class="item-wrapper"><a href="context_helper.html" class="bc-link top-menu-item">Помощник по контексту</a>
-                </div>
-                <div class="item-wrapper"><a href="details.html" class="bc-link top-menu-item">О Zvezda</a>
-                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Производство</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Сервис</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Запчасти</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Гарантия</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Лизинг</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Кредит</a></div>
-                    </div>
-                </div>
-                <div class="item-wrapper"><a href="info.html" class="bc-link top-menu-item">Полезное</a>
-                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Новости</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Фотогалерея</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Видео-материалы</a></div>
-                    </div>
-                </div>
-                <div class="item-wrapper"><a href="contacts.html" class="bc-link top-menu-item">Контакты</a>
-                </div>
-            </div>
-            <div class="bc-submenu_hor top-phone">
-                <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
-                <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
-            </div>
+  <body>
+    <header>
+      <div class="container">
+        <nav x-data="" class="main-navigation">
+          <a href="" class="header-logo">
+            <img
+              src="../../img/goodwork.svg"
+              alt="Логотип "
+              width="160"
+              height="65"
+            />
+          </a>
+          <ul class="site-navigation">
+            <li><a href="#" class="current">Компания</a></li>
+            <li><a href="#">Каталог Спецтехники</a></li>
+            <li><a href="catalog.html">Сервис и запчасти</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="user-navigation">
+            <li><a href="tel:+4733378901">+47 333 78 901</a></li>
+          </ul>
         </nav>
-
+      </div>
     </header>
-
     <main>
+    
+      <section class="">
+        <h1 class=>We are goodwork!</h1>
+        <div class="main-bg"></div>
+      </section>
+      <h2>1. Секция "Первый экран"</h2>
+    <section>
+        
+        <div class="slide">
+            <img src="../img/slides/new_color.jpg" alt="" style="height: 10rem">
+            <h3>Представляем новые цвета бренда ZVEZDA</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+        </div>
+        
+        <div class="slide">
+            <img src="../img/slides/new_model.jpg" alt="" style="height: 10rem">
+            <h3>Новая модель - телескопический погрузчик ZVEZDA TL3000</h2>
+            <p>Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+        <div class="slide">
+            <img src="../img/slides/new_shipment.jpg" alt="" style="height: 10rem">
+            <h3>Большой завоз новой техники</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+        </div>
+        
+    </section>
 
-        <nav class="page_nav" :class="upper_hidden ? '' : 'state_hidden'">
-            <ul>
-                <li @click="window.scrollTo({top:sections[0], behavior:'smooth'})" :class="y_coord<sections[1]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[1], behavior:'smooth'})" :class="sections[1]-200<y_coord && y_coord<sections[2]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[2], behavior:'smooth'})" :class="sections[2]-200<y_coord && y_coord<sections[3]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[3], behavior:'smooth'})" :class="sections[3]-200<y_coord ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-            </ul>
-        </nav>
+    <h2>2. Секция "Заслуги/Достижения"</h2>
+    <section>
+        
+        <div class="slide">
+            <p>Более</p>
+            <h3>11</h2>
+            <h3>Лет на рынке</h2>
+            <p>Надежная техника и качественный сервис - залог отличной репутации и процветания компании</p>
+        </div>
+        
+        <div class="slide">
+            <p>Более</p>
+            <h3>200</h2>
+            <h3>Единиц проданной техники</h2>
+            <p>Множество довольных нашей техникой клиентов по всей России и СНГ</p>
+        </div>
+        
+        <div class="slide">
+            <p>До</p>
+            <h3>1000</h2>
+            <h3>Наименований запчастей в наличии</h2>
+            <p>Помощь в подборе запчастей и ремонте техники даже в постгарантийный период</p>
+        </div>
+        
+    </section>
 
-        <section class="first" x-effect="sections[0]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-            <h1>Фронтальные погрузчики от производителя</h1>
-            <div class="bc-card_wrapper first-merits">
-                
-                <div class="bc-card merit">
-                    <span>МНОГО</span>
-                    <span>0</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
-                </div>
-                
-                <div class="bc-card merit">
-                    <span>МНОГО</span>
-                    <span>1</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
-                </div>
-                
-                <div class="bc-card merit">
-                    <span>МНОГО</span>
-                    <span>2</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
-                </div>
-                
-                <div class="bc-card merit">
-                    <span>МНОГО</span>
-                    <span>3</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
-                </div>
-                
-            </div>
-            <div class="first-slider">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                    
-                        <div class="swiper-slide">
-                            <span class="slide-bg_img" style="background-image: url(img/img/slides/new_color.jpg)"></span>
-                            <a href="/">
-                                <div class="slide-img_wrapper">
-                                    <img src="img/img/slides/new_color.jpg">
-                                </div>
-                                <div class="slide-textcard">
-                                    <h3>Представляем новые цвета бренда ZVEZDA</h3>
-                                    <p>
-                                    Lorem ipsum Представляем новые цвета бренда ZVEZDA, amet consectetur adipisicing elit. A harum Представляем новые цвета бренда ZVEZDA consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    
-                        <div class="swiper-slide">
-                            <span class="slide-bg_img" style="background-image: url(img/img/slides/new_model.jpg)"></span>
-                            <a href="/">
-                                <div class="slide-img_wrapper">
-                                    <img src="img/img/slides/new_model.jpg">
-                                </div>
-                                <div class="slide-textcard">
-                                    <h3>Новая модель - телескопический погрузчик ZVEZDA TL3000</h3>
-                                    <p>
-                                    Lorem ipsum Новая модель - телескопический погрузчик ZVEZDA TL3000, amet consectetur adipisicing elit. A harum Новая модель - телескопический погрузчик ZVEZDA TL3000 consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    
-                        <div class="swiper-slide">
-                            <span class="slide-bg_img" style="background-image: url(img/img/slides/new_shipment.jpg)"></span>
-                            <a href="/">
-                                <div class="slide-img_wrapper">
-                                    <img src="img/img/slides/new_shipment.jpg">
-                                </div>
-                                <div class="slide-textcard">
-                                    <h3>Большой завоз новой техники</h3>
-                                    <p>
-                                    Lorem ipsum Большой завоз новой техники, amet consectetur adipisicing elit. A harum Большой завоз новой техники consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    
-                    </div>
-                </div>
-                <div class="swiper-navigation">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </section>
+    <h2>3. Секция "Каталог"</h2>
+    <section>
+        
+        <div class="slide">
+            <img src="img/catalog/lx100f.jpg" alt="" style="height: 10rem">
+    
+            <h3>LX100F</h2>
+            
+            <h4>0</h4>
+            
+            <p>1000</p>
+            
+            <p>500</p>
+            
+            <p>0.7</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/lx180f.jpg" alt="" style="height: 10rem">
+    
+            <h3>LX180F</h2>
+            
+            <h4>150000</h4>
+            
+            <p>1500</p>
+            
+            <p>750</p>
+            
+            <p>0.9</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/lx280f.jpg" alt="" style="height: 10rem">
+    
+            <h3>LX280F</h2>
+            
+            <h4>300000</h4>
+            
+            <p>2000</p>
+            
+            <p>1000</p>
+            
+            <p>1.1</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/lx300f.jpg" alt="" style="height: 10rem">
+    
+            <h3>LX300F</h2>
+            
+            <h4>450000</h4>
+            
+            <p>2500</p>
+            
+            <p>1250</p>
+            
+            <p>1.3</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/lx330g.jpg" alt="" style="height: 10rem">
+    
+            <h3>LX330G</h2>
+            
+            <h4>600000</h4>
+            
+            <p>3000</p>
+            
+            <p>1500</p>
+            
+            <p>1.5</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/zl15e.jpg" alt="" style="height: 10rem">
+    
+            <h3>ZL15E</h2>
+            
+            <h4>750000</h4>
+            
+            <p>3500</p>
+            
+            <p>1750</p>
+            
+            <p>1.7</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/zl15g.jpg" alt="" style="height: 10rem">
+    
+            <h3>ZL15G</h2>
+            
+            <h4>900000</h4>
+            
+            <p>4000</p>
+            
+            <p>2000</p>
+            
+            <p>1.9</p>
+            
+        </div>
+        
+        <div class="slide">
+            <img src="img/catalog/zl20g.jpg" alt="" style="height: 10rem">
+    
+            <h3>ZL20G</h2>
+            
+            <h4>1050000</h4>
+            
+            <p>4500</p>
+            
+            <p>2250</p>
+            
+            <p>2.1</p>
+            
+        </div>
+        
+    </section>
 
-        <section class="lineup" x-effect="sections[1]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-            <h2>Модельный ряд</h2>
-            <div class="bc-card_wrapper lineup-wrapper">
+    <h2>4. Секция "Наши преимущества"</h2>
+    <section>
+        
+        <div class="slide">
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <img src="img/benefits/1.jpg" alt="" style="height: 10rem">
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <h3>Производительность</h2>
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <p>Надёжные двигатели мировых производителей DEUTZ (Германия), WEICHAI (Китай), CUMMINS (США), YUCHAI (Китай), PERKINS (Англия)</p>
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+        </div>
+        
+        <div class="slide">
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <img src="img/benefits/2.jpg" alt="" style="height: 10rem">
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <h3>Качество</h2>
             
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
+            <p>Рабочие агрегаты и комплектующие проверенного качества. Гидравлические насосы (SEM); Ведущие мосты («LAIYANG» поставщик SEM); Коробка передач («Xin Li De» поставщик SEM)</p>
             
-            </div>
-        </section>
-
-        <section class="third" x-effect="sections[2]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-        <span></span>
-        </section>
-
-        <section class="fourth" x-effect="sections[3]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-        <span x-text="sections[3]"></span>
-        </section>
+        </div>
+        
+        <div class="slide">
+            
+            <img src="img/benefits/3.jpg" alt="" style="height: 10rem">
+            
+            <h3>Безопасность</h2>
+            
+            <p>Усиленная рама с запасом прочности. Повышенная устойчивость к изгибу и скручиванию. При производстве рамы и ковша погрузчика используются роботы-сварщики фирмы «Panasonic»(Япония)</p>
+            
+        </div>
+        
+        <div class="slide">
+            
+            <img src="img/benefits/4.jpg" alt="" style="height: 10rem">
+            
+            <h3>Комфорт</h2>
+            
+            <p>Адаптированны для российских условий эксплуатации. Утеплённая кабина; Две жидкостные печки; Подогреватель двигателя; Вездеходные шины; Биметаллические втулки; Масла в агрегатах до -35С</p>
+            
+        </div>
+        
+    </section>
 
     </main>
-
     <footer>
     </footer>
-
-    <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
-    <script>
-    let swiper= new Swiper('.first-slider .swiper', {
-        effect: 'fade',
-        loop: true,
-        speed: 800,
-        //autoplay: {
-        //    delay: 5000,
-        //    disableOnInteraction: false,
-        //    pauseOnMouseEnter: true,
-        //},
-        pagination: {
-            type: 'fraction',
-            el: '.first-slider .swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>
