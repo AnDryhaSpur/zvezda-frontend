@@ -9,7 +9,12 @@ body {
   font-family: "Gilroy", "Arial", sans-serif;
   color: $text-color;
 
-  background-color: $accent-color;
+  background-color: #333333;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .container {
@@ -17,15 +22,20 @@ body {
   margin: 0 auto;
 }
 
-.site-navigation {
+.main-header {
+  background-color:#333333;
+  border-bottom: 1px solid $text-color;
+}
+
+nav.navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
-.main-header {
-  background-color: #808080;
+a.navigation-logo {
 }
 
 .main-navigation {
@@ -45,18 +55,27 @@ body {
   list-style: none;
 }
 
-ul.site-navigation {
+ul.navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 840px;
 }
 
-a.header-logo:hover,
-a.header-logo:focus {
-  opacity: 0.8;
+.main-header img:hover,
+.main-header img:focus {
+  color: $accent-color;
 }
 
-a.header-logo:active {
-  opacity: 0.3;
+.main-header img:active {
+  opacity: 0.5;
+}
+
+.main-header a:hover,
+.main-header a:focus {
+  color: $accent-color;
+}
+
+.main-header a:active {
+  opacity: 0.5;
 }

@@ -11,6 +11,10 @@
     />
     <title>Goodwork</title>
     <link rel="stylesheet" href="../../css/dmitrii/style-v1.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   </head>
 
   <body>
@@ -45,13 +49,30 @@
       </section>
       <h2>1. Секция "Первый экран"</h2>
     <section>
-        {% for slide in top_slides %}
-        <div class="slide">
+      <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for slide in top_slides %}
+        <div class="swiper-slide">
             <img src="../{{ slide.img }}" alt="" style="height: 10rem">
             <h3>{{slide.title}}</h2>
             <p>{{slide.text}}</p>
         </div>
         {% endfor %}
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev">Prev</div>
+  <div class="swiper-button-next">Next</div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
     </section>
 
     <h2>2. Секция "Заслуги/Достижения"</h2>
@@ -103,6 +124,7 @@
     </main>
     <footer>
     </footer>
-    <script></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../../dmitrii/scripts/main.js"></script>
   </body>
 </html>
