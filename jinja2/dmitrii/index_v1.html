@@ -10,15 +10,15 @@
       href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
     />
     <title>Goodwork</title>
-    <link rel="stylesheet" href="../../css/dmitrii/style-v1.css" />
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
+    <link rel="stylesheet" href="../../css/dmitrii/style-v1.css"/>
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <div class="container">
         <nav x-data="" class="navigation">
           <a href="" class="navigation-logo">
@@ -31,7 +31,12 @@
           </a>
           <ul class="navigation-list">
             <li><a href="#" class="current">Компания</a></li>
-            <li><a href="#">Каталог Спецтехники</a></li>
+            <li class="submenu"><a href="#">Каталог Спецтехники</a>
+              <ul>
+                <li class="submenu-item"><a href="#">Zvezda</a></li>
+                <li class="submenu-item"><a href="#">Goodwork</a></li>
+              </ul>
+            </li>
             <li><a href="catalog.html">Сервис и запчасти</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
@@ -42,21 +47,17 @@
       </div>
     </header>
     <main>
-    
-      <section class="">
-        <h1 class=>We are goodwork!</h1>
-        <div class="main-bg"></div>
-      </section>
-      <h2>1. Секция "Первый экран"</h2>
-    <section>
-      <!-- Slider main container -->
+    <section class="">
+      <h2 class="visually-hidden">1. Секция "Первый экран"</h2>
+    <img class="main-hero" src="../../img/dmitrii/r4g075233_rrd_1366x768 (1).png" alt="">
+      <!-- my-slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     {% for slide in top_slides %}
         <div class="swiper-slide">
-            <img src="../{{ slide.img }}" alt="" style="height: 10rem">
+            <img src="../{{ slide.img }}" alt="">
             <h3>{{slide.title}}</h2>
             <p>{{slide.text}}</p>
         </div>
@@ -75,10 +76,10 @@
 </div>
     </section>
 
-    <h2>2. Секция "Заслуги/Достижения"</h2>
-    <section>
+    <h2 class="visually-hidden">2. Секция "Заслуги/Достижения"</h2>
+    <section class="achievements container">
         {% for merit in merits %}
-        <div class="slide">
+        <div class="achievement-item">
             <p>{{merit.prefix}}</p>
             <h3>{{merit.number}}</h2>
             <h3>{{merit.title}}</h2>
@@ -88,10 +89,10 @@
     </section>
 
     <h2>3. Секция "Каталог"</h2>
-    <section>
+    <section class="container">
         {% for item in catalog %}
-        <div class="slide">
-            <img src="{{ item.img }}" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../{{ item.img }}" alt="">
     
             <h3>{{item.title}}</h2>
             
@@ -108,11 +109,11 @@
     </section>
 
     <h2>4. Секция "Наши преимущества"</h2>
-    <section>
+    <section class="container">
         {% for benefit in benefits %}
-        <div class="slide">
+        <div class="my-slide">
             
-            <img src="{{ benefit.img }}" alt="" style="height: 10rem">
+            <img src="../{{ benefit.img }}" alt="">
             
             <h3>{{benefit.title}}</h2>
             

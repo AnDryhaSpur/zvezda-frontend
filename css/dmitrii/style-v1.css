@@ -87,7 +87,19 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
   margin: 0;
@@ -106,7 +118,7 @@ a {
 }
 
 .container {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -116,19 +128,17 @@ a {
 }
 
 nav.navigation {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 1rem;
   align-items: center;
 }
 
-.main-navigation {
-  display: flex;
-  padding-top: 49px;
+a.navigation-logo {
+  cursor: pointer;
 }
 
-.main-header .header-logo {
+.navigation-logo {
   width: 160px;
   height: 65px;
 }
@@ -143,12 +153,40 @@ ul.navigation-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 840px;
+  position: relative;
 }
 
 .main-header img:hover,
 .main-header img:focus {
   color: #ffdc00;
+  opacity: 0.5;
+}
+
+.submenu-item {
+  position: absolute;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  top: 100%;
+  width: 25rem;
+  background-color: #fff;
+  box-shadow: 0 0.15rem 0.15rem rgba(36, 36, 36, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.submenu:hover {
+  color: #FFD84E;
+}
+
+.submenu:hover .submenu-item {
+  padding: 0.5rem 1rem;
+  opacity: 1;
+  height: auto;
 }
 
 .main-header img:active {
@@ -162,36 +200,21 @@ ul.navigation-list {
 
 .main-header a:active {
   opacity: 0.5;
-}/*# sourceMappingURL=style-v1.css.map */
+}
 
+.main-hero {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .swiper {
-  width: 600px;
-  height: 600px;
+  position: relative;
+  top: -100px;
+  width: 400px;
+  height: 150px;
+  border-radius: 5px;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.achievements {
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+}/*# sourceMappingURL=style-v1.css.map */

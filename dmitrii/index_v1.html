@@ -10,15 +10,15 @@
       href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
     />
     <title>Goodwork</title>
-    <link rel="stylesheet" href="../../css/dmitrii/style-v1.css" />
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
+    <link rel="stylesheet" href="../../css/dmitrii/style-v1.css"/>
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <div class="container">
         <nav x-data="" class="navigation">
           <a href="" class="navigation-logo">
@@ -31,7 +31,12 @@
           </a>
           <ul class="navigation-list">
             <li><a href="#" class="current">Компания</a></li>
-            <li><a href="#">Каталог Спецтехники</a></li>
+            <li class="submenu"><a href="#">Каталог Спецтехники</a>
+              <ul>
+                <li class="submenu-item"><a href="#">Zvezda</a></li>
+                <li class="submenu-item"><a href="#">Goodwork</a></li>
+              </ul>
+            </li>
             <li><a href="catalog.html">Сервис и запчасти</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
@@ -42,33 +47,29 @@
       </div>
     </header>
     <main>
-    
-      <section class="">
-        <h1 class=>We are goodwork!</h1>
-        <div class="main-bg"></div>
-      </section>
-      <h2>1. Секция "Первый экран"</h2>
-    <section>
-      <!-- Slider main container -->
+    <section class="">
+      <h2 class="visually-hidden">1. Секция "Первый экран"</h2>
+    <img class="main-hero" src="../../img/dmitrii/r4g075233_rrd_1366x768 (1).png" alt="">
+      <!-- my-slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     
         <div class="swiper-slide">
-            <img src="../img/slides/new_color.jpg" alt="" style="height: 10rem">
+            <img src="../img/slides/new_color.jpg" alt="">
             <h3>Представляем новые цвета бренда ZVEZDA</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
         </div>
         
         <div class="swiper-slide">
-            <img src="../img/slides/new_model.jpg" alt="" style="height: 10rem">
+            <img src="../img/slides/new_model.jpg" alt="">
             <h3>Новая модель - телескопический погрузчик ZVEZDA TL3000</h2>
             <p>Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         
         <div class="swiper-slide">
-            <img src="../img/slides/new_shipment.jpg" alt="" style="height: 10rem">
+            <img src="../img/slides/new_shipment.jpg" alt="">
             <h3>Большой завоз новой техники</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
         </div>
@@ -87,24 +88,24 @@
 </div>
     </section>
 
-    <h2>2. Секция "Заслуги/Достижения"</h2>
-    <section>
+    <h2 class="visually-hidden">2. Секция "Заслуги/Достижения"</h2>
+    <section class="achievements container">
         
-        <div class="slide">
+        <div class="achievement-item">
             <p>Более</p>
             <h3>11</h2>
             <h3>Лет на рынке</h2>
             <p>Надежная техника и качественный сервис - залог отличной репутации и процветания компании</p>
         </div>
         
-        <div class="slide">
+        <div class="achievement-item">
             <p>Более</p>
             <h3>200</h2>
             <h3>Единиц проданной техники</h2>
             <p>Множество довольных нашей техникой клиентов по всей России и СНГ</p>
         </div>
         
-        <div class="slide">
+        <div class="achievement-item">
             <p>До</p>
             <h3>1000</h2>
             <h3>Наименований запчастей в наличии</h2>
@@ -114,10 +115,10 @@
     </section>
 
     <h2>3. Секция "Каталог"</h2>
-    <section>
+    <section class="container">
         
-        <div class="slide">
-            <img src="img/catalog/lx100f.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/lx100f.jpg" alt="">
     
             <h3>LX100F</h2>
             
@@ -131,8 +132,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/lx180f.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/lx180f.jpg" alt="">
     
             <h3>LX180F</h2>
             
@@ -146,8 +147,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/lx280f.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/lx280f.jpg" alt="">
     
             <h3>LX280F</h2>
             
@@ -161,8 +162,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/lx300f.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/lx300f.jpg" alt="">
     
             <h3>LX300F</h2>
             
@@ -176,8 +177,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/lx330g.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/lx330g.jpg" alt="">
     
             <h3>LX330G</h2>
             
@@ -191,8 +192,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/zl15e.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/zl15e.jpg" alt="">
     
             <h3>ZL15E</h2>
             
@@ -206,8 +207,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/zl15g.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/zl15g.jpg" alt="">
     
             <h3>ZL15G</h2>
             
@@ -221,8 +222,8 @@
             
         </div>
         
-        <div class="slide">
-            <img src="img/catalog/zl20g.jpg" alt="" style="height: 10rem">
+        <div class="my-slide">
+            <img src="../img/catalog/zl20g.jpg" alt="">
     
             <h3>ZL20G</h2>
             
@@ -239,11 +240,11 @@
     </section>
 
     <h2>4. Секция "Наши преимущества"</h2>
-    <section>
+    <section class="container">
         
-        <div class="slide">
+        <div class="my-slide">
             
-            <img src="img/benefits/1.jpg" alt="" style="height: 10rem">
+            <img src="../img/benefits/1.jpg" alt="">
             
             <h3>Производительность</h2>
             
@@ -251,9 +252,9 @@
             
         </div>
         
-        <div class="slide">
+        <div class="my-slide">
             
-            <img src="img/benefits/2.jpg" alt="" style="height: 10rem">
+            <img src="../img/benefits/2.jpg" alt="">
             
             <h3>Качество</h2>
             
@@ -261,9 +262,9 @@
             
         </div>
         
-        <div class="slide">
+        <div class="my-slide">
             
-            <img src="img/benefits/3.jpg" alt="" style="height: 10rem">
+            <img src="../img/benefits/3.jpg" alt="">
             
             <h3>Безопасность</h2>
             
@@ -271,9 +272,9 @@
             
         </div>
         
-        <div class="slide">
+        <div class="my-slide">
             
-            <img src="img/benefits/4.jpg" alt="" style="height: 10rem">
+            <img src="../img/benefits/4.jpg" alt="">
             
             <h3>Комфорт</h2>
             
