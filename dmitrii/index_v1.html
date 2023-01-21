@@ -19,7 +19,7 @@
         </a>
         <ul class="navigation-list">
           <li><a href="#" class="current">Компания</a></li>
-          <li class="submenu"><a href="#">Каталог Спецтехники</a>
+          <li class="submenu"><a href="#">Каталог Спецтехники &dtrif;</a>
             <div class="dropdown-content">
               <a href="#">Zvezda</a>
               <a href="#">Goodwork</a>
@@ -27,15 +27,17 @@
             </div>
           </li>
           <li><a href="catalog.html">Сервис и запчасти</a></li>
+          <li><a href="catalog.html">Политика</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="tel:+4733378901">+47 333 78 901</a></li>
+          <li><a class="button" href="tel:+4733378901">+47 333 78 901</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
+    
     <section class="main-hero">
       <!-- my-slider main container -->
       <div class="swiper">
@@ -44,39 +46,30 @@
           <!-- Slides -->
           
           <div class="swiper-slide">
-          <div class="hero-text container">
-        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
-        <p class="hero-description">
-          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
-        </p>
-      </div>
             <img src="../img/slides/new_color.jpg" alt="">
-            <h3>Представляем новые цвета бренда ZVEZDA</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+            <div class="slide-text">
+              <h2 class="slide-title">Представляем новые цвета бренда ZVEZDA</h2>
+              <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+              <a class="button" href="#">Узнать больше</a>
+            </div>
           </div>
           
           <div class="swiper-slide">
-          <div class="hero-text container">
-        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
-        <p class="hero-description">
-          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
-        </p>
-      </div>
             <img src="../img/slides/new_model.jpg" alt="">
-            <h3>Новая модель - телескопический погрузчик ZVEZDA TL3000</h2>
-              <p>Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="slide-text">
+              <h2 class="slide-title">Новая модель - телескопический погрузчик ZVEZDA TL3000</h2>
+              <p class="slide-description">Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a class="button" href="#">Узнать больше</a>
+            </div>
           </div>
           
           <div class="swiper-slide">
-          <div class="hero-text container">
-        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
-        <p class="hero-description">
-          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
-        </p>
-      </div>
             <img src="../img/slides/new_shipment.jpg" alt="">
-            <h3>Большой завоз новой техники</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+            <div class="slide-text">
+              <h2 class="slide-title">Большой завоз новой техники</h2>
+              <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+              <a class="button" href="#">Узнать больше</a>
+            </div>
           </div>
           
           ...
@@ -85,16 +78,20 @@
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev">Prev</div>
-        <div class="swiper-button-next">Next</div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+              
       </div>
       </div>
     </section>
 
-    <h2 class="visually-hidden">2. Секция "Заслуги/Достижения"</h2>
+    <!-- <div class="hero-text container">
+        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
+        <p class="hero-description">
+          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
+        </p>
+      </div> -->
+
     <section class="achievements container">
       
       <div class="achievements-item">
@@ -120,9 +117,11 @@
       
     </section>
 
-    <h2 class="container">Каталог</h2>
-    <section class="catalog container">
-      
+    
+    <section class="container">
+      <h2 class="section-header">Наш Каталог</h2>
+      <div class="catalog">
+        
       <div class="catalog-item">
         <img src="../img/catalog/lx100f.jpg" alt="">
 
@@ -135,6 +134,8 @@
           <p>500</p>
 
           <p>0.7</p>
+
+          <a class="button" href="#">Узнать больше</a>
 
       </div>
       
@@ -151,6 +152,8 @@
 
           <p>0.9</p>
 
+          <a class="button" href="#">Узнать больше</a>
+
       </div>
       
       <div class="catalog-item">
@@ -165,6 +168,8 @@
           <p>1000</p>
 
           <p>1.1</p>
+
+          <a class="button" href="#">Узнать больше</a>
 
       </div>
       
@@ -181,6 +186,8 @@
 
           <p>1.3</p>
 
+          <a class="button" href="#">Узнать больше</a>
+
       </div>
       
       <div class="catalog-item">
@@ -195,6 +202,8 @@
           <p>1500</p>
 
           <p>1.5</p>
+
+          <a class="button" href="#">Узнать больше</a>
 
       </div>
       
@@ -211,6 +220,8 @@
 
           <p>1.7</p>
 
+          <a class="button" href="#">Узнать больше</a>
+
       </div>
       
       <div class="catalog-item">
@@ -225,6 +236,8 @@
           <p>2000</p>
 
           <p>1.9</p>
+
+          <a class="button" href="#">Узнать больше</a>
 
       </div>
       
@@ -241,13 +254,17 @@
 
           <p>2.1</p>
 
+          <a class="button" href="#">Узнать больше</a>
+
       </div>
       
+      </div>
     </section>
 
-    <h2>4. Секция "Наши преимущества"</h2>
-    <section class="benefits container">
-      
+    <section class="container">
+      <h2 class="section-header">Преимущества</h2>
+      <div class="benefits">
+        
       <div class="benefits-item">
 
         <img src="../img/benefits/1.jpg" alt="">
@@ -288,6 +305,7 @@
 
       </div>
       
+      </div>
     </section>
   </main>
   <footer>

@@ -19,7 +19,7 @@
         </a>
         <ul class="navigation-list">
           <li><a href="#" class="current">Компания</a></li>
-          <li class="submenu"><a href="#">Каталог Спецтехники</a>
+          <li class="submenu"><a href="#">Каталог Спецтехники &dtrif;</a>
             <div class="dropdown-content">
               <a href="#">Zvezda</a>
               <a href="#">Goodwork</a>
@@ -27,15 +27,17 @@
             </div>
           </li>
           <li><a href="catalog.html">Сервис и запчасти</a></li>
+          <li><a href="catalog.html">Политика</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="tel:+4733378901">+47 333 78 901</a></li>
+          <li><a class="button" href="tel:+4733378901">+47 333 78 901</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
+    
     <section class="main-hero">
       <!-- my-slider main container -->
       <div class="swiper">
@@ -44,15 +46,12 @@
           <!-- Slides -->
           {% for slide in top_slides %}
           <div class="swiper-slide">
-          <div class="hero-text container">
-        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
-        <p class="hero-description">
-          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
-        </p>
-      </div>
             <img src="../{{ slide.img }}" alt="">
-            <h3>{{slide.title}}</h2>
-              <p>{{slide.text}}</p>
+            <div class="slide-text">
+              <h2 class="slide-title">{{slide.title}}</h2>
+              <p class="slide-description">{{slide.text}}</p>
+              <a class="button" href="#">Узнать больше</a>
+            </div>
           </div>
           {% endfor %}
           ...
@@ -61,16 +60,20 @@
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev">Prev</div>
-        <div class="swiper-button-next">Next</div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+              
       </div>
       </div>
     </section>
 
-    <h2 class="visually-hidden">2. Секция "Заслуги/Достижения"</h2>
+    <!-- <div class="hero-text container">
+        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
+        <p class="hero-description">
+          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
+        </p>
+      </div> -->
+
     <section class="achievements container">
       {% for merit in merits %}
       <div class="achievements-item">
@@ -82,9 +85,11 @@
       {% endfor %}
     </section>
 
-    <h2 class="container">Каталог</h2>
-    <section class="catalog container">
-      {% for item in catalog %}
+    
+    <section class="container">
+      <h2 class="section-header">Наш Каталог</h2>
+      <div class="catalog">
+        {% for item in catalog %}
       <div class="catalog-item">
         <img src="../{{ item.img }}" alt="">
 
@@ -98,13 +103,17 @@
 
           <p>{{item.bucket_size}}</p>
 
+          <a class="button" href="#">Узнать больше</a>
+
       </div>
       {% endfor %}
+      </div>
     </section>
 
-    <h2>4. Секция "Наши преимущества"</h2>
-    <section class="benefits container">
-      {% for benefit in benefits %}
+    <section class="container">
+      <h2 class="section-header">Преимущества</h2>
+      <div class="benefits">
+        {% for benefit in benefits %}
       <div class="benefits-item">
 
         <img src="../{{ benefit.img }}" alt="">
@@ -115,6 +124,7 @@
 
       </div>
       {% endfor %}
+      </div>
     </section>
   </main>
   <footer>
