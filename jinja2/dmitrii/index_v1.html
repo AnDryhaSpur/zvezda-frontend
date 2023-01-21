@@ -1,131 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
-    />
-    <title>Goodwork</title>
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
-    <link rel="stylesheet" href="../../css/dmitrii/style-v1.css"/>
-  </head>
 
-  <body>
-    <header class="main-header">
-      <div class="container">
-        <nav x-data="" class="navigation">
-          <a href="" class="navigation-logo">
-            <img
-              src="../../img/goodwork.svg"
-              alt="Логотип"
-              width="160"
-              height="65"
-            />
-          </a>
-          <ul class="navigation-list">
-            <li><a href="#" class="current">Компания</a></li>
-            <li class="submenu"><a href="#">Каталог Спецтехники</a>
-              <ul>
-                <li class="submenu-item"><a href="#">Zvezda</a></li>
-                <li class="submenu-item"><a href="#">Goodwork</a></li>
-              </ul>
-            </li>
-            <li><a href="catalog.html">Сервис и запчасти</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li><a href="tel:+4733378901">+47 333 78 901</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-    <section class="">
-      <h2 class="visually-hidden">1. Секция "Первый экран"</h2>
-    <img class="main-hero" src="../../img/dmitrii/r4g075233_rrd_1366x768 (1).png" alt="">
+<head>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" />
+  <title>Goodwork</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../css/dmitrii/style-v1.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+      <nav x-data="" class="navigation">
+        <a href="" class="navigation-logo">
+          <img src="../../img/goodwork.svg" alt="Логотип" width="160" height="65" />
+        </a>
+        <ul class="navigation-list">
+          <li><a href="#" class="current">Компания</a></li>
+          <li class="submenu"><a href="#">Каталог Спецтехники</a>
+            <div class="dropdown-content">
+              <a href="#">Zvezda</a>
+              <a href="#">Goodwork</a>
+              <a href="#">New Stuff</a>
+            </div>
+          </li>
+          <li><a href="catalog.html">Сервис и запчасти</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li><a href="tel:+4733378901">+47 333 78 901</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="main-hero">
       <!-- my-slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    {% for slide in top_slides %}
-        <div class="swiper-slide">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {% for slide in top_slides %}
+          <div class="swiper-slide">
+          <div class="hero-text container">
+        <h1 class="hero-header">Меняем представление о Китайской технике</h1>
+        <p class="hero-description">
+          Бирюзовая компания, которая завоевывает доверие тысяч клиентов круглый год.
+        </p>
+      </div>
             <img src="../{{ slide.img }}" alt="">
             <h3>{{slide.title}}</h2>
-            <p>{{slide.text}}</p>
+              <p>{{slide.text}}</p>
+          </div>
+          {% endfor %}
+          ...
         </div>
-        {% endfor %}
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev">Prev</div>
-  <div class="swiper-button-next">Next</div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">Prev</div>
+        <div class="swiper-button-next">Next</div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      </div>
     </section>
 
     <h2 class="visually-hidden">2. Секция "Заслуги/Достижения"</h2>
     <section class="achievements container">
-        {% for merit in merits %}
-        <div class="achievement-item">
-            <p>{{merit.prefix}}</p>
-            <h3>{{merit.number}}</h2>
-            <h3>{{merit.title}}</h2>
+      {% for merit in merits %}
+      <div class="achievements-item">
+        <p>{{merit.prefix}}</p>
+        <h3>{{merit.number}}</h2>
+          <h3>{{merit.title}}</h2>
             <p>{{merit.text}}</p>
-        </div>
-        {% endfor %}
+      </div>
+      {% endfor %}
     </section>
 
-    <h2>3. Секция "Каталог"</h2>
-    <section class="container">
-        {% for item in catalog %}
-        <div class="my-slide">
-            <img src="../{{ item.img }}" alt="">
-    
-            <h3>{{item.title}}</h2>
-            
-            <h4>{{item.price}}</h4>
-            
-            <p>{{item.mass}}</p>
-            
-            <p>{{item.capacity}}</p>
-            
-            <p>{{item.bucket_size}}</p>
-            
-        </div>
-        {% endfor %}
+    <h2 class="container">Каталог</h2>
+    <section class="catalog container">
+      {% for item in catalog %}
+      <div class="catalog-item">
+        <img src="../{{ item.img }}" alt="">
+
+        <h3>{{item.title}}</h2>
+
+          <h4>{{item.price}}</h4>
+
+          <p>{{item.mass}}</p>
+
+          <p>{{item.capacity}}</p>
+
+          <p>{{item.bucket_size}}</p>
+
+      </div>
+      {% endfor %}
     </section>
 
     <h2>4. Секция "Наши преимущества"</h2>
-    <section class="container">
-        {% for benefit in benefits %}
-        <div class="my-slide">
-            
-            <img src="../{{ benefit.img }}" alt="">
-            
-            <h3>{{benefit.title}}</h2>
-            
-            <p>{{benefit.text}}</p>
-            
-        </div>
-        {% endfor %}
+    <section class="benefits container">
+      {% for benefit in benefits %}
+      <div class="benefits-item">
+
+        <img src="../{{ benefit.img }}" alt="">
+
+        <h3>{{benefit.title}}</h2>
+
+          <p>{{benefit.text}}</p>
+
+      </div>
+      {% endfor %}
     </section>
-    </main>
-    <footer>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../../dmitrii/scripts/main.js"></script>
-  </body>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../../dmitrii/scripts/main.js"></script>
+</body>
+
 </html>

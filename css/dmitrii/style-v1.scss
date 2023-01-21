@@ -18,13 +18,12 @@ a {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .main-header {
   background-color:#333333;
-  border-bottom: 1px solid $text-color;
 }
 
 nav.navigation {
@@ -43,6 +42,10 @@ a.navigation-logo {
   height: 65px;
 }
 
+.navigation-logo:hover {
+  fill: $accent-color;
+}
+
 .main-header ul {
   margin: 0;
   padding: 0;
@@ -58,7 +61,7 @@ ul.navigation-list {
 
 .main-header img:hover,
 .main-header img:focus {
-  color: $accent-color;
+  stroke: $accent-color;
   opacity: 0.5;
 }
 
@@ -72,22 +75,38 @@ ul.navigation-list {
     border-radius: 3px;
     top: 100%;
     width: 25rem;
-    background-color: #fff;
+    background-color: $base-gray;
     box-shadow: 0 0.15rem 0.15rem rgb(36 36 36 / 30%);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+}
+
+.submenu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .submenu:hover {
   color: #FFD84E;
 }
 
-.submenu:hover
-.submenu-item {
-  padding: 0.5rem 1rem;
-  opacity: 1;
-  height: auto;
+.dropdown-content a:hover {
+  display: block;
 }
 
 .main-header img:active {
@@ -103,18 +122,129 @@ ul.navigation-list {
   opacity: 0.5;
 }
 
-.main-hero {
-  object-fit: contain;
+// .main-hero {
+//   padding-top: 3rem;
+//   background:linear-gradient(rgba(0,0,0,0.450),rgba(0, 0, 0, 0.25)),  url("../../img/dmitrii/AdobeStock_193600390.5f4d4b6aa741d.5f4d4ba7ece2e.5f4d4cad246d9.png") no-repeat center / cover;
+//   width:100%;
+//   height: 100vh;
+//   margin-bottom: 2rem;
+// }
+
+.inner-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .swiper {
-  position: relative;
-  top: -100px;
-  width: 400px;
-  height: 150px;
-  border-radius: 5px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .achievements {
   display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.achievements-item {
+  width: 15rem;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.achievements-item:nth-child(1)::before {
+  content: url(../../dmitrii/icons/user-group.svg);
+}
+
+.achievements-item:nth-child(2)::before {
+  content: url(../../dmitrii/icons/chart-bar.svg);
+}
+
+.achievements-item:nth-child(3)::before {
+  content: url(../../dmitrii/icons/wrench.svg);
+}
+
+.achievements-item:hover {
+  background-color: $base-gray;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.3s ease;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.catalog-item {
+  padding: 1rem;
+  width: 15rem;
+  margin-right: 1rem;
+}
+
+.catalog-item img {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.catalog-item:hover {
+  background-color: $base-gray;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.961) 0px 50px 100px -20px, rgba(0, 0, 0, 0.976) 0px 30px 60px -30px;
+  transition: all 0.3s ease;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.benefits-item {
+  padding: 1rem;
+  width: 15rem;
+  margin-right: 1rem;
+}
+
+.benefits-item img {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.benefits-item:hover {
+  background-color: $base-gray;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: white;
+  height: 10rem;
 }
