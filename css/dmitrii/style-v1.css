@@ -124,6 +124,7 @@ a {
 
 .main-header {
   background: #333333;
+  border-bottom: 1px solid #ffdc00;
   position: fixed;
   left: 0;
   right: 0;
@@ -279,6 +280,7 @@ ul.navigation-list {
 }
 
 .slide-text {
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -394,6 +396,30 @@ ul.navigation-list {
 }
 
 footer {
-  background-color: white;
-  height: 10rem;
+  background-color: #333333;
+  border-top: 1px solid #ffdc00;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.footer-menu {
+  list-style: none;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }/*# sourceMappingURL=style-v1.css.map */
