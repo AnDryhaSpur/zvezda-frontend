@@ -75,8 +75,8 @@ ul.navigation-list {
   padding: 0.5rem 1rem;
 }
 
-.main-header img:hover,
-.main-header img:focus {
+.navigation-logo img:hover,
+.navigation-logo img:focus {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -271,6 +271,7 @@ ul.navigation-list {
 .catalog-item img {
   border-radius: 5px;
   margin-bottom: 1rem;
+  height: 150px;
 }
 
 .catalog-item:hover {
@@ -316,16 +317,28 @@ footer {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-gap: 2rem;
-  align-items: center;
 }
 
-.footer-menu {
-  list-style: none;
+ul.footer-menu {
+  margin-bottom: 2rem;
 }
 
 .contacts {
   display: flex;
   flex-direction: column;
+}
+
+.contacts p {
+  margin-bottom: 0.5rem;
+}
+
+.contacts a {
+  margin-bottom: 0.5rem;
+}
+
+.email:hover,
+.email:focus {
+  color: $accent-color;
 }
 
 .info {
@@ -334,3 +347,53 @@ footer {
   align-items: flex-end;
 }
 
+.info .navigation-logo {
+  margin-bottom: 2.5rem;
+}
+
+.info a:hover,
+.info a:focus {
+  color: $accent-color;
+} 
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  color: $accent-color;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.round-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: $base-gray;
+  color: $text-color;
+  vertical-align: middle;
+}
+
+.round-button:hover {
+  background-color: $accent-color;
+}
+
+.round-button:hover svg {
+  fill: $base-black;
+}
+
+.social-media svg {
+  display: inline-block;
+  // width: 25px;
+  // height: 50px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+}
