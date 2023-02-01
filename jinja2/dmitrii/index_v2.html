@@ -3,19 +3,141 @@
 
 <head>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet"
-    href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <title>Goodwork</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../../css/dmitrii/style-v2.css" />
+  <link rel="stylesheet" href="../../css/dmitrii/style_v2.css" />
 </head>
 
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header>
+    <a href="" class="navigation-logo">
+      <img src="../../img/goodwork.svg" alt="Логотип" width="160" height="65" />
+    </a>
+    <div class="user-buttons">
+      <ul>
+        <li><a href="#" class="current">Свяжитесь с нами</a></li>
+        <li><a href="#" class="current">Заказать демо</a></li>
+        <li><a href="#" class="current">Калькулятор стоимости</a></li>
+      </ul>
+    </div>
+    <div class="aside-user-buttons">
+      <ul>
+        <li><a href="#" class="current">Поиск</a></li>
+        <li><a href="#" class="current">Язык</a></li>
+        <li><a href="#" class="current">Тема</a></li>
+      </ul>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Сервис</a></li>
+      <li><a href="#">Запчасти</a></li>
+      <li><a href="#">Финансирование</a></li>
+      <li><a href="#">Про компанию</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="main-hero">
+      <!-- my-slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {% for slide in top_slides %}
+          <div class="swiper-slide">
+            <img src="../{{ slide.img }}" alt="">
+            <div class="slide-text">
+              <h2 class="slide-title">{{slide.title}}</h2>
+              <p class="slide-description">{{slide.text}}</p>
+              <a class="button" href="#">Узнать больше</a>
+            </div>
+          </div>
+          {% endfor %}
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+      </div>
+    </section>
+    <section class="achievements container">
+      {% for merit in merits %}
+      <div class="achievements-item">
+        <p>{{merit.prefix}}</p>
+        <h3>{{merit.number}}</h2>
+          <h3>{{merit.title}}</h2>
+            <p>{{merit.text}}</p>
+      </div>
+      {% endfor %}
+    </section>
+    <section class="container">
+      <h2 class="section-header">Наш Каталог</h2>
+      <div class="catalog">
+        {% for item in catalog %}
+        <div class="catalog-item">
+          <img src="../{{ item.img }}" alt="">
+
+          <h3>{{item.title}}</h2>
+
+            <h4>{{item.price}}</h4>
+
+            <p>{{item.mass}}</p>
+
+            <p>{{item.capacity}}</p>
+
+            <p>{{item.bucket_size}}</p>
+
+            <a class="button" href="#">Узнать больше</a>
+
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-header">Преимущества</h2>
+      <div class="benefits">
+        {% for benefit in benefits %}
+        <div class="benefits-item">
+
+          <img src="../{{ benefit.img }}" alt="">
+
+          <h3>{{benefit.title}}</h2>
+
+            <p>{{benefit.text}}</p>
+
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="news">
+      <div class="swiper news">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="../../dmitrii/scripts/main.js"></script>
+  <script src="../../dmitrii/scripts/main-v2.js"></script>
 </body>
 
 </html>
