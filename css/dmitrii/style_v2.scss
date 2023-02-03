@@ -1,3 +1,5 @@
+@import 'colors', 'reset';
+
 body {
   margin: 0;
   padding: 0;
@@ -5,12 +7,34 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-family: "Nunito", "Arial", sans-serif;
-  color: $text-color;
+  color: $base-black;
+}
 
-  background-color: #333333;
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: red;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-buttons-list {
+  display: flex;
+
+}
+
+.aside-buttons-list {
+  display: flex;
 }
 
