@@ -405,6 +405,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .copyright {
@@ -425,4 +426,27 @@ footer {
 .info {
   display: flex;
   flex-direction: row;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.div-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-media {
+  padding-bottom: 1rem;
+}
+
+.social-list li {
+  margin-right: 0.5rem;
+}
+
+.navigation-logo {
+  border-top: 2px solid #df0000;
 }/*# sourceMappingURL=style_v2.css.map */

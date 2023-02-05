@@ -1,4 +1,4 @@
-@import 'colors', 'reset', 'hover';
+@import "colors", "reset", "hover";
 
 body {
   margin: 0;
@@ -50,7 +50,6 @@ header {
 
 .user-buttons-list {
   display: flex;
-
 }
 
 .aside-buttons-list {
@@ -73,7 +72,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 2px solid $base-color ;
+  border-right: 2px solid $base-color;
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -148,7 +147,6 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
 .achievements-item {
@@ -279,6 +277,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .copyright {
@@ -299,4 +298,27 @@ footer {
 .info {
   display: flex;
   flex-direction: row;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.div-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-media {
+  padding-bottom: 1rem;
+}
+
+.social-list li {
+  margin-right: 0.5rem;
+}
+
+.navigation-logo {
+  border-top: 2px solid $base-color;
 }
