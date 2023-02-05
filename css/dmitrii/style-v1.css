@@ -262,13 +262,6 @@ ul.navigation-list {
   margin-bottom: 5rem;
 }
 
-.inner-hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .swiper {
   width: 100%;
   height: 100vh;
