@@ -1,187 +1,149 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
+  <head>
+    <title>Test</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
 
-<head>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css"/>
-    <script src="https://kit.fontawesome.com/edc1c15fde.js" crossorigin="anonymous"></script>
-    <title>Zvezda</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-</head>
-
-<body x-data="{
-        y_coord:0,
-        upper_hidden: false,
-        once_scrolled: false,
-        sections: [0,],
-        init() {
-            setInterval(() => {
-            this.y_coord = window.pageYOffset;
-            }, 100);
-        },
-    }">
-
-    <header :class="upper_hidden ? 'state_dark' : ''">
-
-        <div class="bc-menu_hor upper" :class="upper_hidden ? 'state_hidden' : ''">
-            <div class="logo_desc">
-                <span>СПЕЦТЕХНИКА</span>
-                <span class="logo_desc-text">Надежная и доступная техника из Китая</span>
-            </div>
-            <a href="https://good-work.biz/" style="font-size: 0.7rem">
-            <img src="img/goodwork.svg" alt="goodwork" style="width: 5rem"> - качественная спецтехника для профессионалов</a>
-        </div>
-
-        <nav class="bc-menu_hor top" x-effect="upper_hidden=(y_coord>300 ? true : false)">
-            <a href="#" class="bc-logo top-logo" :class="upper_hidden ? '' : 'state_big'"><img src="img/zvezda.svg" alt="logo"></a>
-            <div class="bc-submenu_hor top-menu">
-                <div class="item-wrapper"><a href="#" class="bc-link top-menu-item">Главная</a></div>
-                <div class="item-wrapper"><a href="context_helper.html" class="bc-link top-menu-item">Помощник по контексту</a>
-                </div>
-                <div class="item-wrapper"><a href="details.html" class="bc-link top-menu-item">О Zvezda</a>
-                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Производство</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Сервис</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Запчасти</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Гарантия</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Лизинг</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Кредит</a></div>
-                    </div>
-                </div>
-                <div class="item-wrapper"><a href="info.html" class="bc-link top-menu-item">Полезное</a>
-                    <div class="dropdown" :class="upper_hidden ? 'state_dark' : ''">
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Новости</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Фотогалерея</a></div>
-                        <div class="item-wrapper"><a href="#" class="bc-link dropdown-item">Видео-материалы</a></div>
-                    </div>
-                </div>
-                <div class="item-wrapper"><a href="contacts.html" class="bc-link top-menu-item">Контакты</a>
-                </div>
-            </div>
-            <div class="bc-submenu_hor top-phone">
-                <a href="#" class="bc-link top-phone-number">8 800 999-99-99</a>
-                <a href="#" class="bc-button top-phone-button">Заказать звонок</a>
-            </div>
-        </nav>
-
+  <body>
+    <header>
+      <div class="top-nav">
+        <a href="#" class="logo">
+          <img
+            src="/img/goodwork.svg"
+            alt="Логотип компании фронтальных погрузчиков GoodWork"
+          />
+        </a>
+        <ul class="nav-list">
+          <li>
+            <a href="#"
+              >Свяжитесь с нами<img class="icon" src="/img/globe-icon.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              >Свяжитесь с нами <img class="icon" src="/img/truck-icon.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              >Свяжитесь с нами <img class="icon" src="/img/phone-icon.svg"
+            /></a>
+          </li>
+        </ul>
+        <a class="basic-btn phone" href="tel:+78005553535"
+          >&#9742; 8 800 555-35-35</a
+        >
+      </div>
+      <nav class="sub-nav">
+        <ul class="sub-nav-list">
+          <li class="submenu-item">
+            <a href="#">Каталог &#11206;</a>
+            <ul class="dropdown">
+              <li><a href="#">Фронтальные погрузчики</a></li>
+              <li><a href="#">Бетономешалки</a></li>
+              <li><a href="#">Пирожки</a></li>
+              <li><a href="#">Звезда</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Сервис</a></li>
+          <li><a href="#">Запчасти</a></li>
+          <li><a href="#">Финансирование</a></li>
+          <li><a href="#">Про компанию</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-
-        <nav class="page_nav" :class="upper_hidden ? '' : 'state_hidden'">
-            <ul>
-                <li @click="window.scrollTo({top:sections[0], behavior:'smooth'})" :class="y_coord<sections[1]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[1], behavior:'smooth'})" :class="sections[1]-200<y_coord && y_coord<sections[2]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[2], behavior:'smooth'})" :class="sections[2]-200<y_coord && y_coord<sections[3]-200 ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-                <li @click="window.scrollTo({top:sections[3], behavior:'smooth'})" :class="sections[3]-200<y_coord ? 'state_active' : ''"><img src="img/loader-icon.png" alt=""></li>
-            </ul>
-        </nav>
-
-        <section class="first" x-effect="sections[0]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-            <h1>Фронтальные погрузчики от производителя</h1>
-            <div class="bc-card_wrapper first-merits">
-                {% for i in range(4) %}
-                <div class="bc-card merit">
-                    <span>МНОГО</span>
-                    <span>{{i}}</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quibusdam.</span>
-                </div>
-                {% endfor %}
+    <div class="hero">
+      <h1>Фронтальные погрузчики GoodWork от производителя</h1>
+      <div class="call-to-action">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+          commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
+          aspernatur fugiat, ullam quas quisquam.
+        </p>
+        <button class="basic-btn">Заказать технику</button>
+        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+      </div>
+      <div class="top-slider">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="/img/ZL20GRed_1.jpg" class="slide-1" />
             </div>
-            <div class="first-slider">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                    {% for i in top_slides %}
-                        <div class="swiper-slide">
-                            <span class="slide-bg_img" style="background-image: url(img/{{ i.img }})"></span>
-                            <a href="/">
-                                <div class="slide-img_wrapper">
-                                    <img src="img/{{ i.img }}">
-                                </div>
-                                <div class="slide-textcard">
-                                    <h3>{{ i.title }}</h3>
-                                    <p>
-                                    Lorem ipsum {{ i.title }}, amet consectetur adipisicing elit. A harum {{ i.title }} consequatur, facilis eius doloremque odit quaerat eos minima voluptates aperiam voluptate officiis vitae pariatur cum molestias exercitationem, tempora nisi delectus sunt sit. Quaerat sunt vel dolor animi ducimus.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
-                <div class="swiper-navigation">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+            <div class="swiper-slide">
+              <img src="/img/ZL20GRed_1.jpg" class="slide-2" />
             </div>
-        </section>
-
-        <section class="lineup" x-effect="sections[1]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-            <h2>Модельный ряд</h2>
-            <div class="bc-card_wrapper lineup-wrapper">
-            {% for i in range(7) %}
-                <a href="#" class="bc-card vehicle">
-                    <h3>Zvezda ZL20</h3>
-                    <ul class="vehicle-props">
-                        <li>
-                            <span class="name">Ковш, м3</span>
-                            <span class="value">1.1</span>
-                        </li>
-                        <li>
-                            <span class="name">Подъем, кг</span>
-                            <span class="value">1200</span>
-                        </li>
-                        <li>
-                            <span class="name">Мощность, л.с.</span>
-                            <span class="value">45</span>
-                        </li>
-                        <li>
-                            <span class="name">Цена, руб</span>
-                            <span class="value">1 400 000</span>
-                        </li>
-                    </ul>
-                    <div class="vehicle-img_wrapper">
-                        <img src="img/load-2.jpeg" alt="">
-                    </div>
-                </a>
-            {% endfor %}
+            <div class="swiper-slide">
+              <img src="/img/ZL20GRed_1.jpg" class="slide-3" />
             </div>
-        </section>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
-        <section class="third" x-effect="sections[2]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-        <span></span>
-        </section>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    <div class="long-test"></div>
+    <!-- <img
+      src="https://sites.google.com/site/prirodanasevseegooglgfgf/_/rsrc/1463456237313/home/priroda_gory_nebo_ozero_oblaka_81150_1920x1080.jpg"
+      alt="mountain and nature background"
+    />
+    <div class="tint"></div>
+    <div class="main-card">
+      <input type="url" id="url" placeholder="Your background URL" required />
 
-        <section class="fourth" x-effect="sections[3]=(y_coord+$el.getBoundingClientRect().top).toFixed(1)">
-        <span x-text="sections[3]"></span>
-        </section>
+      <button class="button">Load the Background</button>
 
-    </main>
+      <div class="radio-buttons">
+        <input type="radio" id="red" name="color-selector" />
+        <label for="red">Red</label>
 
-    <footer>
-    </footer>
+        <input type="radio" id="yellow" name="color-selector" />
+        <label for="yellow">Yellow</label>
 
-    <script src="https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js"></script>
+        <input type="radio" id="green" name="color-selector" />
+        <label for="green">Green</label>
+      </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-    let swiper= new Swiper('.first-slider .swiper', {
-        effect: 'fade',
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
         loop: true,
-        speed: 800,
-        //autoplay: {
-        //    delay: 5000,
-        //    disableOnInteraction: false,
-        //    pauseOnMouseEnter: true,
-        //},
+        speed: 500,
+        slidesPerView: 1.5,
+
+        // If we need pagination
         pagination: {
-            type: 'fraction',
-            el: '.first-slider .swiper-pagination',
+          el: ".swiper-pagination"
         },
+
+        // Navigation arrows
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
     </script>
-</body>
+    <script src="src/index.js"></script>
+  </body>
 </html>
