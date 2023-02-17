@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context helper</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 3rem;
+            justify-content: center;
+            border-bottom: 0.5rem solid brown;
+        }
+        .slide {
+            border: 1px solid #000;
+            display: grid;
+            grid-template-columns: 15rem auto;
+            padding: 0.5rem;
+            gap: 0.3rem;
+        }
+        .slide * {
+            grid-column: 1;
+        }
+        .helper_expression,
+        .helper_statement {
+            font-size: 1.2rem;
+            color: darkblue;
+            border: 1px dashed grey;
+            border-radius: 0.2rem;
+            grid-column: 2;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .helper_statement {
+            grid-column: 1/-1;
+            justify-self: start;
+        }
+    </style>
+</head>
+<body>
+    <section>Если возникла ошибка<i>watch_jinja.py</i>(не правильно написана директива, опечатка или забыта парная закрывающая директива), то после исправления ошибки следует перезапустить скрипт в терминале. </section>
+    <h2>1. Секция "Первый экран"</h2>
+    <section>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for slide in top_slides %}</span>
+            <img src="img/slides/new_color.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ slide.img }}"</span>
+            <h3>Представляем новые цвета бренда ZVEZDA</h2>
+            <span class="helper_expression">{{ slide.title }}</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+            <span class="helper_expression">{{ slide.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for slide in top_slides %}</span>
+            <img src="img/slides/new_model.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ slide.img }}"</span>
+            <h3>Новая модель - телескопический погрузчик ZVEZDA TL3000</h2>
+            <span class="helper_expression">{{ slide.title }}</span>
+            <p>Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="helper_expression">{{ slide.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for slide in top_slides %}</span>
+            <img src="img/slides/new_shipment.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ slide.img }}"</span>
+            <h3>Большой завоз новой техники</h2>
+            <span class="helper_expression">{{ slide.title }}</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe optio nisi illo maiores officiis id perferendis natus nobis nemo.</p>
+            <span class="helper_expression">{{ slide.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+    </section>
+
+    <h2>2. Секция "Заслуги/Достижения"</h2>
+    <section>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for merit in merits %}</span>
+            <p>Более</p>
+            <span class="helper_expression">src="{{ merit.prefix }}"</span>
+            <h3>11</h2>
+            <span class="helper_expression">{{ merit.number }}</span>
+            <h3>Лет на рынке</h2>
+            <span class="helper_expression">{{ merit.title }}</span>
+            <p>Надежная техника и качественный сервис - залог отличной репутации и процветания компании</p>
+            <span class="helper_expression">{{ merit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for merit in merits %}</span>
+            <p>Более</p>
+            <span class="helper_expression">src="{{ merit.prefix }}"</span>
+            <h3>200</h2>
+            <span class="helper_expression">{{ merit.number }}</span>
+            <h3>Единиц проданной техники</h2>
+            <span class="helper_expression">{{ merit.title }}</span>
+            <p>Множество довольных нашей техникой клиентов по всей России и СНГ</p>
+            <span class="helper_expression">{{ merit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for merit in merits %}</span>
+            <p>До</p>
+            <span class="helper_expression">src="{{ merit.prefix }}"</span>
+            <h3>1000</h2>
+            <span class="helper_expression">{{ merit.number }}</span>
+            <h3>Наименований запчастей в наличии</h2>
+            <span class="helper_expression">{{ merit.title }}</span>
+            <p>Помощь в подборе запчастей и ремонте техники даже в постгарантийный период</p>
+            <span class="helper_expression">{{ merit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+    </section>
+
+    <h2>3. Секция "Каталог"</h2>
+    <section>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/lx100f.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>LX100F</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>0</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>1000</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>500</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>0.7</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/lx180f.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>LX180F</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>150000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>1500</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>750</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>0.9</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/lx280f.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>LX280F</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>300000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>2000</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>1000</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>1.1</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/lx300f.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>LX300F</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>450000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>2500</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>1250</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>1.3</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/lx330g.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>LX330G</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>600000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>3000</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>1500</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>1.5</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/zl15e.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>ZL15E</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>750000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>3500</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>1750</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>1.7</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/zl15g.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>ZL15G</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>900000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>4000</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>2000</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>1.9</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for item in catalog %}</span>
+            <img src="img/catalog/zl20g.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ item.img }}"</span>
+            <h3>ZL20G</h2>
+            <span class="helper_expression">{{ item.title }}</span>
+            <h4>1050000</h4>
+            <span class="helper_expression">{{ item.price }}</span>
+            <p>4500</p>
+            <span class="helper_expression">{{ item.mass }}</span>
+            <p>2250</p>
+            <span class="helper_expression">{{ item.capacity }}</span>
+            <p>2.1</p>
+            <span class="helper_expression">{{ item.bucket_size }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+    </section>
+
+    <h2>4. Секция "Наши преимущества"</h2>
+    <section>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for benefit in benefits %}</span>
+            <img src="img/benefits/1.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ benefit.img }}"</span>
+            <h3>Производительность</h2>
+            <span class="helper_expression">{{ benefit.title }}</span>
+            <p>Надёжные двигатели мировых производителей DEUTZ (Германия), WEICHAI (Китай), CUMMINS (США), YUCHAI (Китай), PERKINS (Англия)</p>
+            <span class="helper_expression">{{ benefit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for benefit in benefits %}</span>
+            <img src="img/benefits/2.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ benefit.img }}"</span>
+            <h3>Качество</h2>
+            <span class="helper_expression">{{ benefit.title }}</span>
+            <p>Рабочие агрегаты и комплектующие проверенного качества. Гидравлические насосы (SEM); Ведущие мосты («LAIYANG» поставщик SEM); Коробка передач («Xin Li De» поставщик SEM)</p>
+            <span class="helper_expression">{{ benefit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for benefit in benefits %}</span>
+            <img src="img/benefits/3.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ benefit.img }}"</span>
+            <h3>Безопасность</h2>
+            <span class="helper_expression">{{ benefit.title }}</span>
+            <p>Усиленная рама с запасом прочности. Повышенная устойчивость к изгибу и скручиванию. При производстве рамы и ковша погрузчика используются роботы-сварщики фирмы «Panasonic»(Япония)</p>
+            <span class="helper_expression">{{ benefit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+        <div class="slide">
+            <span class="helper_statement">{% for benefit in benefits %}</span>
+            <img src="img/benefits/4.jpg" alt="" style="height: 10rem">
+            <span class="helper_expression">src="{{ benefit.img }}"</span>
+            <h3>Комфорт</h2>
+            <span class="helper_expression">{{ benefit.title }}</span>
+            <p>Адаптированны для российских условий эксплуатации. Утеплённая кабина; Две жидкостные печки; Подогреватель двигателя; Вездеходные шины; Биметаллические втулки; Масла в агрегатах до -35С</p>
+            <span class="helper_expression">{{ benefit.text }}</span>
+            <span class="helper_statement">{% endfor %}</span>
+        </div>
+        
+    </section>
+
+</body>
+</html>
