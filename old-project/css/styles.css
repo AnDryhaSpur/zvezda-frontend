@@ -61,6 +61,7 @@ section {
   border-radius: 0.2em;
   padding: 0.7em;
   gap: 0.7em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -74,6 +75,7 @@ section {
   border-radius: 0.2em;
   padding: 0.7em;
   gap: 0.7em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -83,6 +85,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 0.7em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -93,6 +96,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 0.7em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -106,8 +110,10 @@ section {
 .bc-button {
   text-decoration: none;
   font-family: inherit;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.8rem;
@@ -194,8 +200,10 @@ h2 {
 
 header {
   background: none;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   z-index: 10;
@@ -411,8 +419,10 @@ section {
 .page_nav {
   position: fixed;
   padding-left: 1.5rem;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   top: 50%;
@@ -433,6 +443,7 @@ section {
   position: relative;
   padding: 0;
   list-style-type: none;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
@@ -443,6 +454,7 @@ section {
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   transition: transform 0.2s ease;
 }
@@ -465,6 +477,7 @@ section {
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .page_nav ul .state_active img {
@@ -512,6 +525,7 @@ section {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .first-slider .swiper-slide .slide-bg_img {
@@ -662,6 +676,7 @@ section {
   align-items: center;
 }
 .first-slider .swiper-pagination {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
@@ -736,6 +751,7 @@ section {
   display: grid;
   justify-content: right;
   align-items: center;
+  grid-template-columns: -webkit-fit-content 1fr;
   grid-template-columns: fit-content 1fr;
   gap: 1rem 0;
   transition: all 0.2s ease;

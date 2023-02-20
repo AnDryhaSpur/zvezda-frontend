@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Test</title>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
-      rel="stylesheet"
-    />
+          href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+          rel="stylesheet" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/styles/reset.css"/>
-    <link rel="stylesheet" href="/styles/styles.css"/>
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
 
   <body>
     <header>
-      <div class="top-nav">
-        <a href="#" class="logo">
-          <img
-            src="/images/goodwork.svg"
-            alt="Логотип компании фронтальных погрузчиков GoodWork"
-          />
-        </a>
-        <ul class="nav-list">
-          <li>
-            <a href="#"
-              >Свяжитесь с нами<img class="icon" src="/images/globe-icon.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              >Свяжитесь с нами <img class="icon" src="/images/truck-icon.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              >Свяжитесь с нами <img class="icon" src="/images/phone-icon.svg"
-            /></a>
-          </li>
-        </ul>
-        <a class="basic-btn phone" href="tel:+78005553535"
-          >&#9742; 8 800 555-35-35</a
-        >
+      <div class="nav-wrapper">
+        <div class="top-nav">
+          <a href="#" class="logo">
+            <img
+                 src="/img/goodwork.svg"
+                 alt="Логотип компании фронтальных погрузчиков GoodWork" />
+          </a>
+          <ul class="nav-list">
+            <li>
+              <a href="#">Свяжитесь с нами<img class="icon" src="/img/globe-icon.svg" /></a>
+            </li>
+            <li>
+              <a href="#">Свяжитесь с нами <img class="icon" src="/img/truck-icon.svg" /></a>
+            </li>
+            <li>
+              <a href="#">Свяжитесь с нами <img class="icon" src="/img/phone-icon.svg" /></a>
+            </li>
+          </ul>
+          <a class="basic-btn phone" href="tel:+78005553535">&#9742; 8 800 555-35-35</a>
+        </div>
+        <nav class="sub-nav">
+          <ul class="sub-nav-list">
+            <li class="submenu-item">
+              <a href="#">Каталог &#11206;</a>
+              <ul class="dropdown">
+                <li><a href="#">Фронтальные погрузчики</a></li>
+                <li><a href="#">Бетономешалки</a></li>
+                <li><a href="#">Пирожки</a></li>
+                <li><a href="#">Звезда</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Сервис</a></li>
+            <li><a href="#">Запчасти</a></li>
+            <li><a href="#">Финансирование</a></li>
+            <li><a href="#">Про компанию</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="sub-nav">
-        <ul class="sub-nav-list">
-          <li class="submenu-item">
-            <a href="#">Каталог &#11206;</a>
-            <ul class="dropdown">
-              <li><a href="#">Фронтальные погрузчики</a></li>
-              <li><a href="#">Бетономешалки</a></li>
-              <li><a href="#">Пирожки</a></li>
-              <li><a href="#">Звезда</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Сервис</a></li>
-          <li><a href="#">Запчасти</a></li>
-          <li><a href="#">Финансирование</a></li>
-          <li><a href="#">Про компанию</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <div class="hero">
+    <section class="hero">
       <h1>Фронтальные погрузчики GoodWork от производителя</h1>
       <div class="call-to-action">
         <p>
@@ -87,10 +79,13 @@
               <img src="/img/slide_1.jpg" class="slide-1" />
             </div>
             <div class="swiper-slide">
-              <img src="/img/slide_1.jpg" class="slide-2" />
+              <img src="/img/slide_2.jpg" class="slide-2" />
             </div>
             <div class="swiper-slide">
               <img src="/img/slide_1.jpg" class="slide-3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/slide_2.jpg" class="slide-2" />
             </div>
           </div>
           <!-- If we need pagination -->
@@ -101,14 +96,28 @@
           <div class="swiper-button-next"></div>
         </div>
       </div>
-    </div>
-    <div class="long-test"></div>
+    </section>
+    <section class="long-test"></section>
     <section>
-    <div class="stats">
-      <h3>GoodWork это:</h3>
-      <div class="stats-item"><img src="/img/calendar-icon.svg" alt=""><p class="big-number">7</p><p class="stats-description">лет успешной работы</p></div>
-      <div class="stats-item"><img src="/img/calendar-icon.svg" alt=""><p class="big-number">8300</p><p class="stats-description">проданных погрузчиков</p></div>
-      <div class="stats-item"><img src="/img/calendar-icon.svg" alt=""><p class="big-number">53</p><p class="stats-description">локации по всей России</p></div>
+      <div class="stats">
+        <h3>GoodWork это:</h3>
+        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+          <p class="big-number">7</p>
+          <p class="stats-description">лет успешной работы</p>
+        </div>
+        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+          <p class="big-number">8300</p>
+          <p class="stats-description">проданных погрузчиков</p>
+        </div>
+        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+          <p class="big-number">53</p>
+          <p class="stats-description">локации по всей России</p>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div class="catalog-item">
+    <h3></h3>
     </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -117,7 +126,8 @@
         // Optional parameters
         loop: true,
         speed: 500,
-        slidesPerView: 1.5,
+        slidesPerView: 1,
+        effect: "fade",
 
         // If we need pagination
         pagination: {
@@ -133,4 +143,5 @@
     </script>
     <script src="scripts/index.js"></script>
   </body>
+
 </html>
