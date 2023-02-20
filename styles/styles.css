@@ -133,7 +133,6 @@ header img {
   background-color: rgba(170, 170, 170, 0.274);
 }
 
-/* hero secton */
 .hero {
   display: grid;
   padding: 1rem;
@@ -228,4 +227,46 @@ h1 {
 
 .long-test {
   height: 1000px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+
+.stats h3 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.stats-item img {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem 1rem;
+  background-color: #b82c23;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.stats-item:nth-child(2) img {
+  background-color: #00c5c0;
+}
+
+.stats-item:nth-child(3) img {
+  background-color: orange;
+}
+
+.big-number {
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid orange;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
 }/*# sourceMappingURL=styles.css.map */
