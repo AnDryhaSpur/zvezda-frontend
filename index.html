@@ -4,20 +4,19 @@
   <head>
     <title>Test</title>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-          href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
-          rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
 
   <body>
-    <header>
+    <header x-data="{ scrolled: false }">
       <div class="nav-wrapper">
         <div class="top-nav">
           <a href="#" class="logo">
@@ -27,7 +26,7 @@
           </a>
           <ul class="nav-list">
             <li>
-              <a href="#">Свяжитесь с нами<img class="icon" src="/img/globe-icon.svg" /></a>
+              <a href="#">Свяжитесь с нами<img class="icon" height="1rem" src="/img/globe-icon.svg" /></a>
             </li>
             <li>
               <a href="#">Свяжитесь с нами <img class="icon" src="/img/truck-icon.svg" /></a>
@@ -59,16 +58,7 @@
     </header>
 
     <section class="hero">
-      <h1>Фронтальные погрузчики GoodWork от производителя</h1>
-      <div class="call-to-action">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-          commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
-          aspernatur fugiat, ullam quas quisquam.
-        </p>
-        <button class="basic-btn">Заказать технику</button>
-        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-      </div>
+
       <div class="top-slider">
         <!-- Slider main container -->
         <div class="swiper">
@@ -96,29 +86,30 @@
           <div class="swiper-button-next"></div>
         </div>
       </div>
-    </section>
-    <section class="long-test"></section>
-    <section>
-      <div class="stats">
-        <h3>GoodWork это:</h3>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">7</p>
-          <p class="stats-description">лет успешной работы</p>
-        </div>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">8300</p>
-          <p class="stats-description">проданных погрузчиков</p>
-        </div>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">53</p>
-          <p class="stats-description">локации по всей России</p>
-        </div>
+      <h1>Фронтальные погрузчики <b>GoodWork</b> от производителя</h1>
+      <div class="call-to-action">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+          commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
+          aspernatur fugiat, ullam quas quisquam.
+        </p>
+        <button class="basic-btn">Заказать технику</button>
+        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
       </div>
     </section>
-    <section>
-    <div class="catalog-item">
-    <h3></h3>
-    </div>
+    
+    <section class="cards-test">
+      <div class="card card-2w card-trans">
+        <h2>Компания <b>GoodWork</b> это:</h2>
+      </div>
+      <div class="card">Tempore natus assumenda quia distinctio, sint harum optio accusamus tenetur numquam eum, maxime
+        blanditiis aspernatur nulla excepturi sapiente ab rerum?</div>
+      <div class="card">Dicta exercitationem ipsa, voluptate voluptatibus eum cupiditate. Expedita magnam, architecto
+        incidunt ab, perferendis quae eos, quam beatae sunt id quos.</div>
+      <div class="card ">Deleniti assumenda dignissimos itaque officia tenetur impedit sed corporis dolor sapiente quas
+        consectetur temporibus nihil recusandae, atque quibusdam vero est?</div>
+      <div class="card">Aut, provident? Voluptate, ut magni nisi eos exercitationem, voluptatem eius soluta officiis
+        repellendus sequi reiciendis quia nobis magnam vitae qui.</div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
