@@ -26,12 +26,14 @@
     --6bx: calc(6 * var(--1bx) + 5 * var(--basesize));
     --bradout: calc(1.5 * var(--basesize));
     --bradin: var(--basesize);
+    --bigrad: calc(2 * var(--bradout) - 2px);
     transition: all 0.2s ease;
 }
 
 // Utility classes
 .boxgrid {
     display: grid;
+    max-width: var(--6bx);
     gap: var(--basesize);
     grid-auto-flow: row dense;
     grid-auto-rows: var(--1bx);
@@ -60,10 +62,14 @@
     &:nth-last-of-type(4n) {
         background-color: var(--cl_bxbgyellow);
     }
-}
 
-.bg_trsp{
-    background-color: transparent;
+    &.bg_trsp {
+        background-color: transparent;
+    }
+
+    &.bg_white {
+        background-color: #fff;
+    }
 }
 
 @for $i from 2 through 12 {

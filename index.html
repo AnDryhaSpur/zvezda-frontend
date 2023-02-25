@@ -18,12 +18,14 @@
 
     <body>
         <header x-data="{ scrolled: false }">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+            <div class="round-left"></div>
+            <div class="round-right"></div>
             <div class="nav-wrapper">
                 <div class="top-nav">
                     <a href="#" class="logo">
-                        <img
-                             src="/img/goodwork.svg"
-                             alt="Логотип компании фронтальных погрузчиков GoodWork" />
+                        <img src="/img/logo-gw.png" alt="Логотип компанииGoodWork" />
                     </a>
                     <ul class="nav-list">
                         <li>
@@ -61,10 +63,8 @@
         </header>
 
         <section class="hero">
-
-            <div class="top-slider">
-                <!-- Slider main container -->
-                <div class="swiper">
+            <div class="hero-container | boxgrid">
+                <div class="swiper | box grw_4 grh_3 bg_trsp">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -88,27 +88,37 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-            </div>
-            <h1>Фронтальные погрузчики <b>GoodWork</b> от производителя</h1>
-            <div class="call-to-action">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                    commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
-                    aspernatur fugiat, ullam quas quisquam.
-                </p>
-                <button class="basic-btn">Заказать технику</button>
-                <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
+                <h1 class="box grw_2 grh_2 bg_trsp">Фронтальные погрузчики <b>GoodWork</b> от производителя</h1>
+                <div class="call-to-action | box grw_2 grh_1 bg_white">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                        commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
+                        aspernatur fugiat, ullam quas quisquam.
+                    </p>
+                    <button class="basic-btn">Заказать технику</button>
+                    <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
+                </div>
             </div>
         </section>
         
-        <section class="merits | boxgrid">
-            <div class="box grw_2 bg_trsp">
-                <h2>Компания<br><b>GoodWork</b> это:</h2>
+        <div class="accent-box">
+            <div class="accent-box-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+                <div class="round-left"></div>
+                <div class="round-right"></div>
             </div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
+        </div>
+        <section class="merits">
+            <div class="merits-container | boxgrid">
+                <div class="box grw_2 bg_trsp">
+                    <h2>Компания<br><b>GoodWork</b> это:</h2>
+                </div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
         </section>
         <section class="catalog">
             <div class="hwrapper">
@@ -532,10 +542,44 @@
         </section>
 
         <section class="benefits" style="background-image: url(/img/benefits_bg.jpeg)">
+            <div class="hwrapper">
+                <h2>Преимущества</h2>
+            </div>
             <div class="container | boxgrid">
                 <img src="/img/gw_no_bg.png" alt="" class="box bg_trsp grw_4 grh_3">
             </div>
         </section>
+
+        <section class="videogallery">
+            <div class="hwrapper">
+                <h2>Видеогалерея</h2>
+            </div>
+            <div class="boxgrid">
+                
+                <div class="video-item | box grw_2 grh_2">
+                    <a href="#">
+                        <img src="/img/ZL20GCyan.jpg" alt="">
+                    </a>
+                    <h4>Review of ZL20</h4>
+                </div>
+                
+                <div class="video-item | box grw_2 grh_2">
+                    <a href="#">
+                        <img src="/img/ZL20GCyan.jpg" alt="">
+                    </a>
+                    <h4>Review of ZL20</h4>
+                </div>
+                
+                <div class="video-item | box grw_2 grh_2">
+                    <a href="#">
+                        <img src="/img/ZL20GCyan.jpg" alt="">
+                    </a>
+                    <h4>Review of ZL20</h4>
+                </div>
+                
+            </div>
+        </section>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
             const swiper = new Swiper(".swiper", {
