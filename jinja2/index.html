@@ -1,249 +1,253 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Test</title>
-        <meta charset="UTF-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Philosopher:wght@400;700&family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-              rel="stylesheet">
-        <link
-              rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/styles/styles.css" />
-        <script src="//unpkg.com/alpinejs" defer></script>
-        <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Philosopher:wght@400;700&family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <header x-data="{ scrolled: false }">
+<body>
+    <header x-data="{ scrolled: false }">
+        <div class="clip-left"></div>
+        <div class="clip-right"></div>
+        <div class="round-left"></div>
+        <div class="round-right"></div>
+        <div class="nav-wrapper">
+            <div class="top-nav">
+                <a href="#" class="logo">
+                    <img src="/img/logo-gw.png" alt="Логотип компанииGoodWork" />
+                </a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">Свяжитесь с нами <span class="fa-solid fa-phone"></span></a>
+                    </li>
+                    <li>
+                        <a href="#">Демонстрация <span class="fa-solid fa-car"></span></a>
+                    </li>
+                    <li>
+                        <a href="#">Расчитать стоимость <span class="fa-solid fa-hand-holding-dollar"></span></a>
+                    </li>
+                </ul>
+                <a class="basic-btn phone" href="tel:+78005553535"><span
+                        class="fa-solid fa-mobile-screen-button"></span>
+                    8 800 555-35-35</a>
+            </div>
+            <nav class="sub-nav">
+                <ul class="sub-nav-list">
+                    <li class="submenu-item">
+                        <a href="#">Каталог &#11206;</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Фронтальные погрузчики</a></li>
+                            <li><a href="#">Бетономешалки</a></li>
+                            <li><a href="#">Пирожки</a></li>
+                            <li><a href="#">Звезда</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Сервис</a></li>
+                    <li><a href="#">Запчасти</a></li>
+                    <li><a href="#">Финансирование</a></li>
+                    <li><a href="#">Про компанию</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container | boxgrid">
+            <div class="swiper | box grw_4 grh_3 bg_trsp">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="/img/slide_1.jpg" class="slide-1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/slide_2.jpg" class="slide-2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/slide_1.jpg" class="slide-3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/slide_2.jpg" class="slide-2" />
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <h1 class="box grw_2 grh_2 bg_trsp">Фронтальные погрузчики <b>GoodWork</b> от производителя</h1>
+            <div class="call-to-action | box grw_2 grh_1 bg_white">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
+                    aspernatur fugiat, ullam quas quisquam.
+                </p>
+                <button class="basic-btn">Заказать технику</button>
+                <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
+            </div>
+        </div>
+    </section>
+    {# <section>
+        <div class="stats">
+            <h2>Компания GoodWork это:</h2>
+            <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+                <p class="big-number">7</p>
+                <p class="stats-description">лет успешной работы</p>
+            </div>
+            <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+                <p class="big-number">8300</p>
+                <p class="stats-description">проданных погрузчиков</p>
+            </div>
+            <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
+                <p class="big-number">53</p>
+                <p class="stats-description">локации по всей России</p>
+            </div>
+        </div>
+    </section> #}
+    <div class="accent-box">
+        <div class="accent-box-inner">
             <div class="clip-left"></div>
             <div class="clip-right"></div>
             <div class="round-left"></div>
             <div class="round-right"></div>
-            <div class="nav-wrapper">
-                <div class="top-nav">
-                    <a href="#" class="logo">
-                        <img src="/img/logo-gw.png" alt="Логотип компанииGoodWork" />
-                    </a>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#">Свяжитесь с нами <span class="fa-solid fa-phone"></span></a>
-                        </li>
-                        <li>
-                            <a href="#">Демонстрация <span class="fa-solid fa-car"></span></a>
-                        </li>
-                        <li>
-                            <a href="#">Расчитать стоимость <span class="fa-solid fa-hand-holding-dollar"></span></a>
-                        </li>
-                    </ul>
-                    <a class="basic-btn phone" href="tel:+78005553535"><span
-                              class="fa-solid fa-mobile-screen-button"></span>
-                        8 800 555-35-35</a>
-                </div>
-                <nav class="sub-nav">
-                    <ul class="sub-nav-list">
-                        <li class="submenu-item">
-                            <a href="#">Каталог &#11206;</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Фронтальные погрузчики</a></li>
-                                <li><a href="#">Бетономешалки</a></li>
-                                <li><a href="#">Пирожки</a></li>
-                                <li><a href="#">Звезда</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Сервис</a></li>
-                        <li><a href="#">Запчасти</a></li>
-                        <li><a href="#">Финансирование</a></li>
-                        <li><a href="#">Про компанию</a></li>
-                    </ul>
-                </nav>
+        </div>
+    </div>
+    <section class="merits">
+        <div class="merits-container | boxgrid">
+            <div class="box grw_2 bg_trsp">
+                <h2>Компания<br><b>GoodWork</b> это:</h2>
             </div>
-        </header>
-
-        <section class="hero">
-            <div class="hero-container | boxgrid">
-                <div class="swiper | box grw_4 grh_3 bg_trsp">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="/img/slide_1.jpg" class="slide-1" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/slide_2.jpg" class="slide-2" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/slide_1.jpg" class="slide-3" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/slide_2.jpg" class="slide-2" />
-                        </div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="hwrapper">
+            <h2>Каталог</h2>
+        </div>
+        <div class="catalog-box | boxgrid">
+            {% for _ in range(9) %}
+            <div class="catalog-item | box grw_2 innergrid_2x1">
+                <div class="description | inner">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <h1 class="box grw_2 grh_2 bg_trsp">Фронтальные погрузчики <b>GoodWork</b> от производителя</h1>
-                <div class="call-to-action | box grw_2 grh_1 bg_white">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                        commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
-                        aspernatur fugiat, ullam quas quisquam.
-                    </p>
-                    <button class="basic-btn">Заказать технику</button>
-                    <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
-                </div>
-            </div>
-        </section>
-        {# <section>
-      <div class="stats">
-        <h2>Компания GoodWork это:</h2>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">7</p>
-          <p class="stats-description">лет успешной работы</p>
-        </div>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">8300</p>
-          <p class="stats-description">проданных погрузчиков</p>
-        </div>
-        <div class="stats-item"><img src="/img/calendar-icon.svg" alt="">
-          <p class="big-number">53</p>
-          <p class="stats-description">локации по всей России</p>
-        </div>
-      </div>
-    </section> #}
-        <div class="accent-box">
-            <div class="accent-box-inner">
-                <div class="clip-left"></div>
-                <div class="clip-right"></div>
-                <div class="round-left"></div>
-                <div class="round-right"></div>
-            </div>
-        </div>
-        <section class="merits">
-            <div class="merits-container | boxgrid">
-                <div class="box grw_2 bg_trsp">
-                    <h2>Компания<br><b>GoodWork</b> это:</h2>
-                </div>
-                <div class="box">2</div>
-                <div class="box">3</div>
-                <div class="box">4</div>
-                <div class="box">5</div>
-            </div>
-        </section>
-        <section class="catalog">
-            <div class="hwrapper">
-                <h2>Каталог</h2>
-            </div>
-            <div class="catalog-box | boxgrid">
-                {% for _ in range(9) %}
-                <div class="catalog-item | box grw_2 innergrid_2x1">
-                    <div class="description | inner">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tag-buttons">
-                            <a href="#" class="">Новинка</a>
-                            <a href="#" class="">Хит-продаж</a>
-                        </div>
-                        <table class="specs">
-                            <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
-                            </tr>
-                            <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
-                            </tr>
-                            <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
-                            </tr>
-                        </table>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
+                    <div class="tag-buttons">
+                        <a href="#" class="">Новинка</a>
+                        <a href="#" class="">Хит-продаж</a>
                     </div>
-                    <div class="slider | inner">
-                        <img src="/img/slide_1.jpg" alt="">
+                    <table class="specs">
+                        <tr>
+                            <th>Масса, кг</th>
+                            <td>4000</td>
+                        </tr>
+                        <tr>
+                            <th>Длина, мм</th>
+                            <td>4900</td>
+                        </tr>
+                        <tr>
+                            <th>Ширина, мм</th>
+                            <td>1750</td>
+                        </tr>
+                        <tr>
+                            <th>Высота, мм</th>
+                            <td>2730</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша, л</th>
+                            <td>800</td>
+                        </tr>
+                    </table>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-            <div class="white-box">
-                <div class="clip-left"></div>
-                <div class="clip-right"></div>
-                <div class="round-left"></div>
-                <div class="round-right"></div>
-            </div>
-            </div>
-        </section>
-
-        <section class="benefits" style="background-image: url(/img/benefits_bg.jpeg)">
-            <div class="hwrapper">
-                <h2>Преимущества</h2>
-            </div>
-            <div class="container | boxgrid">
-                <img src="/img/gw_no_bg.png" alt="" class="box bg_trsp grw_4 grh_3">
-            </div>
-        </section>
-
-        <section class="videogallery">
-            <div class="hwrapper">
-                <h2>Видеогалерея</h2>
-            </div>
-            <div class="boxgrid">
-                {% for _ in range(3) %}
-                <div class="video-item | box grw_2 grh_2">
-                    <a href="#">
-                        <img src="/img/ZL20GCyan.jpg" alt="">
-                    </a>
-                    <h4>Review of ZL20</h4>
+                <div class="slider | inner">
+                    <img src="/img/slide_1.jpg" alt="">
                 </div>
-                {% endfor %}
             </div>
-        </section>
+            {% endfor %}
+        </div>
+        <div class="white-box">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+            <div class="round-left"></div>
+            <div class="round-right"></div>
+        </div>
+        </div>
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper(".swiper", {
-                // Optional parameters
-                loop: true,
-                speed: 500,
-                slidesPerView: 1,
-                effect: "fade",
+    <section class="benefits" style="background-image: url(/img/benefits_bg.jpeg)">
+        <div class="hwrapper">
+            <h2>Преимущества</h2>
+        </div>
+        <div class="container | boxgrid">
+            <img src="/img/gw_no_bg.png" alt="" class="box bg_trsp grw_4 grh_3">
+        </div>
+    </section>
 
-                // If we need pagination
-                pagination: {
-                    el: ".swiper-pagination"
-                },
+    <section class="videogallery">
+        <div class="hwrapper">
+            <h2>GoodWork ТВ</h2>
+        </div>
+        <div class="boxgrid">
+        {% for _ in range(3) %}
+            <div class="video-item | box grw_2 grh_2">
+                <a href="#">
+                    <img src="/img/ZL20GCyan.jpg" alt="">
+                    <span class="play-button fa-solid fa-circle-play"></span>
+                    <div class="video-description-wrapper">
+                        <h4>Обзор ZL20</h4>
+                        <p class="description">Обзор очень классного красного погрузчика!</p>
+                        <p class="date">26/02/2023</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 
-                // Navigation arrows
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev"
-                }
-            });
-        </script>
-        <script src="scripts/index.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            // Optional parameters
+            loop: true,
+            speed: 500,
+            slidesPerView: 1,
+            effect: "fade",
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination"
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    </script>
+    <script src="scripts/index.js"></script>
+</body>
 
 </html>

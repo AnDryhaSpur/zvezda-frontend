@@ -70,8 +70,16 @@ header {
         width: var(--bigrad);
         -webkit-mask-size: cover;
         mask-size: cover;
-        -webkit-mask-image: radial-gradient(circle var(--bigrad) at 0 100%, #0000 99%, #fff);
-        mask-image: radial-gradient(circle var(--bigrad) at 0 100%, #0000 99%, #fff);
+        -webkit-mask-image: radial-gradient(
+            circle var(--bigrad) at 0 100%,
+            #0000 99%,
+            #fff
+        );
+        mask-image: radial-gradient(
+            circle var(--bigrad) at 0 100%,
+            #0000 99%,
+            #fff
+        );
     }
 
     .clip-right {
@@ -83,8 +91,16 @@ header {
         width: var(--bigrad);
         -webkit-mask-size: cover;
         mask-size: cover;
-        -webkit-mask-image: radial-gradient(circle var(--bigrad) at 100% 100%, #0000 99%, #fff);
-        mask-image: radial-gradient(circle var(--bigrad) at 100% 100%, #0000 99%, #fff);
+        -webkit-mask-image: radial-gradient(
+            circle var(--bigrad) at 100% 100%,
+            #0000 99%,
+            #fff
+        );
+        mask-image: radial-gradient(
+            circle var(--bigrad) at 100% 100%,
+            #0000 99%,
+            #fff
+        );
     }
 
     .round-left {
@@ -170,6 +186,8 @@ header img {
 
         span {
             color: var(--cl_main);
+            transform: rotate(-11deg);
+            transition: transform .2s ease-out;
         }
     }
 }
@@ -196,7 +214,8 @@ header img {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    transition: all 0.2s ease 0s, visibility 0s linear 0.2s, z-index 0s linear 0.01s;
+    transition: all 0.2s ease 0s, visibility 0s linear 0.2s,
+        z-index 0s linear 0.01s;
 }
 
 .submenu-item:hover {
@@ -312,8 +331,16 @@ b {
             width: var(--bigrad);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bigrad) at 0 0, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bigrad) at 0 0, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bigrad) at 0 0,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bigrad) at 0 0,
+                #0000 99%,
+                #fff
+            );
         }
 
         .clip-right {
@@ -325,8 +352,16 @@ b {
             width: var(--bigrad);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bigrad) at 100% 0, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bigrad) at 100% 0, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bigrad) at 100% 0,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bigrad) at 100% 0,
+                #0000 99%,
+                #fff
+            );
         }
 
         .round-left {
@@ -572,8 +607,16 @@ table.specs {
         width: var(--bigrad);
         -webkit-mask-size: cover;
         mask-size: cover;
-        -webkit-mask-image: radial-gradient(circle var(--bigrad) at 0 100%, #0000 99%, #fff);
-        mask-image: radial-gradient(circle var(--bigrad) at 0 100%, #0000 99%, #fff);
+        -webkit-mask-image: radial-gradient(
+            circle var(--bigrad) at 0 100%,
+            #0000 99%,
+            #fff
+        );
+        mask-image: radial-gradient(
+            circle var(--bigrad) at 0 100%,
+            #0000 99%,
+            #fff
+        );
     }
 
     .clip-right {
@@ -585,8 +628,16 @@ table.specs {
         width: var(--bigrad);
         -webkit-mask-size: cover;
         mask-size: cover;
-        -webkit-mask-image: radial-gradient(circle var(--bigrad) at 100% 100%, #0000 99%, #fff);
-        mask-image: radial-gradient(circle var(--bigrad) at 100% 100%, #0000 99%, #fff);
+        -webkit-mask-image: radial-gradient(
+            circle var(--bigrad) at 100% 100%,
+            #0000 99%,
+            #fff
+        );
+        mask-image: radial-gradient(
+            circle var(--bigrad) at 100% 100%,
+            #0000 99%,
+            #fff
+        );
     }
 
     .round-left {
@@ -626,7 +677,13 @@ table.specs {
 // video-channel
 
 .videogallery {
-    border: 1px solid red;
+    // position: relative;
+    // margin-top: calc(0rem - var(--halfbx));
+    // padding-top: var(--halfbx);
+    background: url("/img/overlay_tv.png") no-repeat;
+    background-size: cover;                 
+    background-repeat: no-repeat;
+    background-position: center center;   
 
     .boxgrid {
         grid-auto-rows: auto;
@@ -635,11 +692,73 @@ table.specs {
 
 .video-item {
     height: calc(var(--1bx) + var(--halfbx));
+    position: relative;
 
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: all 0.2s ease;
+        filter: brightness(0.6);
         border-radius: var(--bradout);
     }
+
+    .video-description-wrapper {
+        color: white;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.2rem;
+
+        h4 {
+            font-size: 3em;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .date {
+            font-size: 1em;
+        }
+
+        .description {
+            font-size: 2em;
+        }
+
+
+    }
+
+    &:hover img {
+        transition: all 0.2s ease;
+        filter: brightness(1);
+    }
+
+    &:hover .video-description-wrapper {
+        display: none;
+        transition: all 0.2s ease;
+    }
+
+    &:hover .play-button {
+        display: block;
+        transition: all 0.2s ease;
+    }
+
+    .play-button {
+        display: none;
+        position: absolute;
+        overflow: hidden;
+        color: var(--cl_main);
+        font-size: 4em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease;
+    }
+
 }

@@ -1636,6 +1636,8 @@ header img {
 }
 .nav-list li a:hover span {
   color: var(--cl_main);
+  transform: rotate(-11deg);
+  transition: transform 0.2s ease-out;
 }
 
 .nav-list li:last-child {
@@ -2046,7 +2048,10 @@ table.specs th {
 }
 
 .videogallery {
-  border: 1px solid red;
+  background: url("/img/overlay_tv.png") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .videogallery .boxgrid {
   grid-auto-rows: auto;
@@ -2054,11 +2059,61 @@ table.specs th {
 
 .video-item {
   height: calc(var(--1bx) + var(--halfbx));
+  position: relative;
 }
 .video-item img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.2s ease;
+  filter: brightness(0.6);
   border-radius: var(--bradout);
+}
+.video-item .video-description-wrapper {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+.video-item .video-description-wrapper h4 {
+  font-size: 3em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.video-item .video-description-wrapper .date {
+  font-size: 1em;
+}
+.video-item .video-description-wrapper .description {
+  font-size: 2em;
+}
+.video-item:hover img {
+  transition: all 0.2s ease;
+  filter: brightness(1);
+}
+.video-item:hover .video-description-wrapper {
+  display: none;
+  transition: all 0.2s ease;
+}
+.video-item:hover .play-button {
+  display: block;
+  transition: all 0.2s ease;
+}
+.video-item .play-button {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  color: var(--cl_main);
+  font-size: 4em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
 }/*# sourceMappingURL=styles.css.map */
