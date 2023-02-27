@@ -1,0 +1,177 @@
+$gray: #aaa;
+$lightgray: #eee;
+
+@font-face {
+    font-family: 'Exo2';
+    src: url('../fonts/Exo2-VariableFont_wght.ttf');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo2';
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1em;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+p {
+    text-align: justify;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+nav,
+section {
+    width: 100%;
+    padding: 0 8%;
+}
+
+.bc {  // Base classes
+
+    &-menu_hor {  // Horizontal menu
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid $gray;
+        border-radius: 0.2em;
+        padding: 0.7em;
+        gap: 0.7em;
+        width: fit-content;
+    }
+
+    &-menu_ver {  // Vertical menu
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        border: 1px solid $gray;
+        border-radius: 0.2em;
+        padding: 0.7em;
+        gap: 0.7em;
+        width: fit-content;
+    }
+
+    &-submenu_hor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7em;
+        width: fit-content;
+    }
+
+    &-submenu_ver {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7em;
+        width: fit-content;
+    }
+
+    &-link {
+        color: #000;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    &-button {
+        text-decoration: none;
+        font-family: inherit;
+        height: fit-content;
+        width: fit-content;
+        font-size: 0.8rem;
+        line-height: 1em;
+        color: #000;
+        padding: 0.3em;
+        border: 1px solid #000;
+        border-radius: 0.2em;
+        background-color: $lightgray;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &:active {
+            background-color: $gray;
+            transform: translateY(5%);
+        }
+    }
+
+    &-logo {
+        display: flex;
+        max-width: 10rem;
+        img {
+            width: 100%;
+            object-fit: scale-down;
+        }
+
+    }
+
+    &-card_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    &-card {
+        display: grid;
+        width: clamp(7em, 20%, 14em);
+        padding: 0.7em;
+        border: 1px solid $gray;
+        border-radius: 0.2em;
+
+        &:hover {
+            background-color: $lightgray;
+        }
+
+        img {
+            width: 100%;
+            height: clamp(3rem, 100%, 15rem);
+            object-fit: cover;
+        }
+    }
+}

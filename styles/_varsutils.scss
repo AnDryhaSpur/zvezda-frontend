@@ -1,0 +1,125 @@
+// Global variables
+:root {
+    // font-family: "Jura", sans-serif;
+    // font-family: "Montserrat Alternates", sans-serif;
+    // font-family: "Montserrat", sans-serif;
+    // font-family: 'Philosopher', sans-serif;
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 300;
+    --cl_main: #d44128;
+    --cl_accent: #3cd1c5;
+    --cl_gray: #878787;
+    --cl_yellow: #f7ce24;
+    --cl_text: #3a3a3a;
+    --cl_bxbgmain: #fff5f5;
+    --cl_bxbgaccent: #edfaf9;
+    --cl_bxbggray: #f2f2f2;
+    --cl_bxbgyellow: #fffae3;
+    --cl_bxtext: #252525;
+    --basesize: 1rem;
+    --1bx: calc(12.5 * var(--basesize));
+    --halfbx: calc(0.5 * var(--1bx));
+    --2bx: calc(2 * var(--1bx) + var(--basesize));
+    --3bx: calc(3 * var(--1bx) + 2 * var(--basesize));
+    --4bx: calc(4 * var(--1bx) + 3 * var(--basesize));
+    --5bx: calc(5 * var(--1bx) + 4 * var(--basesize));
+    --6bx: calc(6 * var(--1bx) + 5 * var(--basesize));
+    --bradout: calc(1.5 * var(--basesize));
+    --bradin: var(--basesize);
+    --bigrad: calc(2 * var(--bradout) - 2px);
+    transition: all 0.2s ease;
+}
+
+// Utility classes
+.boxgrid {
+    display: grid;
+    max-width: var(--6bx);
+    gap: var(--basesize);
+    grid-auto-flow: row dense;
+    grid-auto-rows: var(--1bx);
+    grid-template-columns: repeat(6, var(--1bx));
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    grid-column: span 1;
+    grid-row: span 1;
+    border-radius: var(--bradout);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--cl_bxbggray);
+    color: var(--cl_bxtext);
+
+    &:nth-last-of-type(4n - 2) {
+        background-color: var(--cl_bxbgmain);
+    }
+    &:nth-last-of-type(4n - 1) {
+        background-color: var(--cl_bxbgaccent);
+    }
+    &:nth-last-of-type(4n) {
+        background-color: var(--cl_bxbgyellow);
+    }
+
+    &.bg_trsp {
+        background-color: transparent;
+    }
+
+    &.bg_white {
+        background-color: #fff;
+    }
+}
+
+@for $i from 2 through 12 {
+    .grh_#{$i} {
+        grid-row: span #{$i};
+    }
+    .grw_#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+@for $i from -12 through 12 {
+    .order_#{$i} {
+        order: #{$i};
+    }
+}
+
+@for $col from 2 through 12 {
+    @for $row from 1 through 12 {
+        .innergrid_#{$col}x#{$row} {
+            display: grid;
+            gap: 0.5rem;
+            grid-auto-flow: row dense;
+            grid-template-columns: repeat(#{$col}, 1fr);
+            grid-template-rows: repeat(#{$row}, 1fr);
+        }
+    }
+}
+
+.inner {
+    height: 100%;
+    width: 100%;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (max-width: 1400px) {
+    :root {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        font-size: 0.7rem;
+    }
+}
