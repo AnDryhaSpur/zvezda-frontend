@@ -50,14 +50,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background-color: var(--cl_bxbggray);
+    background-color: var(--cl_bxbgaccent);
     color: var(--cl_bxtext);
+
 
     &:nth-last-of-type(4n - 2) {
         background-color: var(--cl_bxbgmain);
     }
     &:nth-last-of-type(4n - 1) {
-        background-color: var(--cl_bxbgaccent);
+        background-color: var(--cl_bxbggray);
     }
     &:nth-last-of-type(4n) {
         background-color: var(--cl_bxbgyellow);
@@ -72,22 +73,16 @@
     }
 }
 
-@for $i from 2 through 12 {
-    .grh_#{$i} {
-        grid-row: span #{$i};
-    }
-    .grw_#{$i} {
-        grid-column: span #{$i};
+.hover3d {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scaleY(0.99) translateY(-0.1rem);
+        box-shadow: 0 0.3rem 0.2rem rgba(#000000, 0.2);
     }
 }
 
-@for $i from -12 through 12 {
-    .order_#{$i} {
-        order: #{$i};
-    }
-}
-
-@for $col from 2 through 12 {
+@for $col from 1 through 12 {
     @for $row from 1 through 12 {
         .innergrid_#{$col}x#{$row} {
             display: grid;
@@ -104,6 +99,21 @@
     width: 100%;
     grid-column: span 1;
     grid-row: span 1;
+}
+
+@for $i from 2 through 12 {
+    .grh_#{$i} {
+        grid-row: span #{$i};
+    }
+    .grw_#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+@for $i from -12 through 12 {
+    .order_#{$i} {
+        order: #{$i};
+    }
 }
 
 @media (max-width: 1400px) {
