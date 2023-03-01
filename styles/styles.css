@@ -2048,10 +2048,7 @@ table.specs th {
 }
 
 .videogallery {
-  background: url("/img/overlay_tv.png") no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: transparent;
 }
 .videogallery .boxgrid {
   grid-auto-rows: auto;
@@ -2116,4 +2113,14 @@ table.specs th {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s ease;
+}
+
+.about-us {
+  width: 100%;
+}
+.about-us .about {
+  display: flex;
+}
+.about-us .video-wrapper {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
