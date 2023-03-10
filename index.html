@@ -4,27 +4,26 @@
     <head>
         <title>Test</title>
         <meta charset="UTF-8" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-              href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Philosopher:wght@400;700&family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
               rel="stylesheet">
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="styles/styles.css" />
         <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+        <script src="scripts/index.js" defer></script>
         <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header x-data="{ scrolled: false }">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
-            <div class="round-left"></div>
-            <div class="round-right"></div>
+        <header>
             <div class="nav-wrapper">
                 <div class="top-nav">
                     <a href="#" class="logo">
-                        <img src="img/logo-gw.png" alt="Логотип компанииGoodWork" />
+                        <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
                     </a>
                     <ul class="nav-list">
                         <li>
@@ -37,9 +36,10 @@
                             <a href="#">Расчитать стоимость <span class="fa-solid fa-hand-holding-dollar"></span></a>
                         </li>
                     </ul>
-                    <a class="basic-btn phone" href="tel:+78005553535"><span
-                              class="fa-solid fa-mobile-screen-button"></span>
-                        8 800 555-35-35</a>
+                    <a class="basic-btn phone" href="tel:+78005553535">
+                        <span class="fa-solid fa-mobile-screen-button"></span>
+                        8 800 555-35-35
+                    </a>
                 </div>
                 <nav class="sub-nav">
                     <ul class="sub-nav-list">
@@ -56,14 +56,24 @@
                         <li><a href="#">Запчасти</a></li>
                         <li><a href="#">Финансирование</a></li>
                         <li><a href="#">Про компанию</a></li>
+                        <li><a href="#">Про компанию 2</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
+        <div class="clipped-corners-top" data-bg="turquoise">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+
+
+            </div>
+        </div>
+
         <section class="hero">
-            <div class="hero-container | boxgrid">
-                <div class="swiper | box grw_4 grh_3 bg_trsp">
+            <div class="hero-container | boxgrid halfrow">
+                <div class="swiper | box w_4 h_3">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -73,6 +83,8 @@
                                 <h3>Акция на GoodWork LX180F</h3>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Harum ab, culpa voluptatum
                                     quasi doloremque vero!
                                 </p>
                                 <span class="arrow"></span>
@@ -84,6 +96,8 @@
                                 <h3>Акция на Zvezda ZL20E</h3>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Harum ab, culpa voluptatum
                                     quasi doloremque vero!
                                 </p>
                                 <span class="arrow"></span>
@@ -95,6 +109,8 @@
                                 <h3>Акция на GoodWork LX180F</h3>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Harum ab, culpa voluptatum
                                     quasi doloremque vero!
                                 </p>
                                 <span class="arrow"></span>
@@ -106,6 +122,8 @@
                                 <h3>Акция на Zvezda ZL20E</h3>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Harum ab, culpa voluptatum
                                     quasi doloremque vero!
                                 </p>
                                 <span class="arrow"></span>
@@ -121,9 +139,9 @@
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
-                <h1 class="box grw_2 grh_2 bg_trsp">Фронтальные погрузчики <b
+                <h1 class="box w_2 h_2">Фронтальные погрузчики <b
                        class="goodwork-name">Good<span>Work</span></b> от производителя</h1>
-                <div class="call-to-action | box hover3d grw_2 grh_1 bg_white">
+                <div class="call-to-action | box hover3d w_2 h_1" data-bg="white">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
                         commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
@@ -135,21 +153,20 @@
             </div>
         </section>
 
-        <div class="accent-box">
-            <div class="accent-box-inner">
+        <div class="clipped-corners-bottom" data-bg="turquoise">
+            <div class="clipped-corners-inner">
                 <div class="clip-left"></div>
                 <div class="clip-right"></div>
-                <div class="round-left"></div>
-                <div class="round-right"></div>
             </div>
         </div>
+
         <section class="merits">
             <div class="merits-container | boxgrid">
-                <div class="box grw_2 bg_trsp">
+                <div class="box w_2">
                     <h2>Компания <b class="goodwork-name">Good<span>Work</span></b></h2>
                 </div>
 
-                <div class="merit | box hover3d">
+                <div class="merit | box hover3d" data-bg="yellow">
                     <img src="img/icons/calendar.png" alt="">
                     <span>Более</span>
                     <span class="number">11</span>
@@ -158,7 +175,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d">
+                <div class="merit | box hover3d" data-bg="gray">
                     <img src="img/icons/loader.png" alt="">
                     <span>Свыше</span>
                     <span class="number">500</span>
@@ -167,7 +184,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d">
+                <div class="merit | box hover3d" data-bg="red">
                     <img src="img/icons/engine.png" alt="">
                     <span>До</span>
                     <span class="number">1000</span>
@@ -176,7 +193,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d">
+                <div class="merit | box hover3d" data-bg="turquoise">
                     <img src="img/icons/map.png" alt="">
                     <span>Более чем в</span>
                     <span class="number">50</span>
@@ -192,10 +209,17 @@
             <div class="hwrapper">
                 <h2>Каталог</h2>
             </div>
+<<<<<<< HEAD
             <div class="catalog-box | boxgrid">
                 
                 <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
                     <div class="description | inner">
+=======
+            <div class="boxgrid">
+                
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -207,40 +231,38 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                 <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
                     <div class="description | inner">
+=======
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -252,40 +274,38 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                 <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
                     <div class="description | inner">
+=======
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -297,40 +317,38 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                 <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
                     <div class="description | inner">
+=======
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -342,40 +360,38 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                 <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
                     <div class="description | inner">
+=======
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -387,40 +403,34 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
-                    <div class="description | inner">
+                
+                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                    <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -432,40 +442,33 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
-                    <div class="description | inner">
+                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                    <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -477,40 +480,33 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
-                    <div class="description | inner">
+                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                    <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -522,40 +518,33 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d grw_2 innergrid_2x1">
-                    <div class="description | inner">
+                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                    <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
                                 <h4>Zvezda ZL20G</h4>
@@ -567,38 +556,32 @@
                             <a href="#" class="new">Новинка</a>
                             <a href="#" class="hit">Хит-продаж</a>
                         </div>
-                        <table class="specs">
+                        <table>
                             <tr>
-                                <th>Масса, кг</th>
-                                <td>4000</td>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
                             </tr>
                             <tr>
-                                <th>Длина, мм</th>
-                                <td>4900</td>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
                             </tr>
                             <tr>
-                                <th>Ширина, мм</th>
-                                <td>1750</td>
-                            </tr>
-                            <tr>
-                                <th>Высота, мм</th>
-                                <td>2730</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша, л</th>
-                                <td>800</td>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
                             </tr>
                         </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
                         <div class="buttons">
                             <button class="basic-btn">Заказать</button>
                             <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                         </div>
                     </div>
-                    <div class="slider | inner">
+                    <div class="slider">
                         <img src="img/slide_1.jpg" alt="">
                     </div>
                 </div>
                 
+<<<<<<< HEAD
             </div>
             <div class="white-box">
                 <div class="clip-left"></div>
@@ -606,15 +589,24 @@
                 <div class="round-left"></div>
                 <div class="round-right"></div>
             </div>
+=======
+>>>>>>> 0ae142d71845e59633a43562260c8cff4fd30511
             </div>
         </section>
+
+        <div class="clipped-corners-top">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
+        </div>
 
         <section class="benefits" style="background-image: url(img/benefits_bg.jpeg)">
             <div class="hwrapper">
                 <h2>Преимущества</h2>
             </div>
             <div class="container | boxgrid">
-                <img src="img/gw_no_bg.png" alt="" class="box bg_trsp grw_4 grh_3">
+                <img src="img/gw_no_bg.png" alt="" class="box w_4 h_3">
             </div>
         </section>
 
@@ -623,8 +615,8 @@
                 <h2>GoodWork ТВ</h2>
             </div>
             <div class="boxgrid">
-                    
-                <div class="video-item | box grw_2 grh_2">
+                
+                <div class="video-item | box w_2 h_2">
                     <a href="#">
                         <img src="img/ZL20GCyan.jpg" alt="">
                         <span class="play-button fa-solid fa-circle-play"></span>
@@ -636,7 +628,7 @@
                     </a>
                 </div>
                 
-                <div class="video-item | box grw_2 grh_2">
+                <div class="video-item | box w_2 h_2">
                     <a href="#">
                         <img src="img/ZL20GCyan.jpg" alt="">
                         <span class="play-button fa-solid fa-circle-play"></span>
@@ -648,7 +640,7 @@
                     </a>
                 </div>
                 
-                <div class="video-item | box grw_2 grh_2">
+                <div class="video-item | box w_2 h_2">
                     <a href="#">
                         <img src="img/ZL20GCyan.jpg" alt="">
                         <span class="play-button fa-solid fa-circle-play"></span>
@@ -663,13 +655,13 @@
             </div>
         </section>
 
-    <section class="reviews">
-        <div class="hwrapper">
-            <h2>Отзывы</h2>
-        </div>
-        <div class="boxgrid">
-            <div class="review-box | box grw_4 grh_2">
-                <ul class="review-thumbnail">
+        <section class="reviews">
+            <div class="hwrapper">
+                <h2>Отзывы</h2>
+            </div>
+            <div class="boxgrid">
+                <div class="review-box | box w_4 grh_2">
+                    <ul class="review-thumbnail">
                     <li class="">Первый отзыв</li>
                     <li>Второй</li>
                     <li>Третий</li>
@@ -681,75 +673,67 @@
                     <div>Звезды</div>
                     <p>Описание всего отзыва, клиент должен быть доволен техникой.</p>
                 </div>
+                </div>
+                <div class="video-review-box | box w_2 grh_2">
+                    <h4>Видео отзывы</h4>
+                </div>
             </div>
-            <div class="video-review-box | box grw_2 grh_2">
-                <h4>Видео отзывы</h4>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about-us">
-        <div class="hwrapper">
-            <h2>О нашей компании</h2>
-        </div>
-        <div class="container | boxgrid">
-            <div class="video-wrapper">
-                <video playsinline autoplay muted loop poster="cake.jpg">
-                    <source src="img/rain.mp4" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
+        <section class="about-us">
+            <div class="hwrapper">
+                <h2>О нашей компании</h2>
             </div>
-            <div class="description | box grw_3 grh_1">
-                <p>Текст об истории компании и её ценностях Текст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
+            <div class="container | boxgrid">
+                <div class="video-wrapper">
+                    <video playsinline autoplay muted loop>
+                        <source src="img/rain.mp4" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="description | box w_3 h_1">
+                    <p>Текст об истории компании и её ценностях Текст об истории компании и её ценностяхТекст об истории
+                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                        об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
+                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                        об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
+                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                        об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
+                </div>
+                <div class="gallery | box w_2 h_1">
+                    <img src="img/radmir-photo.jpg" alt="">
+                </div>
             </div>
-            <div class="gallery | box grw_2 grh_1">
-                <img src="img/radmir-photo.jpg" alt="">
+        </section>
+
+        <section class="contact-us">
+            <div class="hwrapper">
             </div>
-        </div>
-    </section>
-
-    <section class="contact-us">
-        <div class="hwrapper">
-        </div>
-        <div class="boxgrid">
-            <div class="review-box | box grw_4">
-                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в Уфе</a><a href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в Уфе</a><iframe src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <div class="boxgrid">
+                <div class="review-box | box w_4">
+                    <div style="position:relative;overflow:hidden;"><a
+                           href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps"
+                           style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a
+                           href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps"
+                           style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в
+                            Уфе</a><a
+                           href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps"
+                           style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в
+                            Уфе</a><iframe
+                                src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05"
+                                width="560" height="400" frameborder="1" allowfullscreen="true"
+                                style="position:relative;"></iframe></div>
+                </div>
+                <div class="inquiry-form | box w_2">
+                    <form action="get">
+                        <input type="Имя" name="" id="">
+                    </form>
+                </div>
             </div>
-            <div class="inquiry-form | box grw_2">
-                <form action="get">
-                    <input type="Имя" name="" id="">
-                </form>
-            </div>
-        </div>
-    </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper(".swiper", {
-                // Optional parameters
-                loop: true,
-                speed: 500,
-                slidesPerView: 1,
-                effect: "fade",
-                autoplay: {
-                    pauseOnMouseEnter: true,
-                },
-
-                // If we need pagination
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: "fraction"
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev"
-                }
-            });
-
-        </script>
-        <script src="scripts/index.js"></script>
+        </section>
     </body>
 
 </html>
