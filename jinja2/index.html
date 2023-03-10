@@ -23,7 +23,7 @@
             <div class="nav-wrapper">
                 <div class="top-nav">
                     <a href="#" class="logo">
-                        <img src="img/logo-gw.png" alt="Логотип компанииGoodWork" />
+                        <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
                     </a>
                     <ul class="nav-list">
                         <li>
@@ -210,8 +210,47 @@
                 <h2>Каталог</h2>
             </div>
             <div class="boxgrid">
-                {% for _ in range(9) %}
-                <div class="catalog-item | box hover3d w_2" data-bg="turquoise">
+                {% for _ in range(5) %}
+                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                    <div class="description">
+                        <div class="user-buttons">
+                            <a href="#" class="item-name">
+                                <h4>Zvezda ZL20G</h4>
+                            </a>
+                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                        </div>
+                        <div class="tags">
+                            <a href="#" class="new">Новинка</a>
+                            <a href="#" class="hit">Хит-продаж</a>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Масса </th>
+                                <td>4000 кг</td>
+                            </tr>
+                            <tr>
+                                <th>Грузоподъемность</th>
+                                <td>1500 кг</td>
+                            </tr>
+                            <tr>
+                                <th>Обьем ковша </th>
+                                <td>800 м³</td>
+                            </tr>
+                        </table>
+                        <div class="price">от <span>1 800 000</span> руб.</div>
+                        <div class="buttons">
+                            <button class="basic-btn">Заказать</button>
+                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <img src="img/slide_1.jpg" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+                {% for _ in range(4) %}
+                <div class="catalog-item | box hover3d w_2" data-bg="red">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
