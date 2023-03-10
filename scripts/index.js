@@ -1,20 +1,22 @@
-// let urlInput = document.querySelector("input#url");
-// let button = document.querySelector(".button");
-// let tint = document.querySelector(".tint");
-// let colorId = window.localStorage.getItem("color") || "red";
-// console.log(colorId);
-// let radio = document.querySelector(`#${colorId}`);
-// tint.style.backgroundColor = radio.id;
+const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    loop: true,
+    speed: 500,
+    slidesPerView: 1,
+    effect: "fade",
+    autoplay: {
+        pauseOnMouseEnter: true,
+    },
 
-// let image = document.querySelector("img");
-// let getImageUrl = window.localStorage.getItem("url") || image.src;
-// image.src = getImageUrl;
+    // If we need pagination
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+    },
 
-// button.addEventListener("click", () => {
-//   radio = document.querySelector('input[name="color-selector"]:checked');
-//   tint.style.backgroundColor = radio.id;
-//   localStorage.setItem("color", radio.id);
-//   image.src = urlInput.value;
-//   localStorage.setItem("url", urlInput.value);
-//   urlInput.value = "";
-// });
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
