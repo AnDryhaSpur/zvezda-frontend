@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
         <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
         <script src="scripts/index.js" defer></script>
@@ -20,46 +22,50 @@
 
     <body>
         <header>
-            <div class="nav-wrapper">
-                <div class="top-nav">
-                    <a href="#" class="logo">
-                        <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
-                    </a>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#">Свяжитесь с нами <span class="fa-solid fa-phone"></span></a>
-                        </li>
-                        <li>
-                            <a href="#">Демонстрация <span class="fa-solid fa-car"></span></a>
-                        </li>
-                        <li>
-                            <a href="#">Расчитать стоимость <span class="fa-solid fa-hand-holding-dollar"></span></a>
-                        </li>
-                    </ul>
-                    <a class="basic-btn phone" href="tel:+78005553535">
-                        <span class="fa-solid fa-mobile-screen-button"></span>
-                        8 800 555-35-35
-                    </a>
+            <nav class="top-row | boxgrid"></nav>
+            <nav class="mid-row | boxgrid">
+                <a href="#" class="logo | box w_2">
+                    <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
+                </a>
+                <a href="#" class="box w_2">Свяжитесь с нами <span class="uil uil-incoming-call"></span></a>
+                <a href="#" class="box w_2">Демонстрация <span class="uil uil-car-sideview"></span></a>
+                <a href="#" class="box w_2">Расчитать стоимость <span class="uil uil-bill"></span></a>
+                <a class="basic-btn phone | box w_2" href="tel:+78005553535">
+                    <span class="uil uil-outgoing-call"></span> 8 800 555-35-35
+                </a>
+            </nav>
+            <nav class="bot-row | boxgrid">
+                <a href="#" class="logo | box"><img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork"></a>
+                <div class="item">
+                    <a href="#">Каталог</a>
+                    <div class="dropdown">
+                        <a href="#">Фронтальные погрузчики</a>
+                        <a href="#">Бетономешалки</a>
+                        <a href="#">Пирожки</a>
+                        <a href="#">Звезда</a>
+                    </div>
                 </div>
-                <nav class="sub-nav">
-                    <ul class="sub-nav-list">
-                        <li class="submenu-item">
-                            <a href="#">Каталог &#11206;</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Фронтальные погрузчики</a></li>
-                                <li><a href="#">Бетономешалки</a></li>
-                                <li><a href="#">Пирожки</a></li>
-                                <li><a href="#">Звезда</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Сервис</a></li>
-                        <li><a href="#">Запчасти</a></li>
-                        <li><a href="#">Финансирование</a></li>
-                        <li><a href="#">Про компанию</a></li>
-                        <li><a href="#">Про компанию 2</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="item">
+                    <a href="#">Сервис</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Запчасти</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Финансирование</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Про компанию</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Про компанию 2</a>
+                    <div class="dropdown"></div>
+                </div>
+            </nav>
         </header>
 
         <div class="clipped-corners-top" data-bg="turquoise">
@@ -72,8 +78,8 @@
         </div>
 
         <section class="hero">
-            <div class="hero-container | boxgrid halfrow">
-                <div class="swiper | box w_4 h_3">
+            <div class="hero-container | boxgrid">
+                <div class="swiper | box w_8 h_6">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -130,18 +136,22 @@
                             </a>
                         </div>
                     </div>
-                    <!-- If we need pagination -->
-
-                    <!-- If we need navigation buttons -->
                     <div class="swiper-buttons">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
-                <h1 class="box w_2 h_2">Фронтальные погрузчики <b
-                       class="goodwork-name">Good<span>Work</span></b> от производителя</h1>
-                <div class="call-to-action | box hover3d w_2 h_1" data-bg="white">
+                <div class="box w_4 h_4">
+                    <h1>
+                        Фронтальные погрузчики
+                        <b class="brandname">Good<span>Work</span></b>
+                        и
+                        <b class="brandname">ZVEZDA<span>★</span></span></b>
+                        от производителя
+                    </h1>
+                </div>
+                <div class="call-to-action | box w_4 h_2 hover3d" data-bg="white">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
                         commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
@@ -161,12 +171,12 @@
         </div>
 
         <section class="merits">
-            <div class="merits-container | boxgrid">
-                <div class="box w_2">
-                    <h2>Компания <b class="goodwork-name">Good<span>Work</span></b></h2>
+            <div class="boxgrid">
+                <div class="box w_4 h_2">
+                    <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
                 </div>
 
-                <div class="merit | box hover3d" data-bg="yellow">
+                <div class="merit | box w_2 h_2 hover3d" data-bg="yellow">
                     <img src="img/icons/calendar.png" alt="">
                     <span>Более</span>
                     <span class="number">11</span>
@@ -175,7 +185,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d" data-bg="gray">
+                <div class="merit | box w_2 h_2 hover3d" data-bg="gray">
                     <img src="img/icons/loader.png" alt="">
                     <span>Свыше</span>
                     <span class="number">500</span>
@@ -184,7 +194,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d" data-bg="red">
+                <div class="merit | box w_2 h_2 hover3d" data-bg="red">
                     <img src="img/icons/engine.png" alt="">
                     <span>До</span>
                     <span class="number">1000</span>
@@ -193,7 +203,7 @@
                     </p>
                 </div>
 
-                <div class="merit | box hover3d" data-bg="turquoise">
+                <div class="merit | box w_2 h_2 hover3d" data-bg="turquoise">
                     <img src="img/icons/map.png" alt="">
                     <span>Более чем в</span>
                     <span class="number">50</span>
@@ -203,15 +213,27 @@
                 </div>
 
             </div>
-
         </section>
+
+        <section class="news">
+            <div class="boxgrid">
+                <div class="box w_2" data-bg="gray">1</div>
+                <div class="box w_6" data-bg="gray">2</div>
+                <div class="box w_2" data-bg="gray">3</div>
+                <div class="box" data-bg="gray">5</div>
+                <div class="box w_2" data-bg="gray">6</div>
+                <div class="box w_2" data-bg="gray">7</div>
+                <div class="box w_2" data-bg="gray">8</div>
+            </div>
+        </section>
+
         <section class="catalog">
             <div class="hwrapper">
                 <h2>Каталог</h2>
             </div>
             <div class="boxgrid">
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -249,7 +271,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -287,7 +309,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -325,7 +347,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -363,7 +385,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="gray">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -402,7 +424,7 @@
                 </div>
                 
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -440,7 +462,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -478,7 +500,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -516,7 +538,7 @@
                     </div>
                 </div>
                 
-                <div class="catalog-item | box hover3d w_2" data-bg="red">
+                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
                     <div class="description">
                         <div class="user-buttons">
                             <a href="#" class="item-name">
@@ -569,7 +591,7 @@
                 <h2>Преимущества</h2>
             </div>
             <div class="container | boxgrid">
-                <img src="img/gw_no_bg.png" alt="" class="box w_4 h_3">
+                <img src="img/gw_no_bg.png" alt="" class="box w_8 h_6">
             </div>
         </section>
 
@@ -579,41 +601,35 @@
             </div>
             <div class="boxgrid">
                 
-                <div class="video-item | box w_2 h_2">
-                    <a href="#">
-                        <img src="img/ZL20GCyan.jpg" alt="">
-                        <span class="play-button fa-solid fa-circle-play"></span>
-                        <div class="video-description-wrapper">
-                            <h4>Обзор ZL20</h4>
-                            <p class="description">Обзор очень классного красного погрузчика!</p>
-                            <p class="date">26/02/2023</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="#" class="video-item | box w_4 h_3">
+                    <img src="img/ZL20GCyan.jpg" alt="">
+                    <span class="play-button fa-solid fa-circle-play"></span>
+                    <div class="video-description-wrapper">
+                        <h4>Обзор ZL20</h4>
+                        <p class="description">Обзор очень классного красного погрузчика!</p>
+                        <p class="date">26/02/2023</p>
+                    </div>
+                </a>
                 
-                <div class="video-item | box w_2 h_2">
-                    <a href="#">
-                        <img src="img/ZL20GCyan.jpg" alt="">
-                        <span class="play-button fa-solid fa-circle-play"></span>
-                        <div class="video-description-wrapper">
-                            <h4>Обзор ZL20</h4>
-                            <p class="description">Обзор очень классного красного погрузчика!</p>
-                            <p class="date">26/02/2023</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="#" class="video-item | box w_4 h_3">
+                    <img src="img/ZL20GCyan.jpg" alt="">
+                    <span class="play-button fa-solid fa-circle-play"></span>
+                    <div class="video-description-wrapper">
+                        <h4>Обзор ZL20</h4>
+                        <p class="description">Обзор очень классного красного погрузчика!</p>
+                        <p class="date">26/02/2023</p>
+                    </div>
+                </a>
                 
-                <div class="video-item | box w_2 h_2">
-                    <a href="#">
-                        <img src="img/ZL20GCyan.jpg" alt="">
-                        <span class="play-button fa-solid fa-circle-play"></span>
-                        <div class="video-description-wrapper">
-                            <h4>Обзор ZL20</h4>
-                            <p class="description">Обзор очень классного красного погрузчика!</p>
-                            <p class="date">26/02/2023</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="#" class="video-item | box w_4 h_3">
+                    <img src="img/ZL20GCyan.jpg" alt="">
+                    <span class="play-button fa-solid fa-circle-play"></span>
+                    <div class="video-description-wrapper">
+                        <h4>Обзор ZL20</h4>
+                        <p class="description">Обзор очень классного красного погрузчика!</p>
+                        <p class="date">26/02/2023</p>
+                    </div>
+                </a>
                 
             </div>
         </section>
@@ -626,7 +642,7 @@
                 <div class="review-box | box w_4">
                     <h4>Отзывы наших клиентов</h4>
                 </div>
-                <div class="video-review-box | box w_2">
+                <div class="video-review-box | box w_4">
                     <h4>Видео отзывы</h4>
                 </div>
             </div>
@@ -655,7 +671,7 @@
                         ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
                         об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
                 </div>
-                <div class="gallery | box w_2 h_1">
+                <div class="gallery | box w_4 h_1">
                     <img src="img/radmir-photo.jpg" alt="">
                 </div>
             </div>
@@ -679,7 +695,7 @@
                                 width="560" height="400" frameborder="1" allowfullscreen="true"
                                 style="position:relative;"></iframe></div>
                 </div>
-                <div class="inquiry-form | box w_2">
+                <div class="inquiry-form | box w_4">
                     <form action="get">
                         <input type="Имя" name="" id="">
                     </form>

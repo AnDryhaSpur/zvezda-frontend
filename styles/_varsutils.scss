@@ -9,32 +9,26 @@
     --text_color: #252525;
     --bg_red: #ffeaea;
     --bg_turquoise: #e0f9f7;
-    --bg_gray: #eeeeee;
+    --bg_gray: #f0f0f0;
     --bg_yellow: #fff8d3;
-    --1bx: calc(12.5 * 1rem);
-    --halfbx: calc(0.5 * var(--1bx));
-    --2bx: calc(2 * var(--1bx) + 1rem);
-    --3bx: calc(3 * var(--1bx) + 2 * 1rem);
-    --4bx: calc(4 * var(--1bx) + 3 * 1rem);
-    --5bx: calc(5 * var(--1bx) + 4 * 1rem);
-    --6bx: calc(6 * var(--1bx) + 5 * 1rem);
+    --1bx: 6rem;
+    @for $i from 2 through 12 {
+    --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
+    }
     --bradout: calc(1.4 * 1rem);
     --bradin: 0.9rem;
     --bradbig: calc(1.8 * var(--bradout) - 2px);
+    color: var(--text_color);
 }
 
 // Utility classes
 .boxgrid {
     display: grid;
-    max-width: var(--6bx);
+    max-width: var(--12bx);
     gap: 1rem;
     grid-auto-flow: row dense;
     grid-auto-rows: var(--1bx);
-    grid-template-columns: repeat(6, var(--1bx));
-}
-
-.halfrow {
-    grid-template-rows: var(--halfbx);
+    grid-template-columns: repeat(12, var(--1bx));
 }
 
 .box {
@@ -47,7 +41,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: var(--text_color);
 }
 
 [data-bg='white'] {
@@ -79,7 +72,7 @@
     }
 }
 
-@for $i from 2 through 6 {
+@for $i from 2 through 12 {
     .h_#{$i} {
         grid-row: span #{$i};
     }
