@@ -994,6 +994,7 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 }
 .reviews .customer h3 {
   text-align: center;
+  font-size: 1.1rem;
 }
 .reviews .customer .clip-top,
 .reviews .customer .clip-bottom {
@@ -1044,4 +1045,40 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5rem;
+}
+.reviews .texts button {
+  all: unset;
+  cursor: pointer;
+}
+.reviews .texts button i {
+  font-size: 5rem;
+  color: var(--gray);
+}
+.reviews .texts h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.reviews .texts p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
+}
+.reviews .videos {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.reviews .videos h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+.reviews .videos iframe {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--bradin);
 }/*# sourceMappingURL=styles.css.map */

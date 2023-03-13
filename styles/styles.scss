@@ -773,6 +773,7 @@ header {
 
         h3 {
             text-align: center;
+            font-size: 1.1rem;
         }
 
         .clip-top,
@@ -849,5 +850,56 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        padding: 0 5rem;
+
+        button {
+            all: unset;
+            cursor: pointer;
+
+            i {
+                font-size: 5rem;
+                color: var(--gray);
+            }
+        }
+
+        h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    .videos {
+        height: 100%;
+        display: grid;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        iframe {
+            height: 100%;
+            width: 100%;
+            border-radius: var(--bradin);
+        }
+
+        // .video {
+        //     background-color: cyan;
+        //     height: 100%;
+        //     width: 100%;
+
+        // }
     }
 }
