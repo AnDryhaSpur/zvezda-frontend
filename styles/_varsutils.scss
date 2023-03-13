@@ -23,6 +23,8 @@
 
 // Utility classes
 .boxgrid {
+    --col_start: auto;
+    --row_start: auto;
     display: grid;
     max-width: var(--12bx);
     gap: 1rem;
@@ -72,19 +74,22 @@
     }
 }
 
-@for $i from 2 through 12 {
-    .h_#{$i} {
-        grid-row: span #{$i};
+@for $i from -1 through 12 {
+    .col_#{$i} {
+        --col_start: #{$i};
     }
-    .w_#{$i} {
-        grid-column: span #{$i};
+    .row_#{$i} {
+        --row_start: #{$i};
     }
 }
 
-@for $i from -12 through 12 {
-    .order_#{$i} {
-        order: #{$i};
+@for $i from 2 through 12 {
+    .w_#{$i} {
+        grid-column: var(--col_start) / span #{$i};
     }
+    .h_#{$i} {
+        grid-row: var(--row_start) / span #{$i};
+    }    
 }
 
 @media (max-width: 1400px) {

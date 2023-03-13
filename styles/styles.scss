@@ -30,6 +30,7 @@ h2 {
 
 a {
     text-decoration: none;
+    color: inherit;
     transition: all 0.2s ease;
 
     &:visited {
@@ -105,7 +106,8 @@ header {
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-3rem);
-                transition: all 0.2s ease 0s, visibility 0s linear 0.2s, z-index 0s linear 0.01s;
+                transition: all 0.2s ease 0s, visibility 0s linear 0.2s,
+                    z-index 0s linear 0.01s;
             }
 
             &:hover,
@@ -126,15 +128,12 @@ header {
 }
 
 .news {
-
     .boxgrid {
         background-color: var(--bg_turquoise);
     }
 
     .box {
-
         a {
-
         }
     }
 }
@@ -409,8 +408,16 @@ header {
             width: var(--bradbig);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bradbig) at 0 0, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bradbig) at 0 0, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradbig) at 0 0,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradbig) at 0 0,
+                #0000 99%,
+                #fff
+            );
         }
 
         .clip-right {
@@ -422,8 +429,16 @@ header {
             width: var(--bradbig);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bradbig) at 100% 0, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bradbig) at 100% 0, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradbig) at 100% 0,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradbig) at 100% 0,
+                #0000 99%,
+                #fff
+            );
         }
     }
 }
@@ -449,8 +464,16 @@ header {
             width: var(--bradbig);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bradbig) at 0 100%, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bradbig) at 0 100%, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradbig) at 0 100%,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradbig) at 0 100%,
+                #0000 99%,
+                #fff
+            );
         }
 
         .clip-right {
@@ -462,8 +485,16 @@ header {
             width: var(--bradbig);
             -webkit-mask-size: cover;
             mask-size: cover;
-            -webkit-mask-image: radial-gradient(circle var(--bradbig) at 100% 100%, #0000 99%, #fff);
-            mask-image: radial-gradient(circle var(--bradbig) at 100% 100%, #0000 99%, #fff);
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradbig) at 100% 100%,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradbig) at 100% 100%,
+                #0000 99%,
+                #fff
+            );
         }
     }
 }
@@ -724,15 +755,99 @@ header {
     }
 }
 
-// reviews
+// Reviews
 
-.review-thumbnail {
-    height: 100%;
+.reviews {
+    .customer {
+        position: relative;
+        flex-wrap: nowrap;
+        justify-content: start;
+        padding: 0.5rem;
+        column-gap: 0.5rem;
+        transition: all 0.2s ease;
 
-    li {
-        background-color: red;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        img {
+            height: 100%;
+            border-radius: var(--bradin);
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .clip-top,
+        .clip-bottom {
+            position: absolute;
+            opacity: 0;
+            right: -1rem;
+            background-color: inherit;
+            height: var(--bradout);
+            width: var(--bradout);
+            transition: all 0.2s ease, background-color 0.01s;
+        }
+
+        .clip-top {
+            bottom: 100%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradout) at 0 0,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradout) at 0 0,
+                #0000 99%,
+                #fff
+            );
+        }
+
+        .clip-bottom {
+            top: 100%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-image: radial-gradient(
+                circle var(--bradout) at 0 100%,
+                #0000 99%,
+                #fff
+            );
+            mask-image: radial-gradient(
+                circle var(--bradout) at 0 100%,
+                #0000 99%,
+                #fff
+            );
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: inherit;
+            inset: 0;
+            left: 50%;
+            border-radius: inherit;
+            transition: all 0.2s ease, background-color 0.01s;
+        }
+
+        &[data-chosen="true"] {
+            .clip-top,
+            .clip-bottom {
+                opacity: 1;
+            }
+
+            &::after {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                right: -3rem;
+            }
+        }
+    }
+
+    .texts {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 }

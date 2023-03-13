@@ -1,707 +1,863 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Test</title>
-        <meta charset="UTF-8" />
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
-              rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-        <script src="//unpkg.com/alpinejs" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-        <script src="scripts/index.js" defer></script>
-        <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
-    </head>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <header>
-            <nav class="top-row | boxgrid"></nav>
-            <nav class="mid-row | boxgrid">
-                <a href="#" class="logo | box w_2">
-                    <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
-                </a>
-                <a href="#" class="box w_2">Свяжитесь с нами <span class="uil uil-incoming-call"></span></a>
-                <a href="#" class="box w_2">Демонстрация <span class="uil uil-car-sideview"></span></a>
-                <a href="#" class="box w_2">Расчитать стоимость <span class="uil uil-bill"></span></a>
-                <a class="basic-btn phone | box w_2" href="tel:+78005553535">
-                    <span class="uil uil-outgoing-call"></span> 8 800 555-35-35
-                </a>
-            </nav>
-            <nav class="bot-row | boxgrid">
-                <a href="#" class="logo | box"><img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork"></a>
-                <div class="item">
-                    <a href="#">Каталог</a>
-                    <div class="dropdown">
-                        <a href="#">Фронтальные погрузчики</a>
-                        <a href="#">Бетономешалки</a>
-                        <a href="#">Пирожки</a>
-                        <a href="#">Звезда</a>
+<body>
+    <header>
+        <nav class="top-row | boxgrid"></nav>
+        <nav class="mid-row | boxgrid">
+            <a href="#" class="logo | box w_2">
+                <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
+            </a>
+            <a href="#" class="box w_2">Свяжитесь с нами <span class="uil uil-incoming-call"></span></a>
+            <a href="#" class="box w_2">Демонстрация <span class="uil uil-car-sideview"></span></a>
+            <a href="#" class="box w_2">Расчитать стоимость <span class="uil uil-bill"></span></a>
+            <a class="basic-btn phone | box w_2" href="tel:+78005553535">
+                <span class="uil uil-outgoing-call"></span> 8 800 555-35-35
+            </a>
+        </nav>
+        <nav class="bot-row | boxgrid">
+            <a href="#" class="logo | box"><img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork"></a>
+            <div class="item">
+                <a href="#">Каталог</a>
+                <div class="dropdown">
+                    <a href="#">Фронтальные погрузчики</a>
+                    <a href="#">Бетономешалки</a>
+                    <a href="#">Пирожки</a>
+                    <a href="#">Звезда</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#">Сервис</a>
+                <div class="dropdown"></div>
+            </div>
+            <div class="item">
+                <a href="#">Запчасти</a>
+                <div class="dropdown"></div>
+            </div>
+            <div class="item">
+                <a href="#">Финансирование</a>
+                <div class="dropdown"></div>
+            </div>
+            <div class="item">
+                <a href="#">Про компанию</a>
+                <div class="dropdown"></div>
+            </div>
+            <div class="item">
+                <a href="#">Про компанию 2</a>
+                <div class="dropdown"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="clipped-corners-top" data-bg="turquoise">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+
+
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-container | boxgrid">
+            <div class="swiper | box w_8 h_6">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
                     </div>
                 </div>
-                <div class="item">
-                    <a href="#">Сервис</a>
-                    <div class="dropdown"></div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="item">
-                    <a href="#">Запчасти</a>
-                    <div class="dropdown"></div>
-                </div>
-                <div class="item">
-                    <a href="#">Финансирование</a>
-                    <div class="dropdown"></div>
-                </div>
-                <div class="item">
-                    <a href="#">Про компанию</a>
-                    <div class="dropdown"></div>
-                </div>
-                <div class="item">
-                    <a href="#">Про компанию 2</a>
-                    <div class="dropdown"></div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="clipped-corners-top" data-bg="turquoise">
-            <div class="clipped-corners-inner">
-                <div class="clip-left"></div>
-                <div class="clip-right"></div>
-
-
+            </div>
+            <div class="box w_4 h_4">
+                <h1>
+                    Фронтальные погрузчики
+                    <b class="brandname">Good<span>Work</span></b>
+                    и
+                    <b class="brandname">ZVEZDA<span>★</span></span></b>
+                    от производителя
+                </h1>
+            </div>
+            <div class="call-to-action | box w_4 h_2 hover3d" data-bg="white">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
+                    aspernatur fugiat, ullam quas quisquam.
+                </p>
+                <button class="basic-btn">Заказать технику</button>
+                <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
             </div>
         </div>
+    </section>
 
-        <section class="hero">
-            <div class="hero-container | boxgrid">
-                <div class="swiper | box w_8 h_6">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="img/slide_1.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на GoodWork LX180F</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_2.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на Zvezda ZL20E</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_1.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на GoodWork LX180F</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_2.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на Zvezda ZL20E</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
+    <div class="clipped-corners-bottom" data-bg="turquoise">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
+    <section class="merits">
+        <div class="boxgrid">
+            <div class="box w_4 h_2">
+                <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d" data-bg="yellow">
+                <img src="img/icons/calendar.png" alt="">
+                <span>Более</span>
+                <span class="number">11</span>
+                <p class="description">
+                    Лет на рынке спецтехники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d" data-bg="gray">
+                <img src="img/icons/loader.png" alt="">
+                <span>Свыше</span>
+                <span class="number">500</span>
+                <p class="description">
+                    Единиц проданной техники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d" data-bg="red">
+                <img src="img/icons/engine.png" alt="">
+                <span>До</span>
+                <span class="number">1000</span>
+                <p class="description">
+                    Наименований запчастей в наличии
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d" data-bg="turquoise">
+                <img src="img/icons/map.png" alt="">
+                <span>Более чем в</span>
+                <span class="number">50</span>
+                <span class="description">
+                    Регионах есть наши клиенты
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="boxgrid">
+            <div class="box w_2" data-bg="gray">1</div>
+            <div class="box w_6" data-bg="gray">2</div>
+            <div class="box w_2" data-bg="gray">3</div>
+            <div class="box" data-bg="gray">5</div>
+            <div class="box w_2" data-bg="gray">6</div>
+            <div class="box w_2" data-bg="gray">7</div>
+            <div class="box w_2" data-bg="gray">8</div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="hwrapper">
+            <h2>Каталог</h2>
+        </div>
+        <div class="boxgrid">
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
                     </div>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
                     </div>
                 </div>
-                <div class="box w_4 h_4">
-                    <h1>
-                        Фронтальные погрузчики
-                        <b class="brandname">Good<span>Work</span></b>
-                        и
-                        <b class="brandname">ZVEZDA<span>★</span></span></b>
-                        от производителя
-                    </h1>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
                 </div>
-                <div class="call-to-action | box w_4 h_2 hover3d" data-bg="white">
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
+                <div class="description">
+                    <div class="user-buttons">
+                        <a href="#" class="item-name">
+                            <h4>Zvezda ZL20G</h4>
+                        </a>
+                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
+                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+                    </div>
+                    <div class="tags">
+                        <a href="#" class="new">Новинка</a>
+                        <a href="#" class="hit">Хит-продаж</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Масса </th>
+                            <td>4000 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Грузоподъемность</th>
+                            <td>1500 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Обьем ковша </th>
+                            <td>800 м³</td>
+                        </tr>
+                    </table>
+                    <div class="price">от <span>1 800 000</span> руб.</div>
+                    <div class="buttons">
+                        <button class="basic-btn">Заказать</button>
+                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    </div>
+                </div>
+                <div class="slider">
+                    <img src="img/slide_1.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="clipped-corners-top">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
+    <section class="benefits" style="background-image: url(img/benefits_bg.jpeg)">
+        <div class="hwrapper">
+            <h2>Преимущества</h2>
+        </div>
+        <div class="container | boxgrid">
+            <img src="img/gw_no_bg.png" alt="" class="box w_8 h_6">
+        </div>
+    </section>
+
+    <section class="videogallery">
+        <div class="hwrapper">
+            <h2>GoodWork ТВ</h2>
+        </div>
+        <div class="boxgrid">
+            
+            <a href="#" class="video-item | box w_4 h_3">
+                <img src="img/ZL20GCyan.jpg" alt="">
+                <span class="play-button fa-solid fa-circle-play"></span>
+                <div class="video-description-wrapper">
+                    <h4>Обзор ZL20</h4>
+                    <p class="description">Обзор очень классного красного погрузчика!</p>
+                    <p class="date">26/02/2023</p>
+                </div>
+            </a>
+            
+            <a href="#" class="video-item | box w_4 h_3">
+                <img src="img/ZL20GCyan.jpg" alt="">
+                <span class="play-button fa-solid fa-circle-play"></span>
+                <div class="video-description-wrapper">
+                    <h4>Обзор ZL20</h4>
+                    <p class="description">Обзор очень классного красного погрузчика!</p>
+                    <p class="date">26/02/2023</p>
+                </div>
+            </a>
+            
+            <a href="#" class="video-item | box w_4 h_3">
+                <img src="img/ZL20GCyan.jpg" alt="">
+                <span class="play-button fa-solid fa-circle-play"></span>
+                <div class="video-description-wrapper">
+                    <h4>Обзор ZL20</h4>
+                    <p class="description">Обзор очень классного красного погрузчика!</p>
+                    <p class="date">26/02/2023</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <section class="reviews" x-data="{ showElement: 0 }">
+        <div class="hwrapper">
+            <h2>Отзывы</h2>
+        </div>
+        <div class="boxgrid">
+            
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="0"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                
+                <div class="clip-bottom"></div>
+                
+            </div>
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="1"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                <div class="clip-top"></div>
+                
+                
+                <div class="clip-bottom"></div>
+                
+            </div>
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="2"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                <div class="clip-top"></div>
+                
+                
+                <div class="clip-bottom"></div>
+                
+            </div>
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="3"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                <div class="clip-top"></div>
+                
+                
+                <div class="clip-bottom"></div>
+                
+            </div>
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="4"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                <div class="clip-top"></div>
+                
+                
+                <div class="clip-bottom"></div>
+                
+            </div>
+            
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="5"
+                @click="showElement = $el.dataset.id">
+                <img src="img/customer avatar.jpg" alt="">
+                <h3><b class="name">Vasily Nurihanovich</b>
+                    Engineer
+                </h3>
+                
+                <div class="clip-top"></div>
+                
+                
+            </div>
+            
+            <div class="texts | box w_6 h_6" data-bg="turquoise">
+                <button :disabled="showElement==0" @click="showElement=Math.max(showElement - 1, 0)">
+                    Вверх
+                </button>
+                
+                <div class="text" data-id="0" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 0 Отзыв на крутой красный погрузчик</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                        commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
-                        aspernatur fugiat, ullam quas quisquam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
                     </p>
-                    <button class="basic-btn">Заказать технику</button>
-                    <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
                 </div>
+                
+                <div class="text" data-id="1" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 1 Отзыв на крутой красный погрузчик</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
+                    </p>
+                </div>
+                
+                <div class="text" data-id="2" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 2 Отзыв на крутой красный погрузчик</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
+                    </p>
+                </div>
+                
+                <div class="text" data-id="3" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 3 Отзыв на крутой красный погрузчик</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
+                    </p>
+                </div>
+                
+                <div class="text" data-id="4" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 4 Отзыв на крутой красный погрузчик</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
+                    </p>
+                </div>
+                
+                <div class="text" data-id="5" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                    <h3> 5 Отзыв на крутой красный погрузчик</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
+                        deleniti repellendus eos quaerat sit doloribus illo eius.
+                        Temporibus fugit quibusdam ratione laborum.
+                    </p>
+                </div>
+                
+                <button :disabled="showElement==6-1"
+                    @click="showElement=Math.min(showElement + 1, 6)">
+                    Вниз
+                </button>
             </div>
-        </section>
-
-        <div class="clipped-corners-bottom" data-bg="turquoise">
-            <div class="clipped-corners-inner">
-                <div class="clip-left"></div>
-                <div class="clip-right"></div>
+            
+            <div class="videos | box w_3 h_6" data-bg="red">
+                <h4>Видео отзывы</h4>
             </div>
         </div>
+    </section>
 
-        <section class="merits">
-            <div class="boxgrid">
-                <div class="box w_4 h_2">
-                    <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
-                </div>
-
-                <div class="merit | box w_2 h_2 hover3d" data-bg="yellow">
-                    <img src="img/icons/calendar.png" alt="">
-                    <span>Более</span>
-                    <span class="number">11</span>
-                    <p class="description">
-                        Лет на рынке спецтехники
-                    </p>
-                </div>
-
-                <div class="merit | box w_2 h_2 hover3d" data-bg="gray">
-                    <img src="img/icons/loader.png" alt="">
-                    <span>Свыше</span>
-                    <span class="number">500</span>
-                    <p class="description">
-                        Единиц проданной техники
-                    </p>
-                </div>
-
-                <div class="merit | box w_2 h_2 hover3d" data-bg="red">
-                    <img src="img/icons/engine.png" alt="">
-                    <span>До</span>
-                    <span class="number">1000</span>
-                    <p class="description">
-                        Наименований запчастей в наличии
-                    </p>
-                </div>
-
-                <div class="merit | box w_2 h_2 hover3d" data-bg="turquoise">
-                    <img src="img/icons/map.png" alt="">
-                    <span>Более чем в</span>
-                    <span class="number">50</span>
-                    <span class="description">
-                        Регионах есть наши клиенты
-                    </span>
-                </div>
-
+    <section class="about-us">
+        <div class="hwrapper">
+            <h2>О нашей компании</h2>
+        </div>
+        <div class="container | boxgrid">
+            <div class="video-wrapper">
+                <video playsinline autoplay muted loop>
+                    <source src="img/rain.mp4" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </section>
-
-        <section class="news">
-            <div class="boxgrid">
-                <div class="box w_2" data-bg="gray">1</div>
-                <div class="box w_6" data-bg="gray">2</div>
-                <div class="box w_2" data-bg="gray">3</div>
-                <div class="box" data-bg="gray">5</div>
-                <div class="box w_2" data-bg="gray">6</div>
-                <div class="box w_2" data-bg="gray">7</div>
-                <div class="box w_2" data-bg="gray">8</div>
+            <div class="description | box w_3 h_1">
+                <p>Текст об истории компании и её ценностях Текст об истории компании и её ценностяхТекст об истории
+                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                    об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
+                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                    об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
+                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
+                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
+                    об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
             </div>
-        </section>
-
-        <section class="catalog">
-            <div class="hwrapper">
-                <h2>Каталог</h2>
-            </div>
-            <div class="boxgrid">
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                    <div class="description">
-                        <div class="user-buttons">
-                            <a href="#" class="item-name">
-                                <h4>Zvezda ZL20G</h4>
-                            </a>
-                            <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                            <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
-                        </div>
-                        <div class="tags">
-                            <a href="#" class="new">Новинка</a>
-                            <a href="#" class="hit">Хит-продаж</a>
-                        </div>
-                        <table>
-                            <tr>
-                                <th>Масса </th>
-                                <td>4000 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Грузоподъемность</th>
-                                <td>1500 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Обьем ковша </th>
-                                <td>800 м³</td>
-                            </tr>
-                        </table>
-                        <div class="price">от <span>1 800 000</span> руб.</div>
-                        <div class="buttons">
-                            <button class="basic-btn">Заказать</button>
-                            <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <img src="img/slide_1.jpg" alt="">
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <div class="clipped-corners-top">
-            <div class="clipped-corners-inner">
-                <div class="clip-left"></div>
-                <div class="clip-right"></div>
+            <div class="gallery | box w_4 h_1">
+                <img src="img/radmir-photo.jpg" alt="">
             </div>
         </div>
+    </section>
 
-        <section class="benefits" style="background-image: url(img/benefits_bg.jpeg)">
-            <div class="hwrapper">
-                <h2>Преимущества</h2>
+    <section class="contact-us">
+        <div class="hwrapper">
+        </div>
+        <div class="boxgrid">
+            <div class="review-box | box w_4">
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a
+                        href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в
+                        Уфе</a><a
+                        href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в
+                        Уфе</a><iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05"
+                        width="560" height="400" frameborder="1" allowfullscreen="true"
+                        style="position:relative;"></iframe></div>
             </div>
-            <div class="container | boxgrid">
-                <img src="img/gw_no_bg.png" alt="" class="box w_8 h_6">
+            <div class="inquiry-form | box w_4">
+                <form action="get">
+                    <input type="Имя" name="" id="">
+                </form>
             </div>
-        </section>
-
-        <section class="videogallery">
-            <div class="hwrapper">
-                <h2>GoodWork ТВ</h2>
-            </div>
-            <div class="boxgrid">
-                
-                <a href="#" class="video-item | box w_4 h_3">
-                    <img src="img/ZL20GCyan.jpg" alt="">
-                    <span class="play-button fa-solid fa-circle-play"></span>
-                    <div class="video-description-wrapper">
-                        <h4>Обзор ZL20</h4>
-                        <p class="description">Обзор очень классного красного погрузчика!</p>
-                        <p class="date">26/02/2023</p>
-                    </div>
-                </a>
-                
-                <a href="#" class="video-item | box w_4 h_3">
-                    <img src="img/ZL20GCyan.jpg" alt="">
-                    <span class="play-button fa-solid fa-circle-play"></span>
-                    <div class="video-description-wrapper">
-                        <h4>Обзор ZL20</h4>
-                        <p class="description">Обзор очень классного красного погрузчика!</p>
-                        <p class="date">26/02/2023</p>
-                    </div>
-                </a>
-                
-                <a href="#" class="video-item | box w_4 h_3">
-                    <img src="img/ZL20GCyan.jpg" alt="">
-                    <span class="play-button fa-solid fa-circle-play"></span>
-                    <div class="video-description-wrapper">
-                        <h4>Обзор ZL20</h4>
-                        <p class="description">Обзор очень классного красного погрузчика!</p>
-                        <p class="date">26/02/2023</p>
-                    </div>
-                </a>
-                
-            </div>
-        </section>
-
-        <section class="reviews">
-            <div class="hwrapper">
-                <h2>Отзывы</h2>
-            </div>
-            <div class="boxgrid">
-                <div class="review-box | box w_4">
-                    <h4>Отзывы наших клиентов</h4>
-                </div>
-                <div class="video-review-box | box w_4">
-                    <h4>Видео отзывы</h4>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-us">
-            <div class="hwrapper">
-                <h2>О нашей компании</h2>
-            </div>
-            <div class="container | boxgrid">
-                <div class="video-wrapper">
-                    <video playsinline autoplay muted loop>
-                        <source src="img/rain.mp4" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="description | box w_3 h_1">
-                    <p>Текст об истории компании и её ценностях Текст об истории компании и её ценностяхТекст об истории
-                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                        об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
-                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                        об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
-                        компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                        ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                        об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
-                </div>
-                <div class="gallery | box w_4 h_1">
-                    <img src="img/radmir-photo.jpg" alt="">
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-us">
-            <div class="hwrapper">
-            </div>
-            <div class="boxgrid">
-                <div class="review-box | box w_4">
-                    <div style="position:relative;overflow:hidden;"><a
-                           href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps"
-                           style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a
-                           href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps"
-                           style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в
-                            Уфе</a><a
-                           href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps"
-                           style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в
-                            Уфе</a><iframe
-                                src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05"
-                                width="560" height="400" frameborder="1" allowfullscreen="true"
-                                style="position:relative;"></iframe></div>
-                </div>
-                <div class="inquiry-form | box w_4">
-                    <form action="get">
-                        <input type="Имя" name="" id="">
-                    </form>
-                </div>
-            </div>
-        </section>
-    </body>
+        </div>
+    </section>
+</body>
 
 </html>
