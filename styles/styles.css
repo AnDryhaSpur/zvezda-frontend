@@ -972,13 +972,6 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
   transition: all 0.2s ease;
 }
 
-.about-us {
-  width: 100%;
-}
-.about-us .video-wrapper {
-  width: 100%;
-}
-
 .reviews .customer {
   position: relative;
   flex-wrap: nowrap;
@@ -1081,4 +1074,28 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
   height: 100%;
   width: 100%;
   border-radius: var(--bradin);
+}
+
+.about-us {
+  width: 100%;
+  padding: 0;
+}
+.about-us h2 {
+  color: white;
+}
+.about-us video {
+  width: 100%;
+  position: absolute;
+  max-width: none;
+  z-index: -1;
+}
+.about-us .description h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.about-us .description p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
 }/*# sourceMappingURL=styles.css.map */

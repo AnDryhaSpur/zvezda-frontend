@@ -746,17 +746,7 @@ header {
     }
 }
 
-// About us
-.about-us {
-    width: 100%;
-
-    .video-wrapper {
-        width: 100%;
-    }
-}
-
 // Reviews
-
 .reviews {
     .customer {
         position: relative;
@@ -901,5 +891,39 @@ header {
         //     width: 100%;
 
         // }
+    }
+}
+
+// About us
+.about-us {
+    width: 100%;
+    padding: 0;
+
+    h2 {
+        color: white;
+    }
+
+    video {
+        width: 100%;
+        position: absolute;
+        max-width: none;
+        z-index: -1;
+    }
+
+    .description {
+        h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    .gallery {
     }
 }
