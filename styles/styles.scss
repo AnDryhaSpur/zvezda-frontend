@@ -896,8 +896,12 @@ header {
 
 // About us
 .about-us {
+    position: relative;
     width: 100%;
-    padding: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+
+    // !ask about inset
 
     h2 {
         color: white;
@@ -905,25 +909,43 @@ header {
 
     video {
         width: 100%;
+        object-fit: fill;
+        inset: 0;
         position: absolute;
         max-width: none;
         z-index: -1;
     }
 
     .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 5rem;
+
         h3 {
             font-size: 1.7rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
         }
 
         p {
             font-size: 1.4rem;
             font-weight: 400;
-            margin-bottom: 1.3rem;
         }
     }
 
     .gallery {
+        padding: 5rem;
+
+        img {
+            width: 100%;
+            border-radius: var(--bradin);
+        }
     }
+}
+
+// Contacts
+.contacts {
+    border-radius: var(--bradout);
+    width: 100%;
 }

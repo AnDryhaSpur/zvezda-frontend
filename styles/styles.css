@@ -1077,25 +1077,47 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 }
 
 .about-us {
+  position: relative;
   width: 100%;
-  padding: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 .about-us h2 {
   color: white;
 }
 .about-us video {
   width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  inset: 0;
   position: absolute;
   max-width: none;
   z-index: -1;
 }
+.about-us .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 5rem;
+}
 .about-us .description h3 {
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
 }
 .about-us .description p {
   font-size: 1.4rem;
   font-weight: 400;
-  margin-bottom: 1.3rem;
+}
+.about-us .gallery {
+  padding: 5rem;
+}
+.about-us .gallery img {
+  width: 100%;
+  border-radius: var(--bradin);
+}
+
+.contacts {
+  border-radius: var(--bradout);
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
