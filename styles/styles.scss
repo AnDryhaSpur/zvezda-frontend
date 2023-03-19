@@ -13,7 +13,7 @@ header,
 section,
 footer {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -388,7 +388,7 @@ header {
 
 // Clipped corners divider
 .clipped-corners-bottom {
-    z-index: 0;
+    z-index: 1;
     height: var(--1bx);
     width: 100%;
     margin-bottom: calc(0rem - var(--1bx));
@@ -444,7 +444,7 @@ header {
 }
 
 .clipped-corners-top {
-    z-index: 0;
+    z-index: 1;
     height: var(--1bx);
     width: 100%;
     margin-top: calc(0rem - var(--1bx));
@@ -665,17 +665,22 @@ header {
     position: relative;
     max-width: none;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
     margin-top: calc(0rem - var(--1bx));
+    margin-bottom: calc(0rem - var(--1bx));
     padding-top: var(--1bx);
+    padding-bottom: var(--1bx);
 
     * {
-        z-index: 0;
+        z-index: 1;
     }
 }
 
 // Videogallery
 .videogallery {
+    padding-top: 0;
+    border-radius: var(--bradbig);
+
     .video-item {
         position: relative;
 
@@ -748,6 +753,8 @@ header {
 
 // Reviews
 .reviews {
+    border-radius: var(--bradbig);
+
     .customer {
         position: relative;
         flex-wrap: nowrap;
@@ -898,10 +905,30 @@ header {
 .about-us {
     position: relative;
     width: 100%;
-    padding-bottom: 1rem;
-    margin-bottom: 5rem;
+    z-index: 0;
+    margin-top: calc(0rem - var(--1bx));
+    padding-top: calc(1rem + var(--1bx));
+    margin-bottom: calc(0rem - var(--1bx));
+    padding-bottom: calc(1rem + var(--1bx));
+    color: #fff;
 
-    // !ask about inset
+    * {
+        z-index: 1;        
+    }
+
+    .box {
+        border: 1px solid #fff;
+    }
+
+    &::after {            
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(#000, 0.7);  
+                
+    }
 
     h2 {
         color: white;
@@ -909,14 +936,16 @@ header {
 
     video {
         width: 100%;
-        object-fit: fill;
-        inset: 0;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
         position: absolute;
         max-width: none;
-        z-index: -1;
+        z-index: -1;       
     }
 
-    .description {
+    .text {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -929,7 +958,7 @@ header {
         }
 
         p {
-            font-size: 1.4rem;
+            font-size: 1rem;
             font-weight: 400;
         }
     }
@@ -946,6 +975,52 @@ header {
 
 // Contacts
 .contacts {
-    border-radius: var(--bradout);
-    width: 100%;
+    padding-top: 0;
+    border-radius: var(--bradbig);
+
+    .map {
+        iframe {
+            height: 100%;
+            width:100%;
+            border-radius: var(--bradout);
+        }
+    }
+
+    .inquiry-form {
+        padding: 3rem 2rem;
+
+        h3 {font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        input {
+            outline: none;
+            border: none;
+
+            width: 100%;
+            
+            border-radius: var(--bradin);
+            height: 2rem;
+            padding: 0 1rem;
+            margin-bottom: 1.5rem;
+
+            font-size: 1rem;
+        }
+
+        textarea {
+            outline: none;
+            border: none;
+
+            width: 100%;
+
+            min-height: 3rem;
+            border-radius: var(--bradin);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+
+            font-size: 1rem;
+            resize: none;
+        }
+    }
 }

@@ -11,6 +11,10 @@
     --bg_turquoise: #e0f9f7;
     --bg_gray: #f0f0f0;
     --bg_yellow: #fff8d3;
+    --bg_red_trl: rgba(255, 234, 234, 0.8);
+    --bg_turquoise_trl: rgba(224, 249, 247, 0.8);
+    --bg_gray_trl: rgba(240, 240, 240, 0.8);
+    --bg_yellow_trl: rgba(255, 248, 211, 0.8);
     --1bx: 6rem;
     @for $i from 2 through 12 {
     --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
@@ -63,6 +67,26 @@
 
 [data-bg='yellow'] {
     background-color: var(--bg_yellow) !important;
+}
+
+[data-bg='white translucent'] {
+    background-color: rgba(#fff, 0.7) !important;
+}
+
+[data-bg='red translucent'] {
+    background-color: var(--bg_red_trl) !important;
+}
+
+[data-bg='turquoise translucent'] {
+    background-color: var(--bg_turquoise_trl) !important;
+}
+
+[data-bg='gray translucent'] {
+    background-color: var(--bg_gray_trl) !important;
+}
+
+[data-bg='yellow translucent'] {
+    background-color: var(--bg_yellow_trl) !important;
 }
 
 .hover3d {

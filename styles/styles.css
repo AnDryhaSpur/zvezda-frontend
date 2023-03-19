@@ -150,6 +150,10 @@ html {
   --bg_turquoise: #e0f9f7;
   --bg_gray: #f0f0f0;
   --bg_yellow: #fff8d3;
+  --bg_red_trl: rgba(255, 234, 234, 0.8);
+  --bg_turquoise_trl: rgba(224, 249, 247, 0.8);
+  --bg_gray_trl: rgba(240, 240, 240, 0.8);
+  --bg_yellow_trl: rgba(255, 248, 211, 0.8);
   --1bx: 6rem;
   --2bx: calc(2 * var(--1bx) + 1 * 1rem);
   --3bx: calc(3 * var(--1bx) + 2 * 1rem);
@@ -209,6 +213,26 @@ html {
 
 [data-bg=yellow] {
   background-color: var(--bg_yellow) !important;
+}
+
+[data-bg="white translucent"] {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-bg="red translucent"] {
+  background-color: var(--bg_red_trl) !important;
+}
+
+[data-bg="turquoise translucent"] {
+  background-color: var(--bg_turquoise_trl) !important;
+}
+
+[data-bg="gray translucent"] {
+  background-color: var(--bg_gray_trl) !important;
+}
+
+[data-bg="yellow translucent"] {
+  background-color: var(--bg_yellow_trl) !important;
 }
 
 .hover3d {
@@ -446,7 +470,7 @@ header,
 section,
 footer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -697,7 +721,7 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 }
 
 .clipped-corners-bottom {
-  z-index: 0;
+  z-index: 1;
   height: var(--1bx);
   width: 100%;
   margin-bottom: calc(0rem - var(--1bx));
@@ -734,7 +758,7 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 }
 
 .clipped-corners-top {
-  z-index: 0;
+  z-index: 1;
   height: var(--1bx);
   width: 100%;
   margin-top: calc(0rem - var(--1bx));
@@ -904,14 +928,20 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
   position: relative;
   max-width: none;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   margin-top: calc(0rem - var(--1bx));
+  margin-bottom: calc(0rem - var(--1bx));
   padding-top: var(--1bx);
+  padding-bottom: var(--1bx);
 }
 .benefits * {
-  z-index: 0;
+  z-index: 1;
 }
 
+.videogallery {
+  padding-top: 0;
+  border-radius: var(--bradbig);
+}
 .videogallery .video-item {
   position: relative;
 }
@@ -972,6 +1002,9 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
   transition: all 0.2s ease;
 }
 
+.reviews {
+  border-radius: var(--bradbig);
+}
 .reviews .customer {
   position: relative;
   flex-wrap: nowrap;
@@ -1079,34 +1112,54 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 .about-us {
   position: relative;
   width: 100%;
-  padding-bottom: 1rem;
-  margin-bottom: 5rem;
+  z-index: 0;
+  margin-top: calc(0rem - var(--1bx));
+  padding-top: calc(1rem + var(--1bx));
+  margin-bottom: calc(0rem - var(--1bx));
+  padding-bottom: calc(1rem + var(--1bx));
+  color: #fff;
+}
+.about-us * {
+  z-index: 1;
+}
+.about-us .box {
+  border: 1px solid #fff;
+}
+.about-us::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .about-us h2 {
   color: white;
 }
 .about-us video {
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  inset: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
   position: absolute;
   max-width: none;
   z-index: -1;
 }
-.about-us .description {
+.about-us .text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   padding: 1rem 5rem;
 }
-.about-us .description h3 {
+.about-us .text h3 {
   font-size: 1.7rem;
   font-weight: 700;
 }
-.about-us .description p {
-  font-size: 1.4rem;
+.about-us .text p {
+  font-size: 1rem;
   font-weight: 400;
 }
 .about-us .gallery {
@@ -1118,6 +1171,40 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 }
 
 .contacts {
-  border-radius: var(--bradout);
+  padding-top: 0;
+  border-radius: var(--bradbig);
+}
+.contacts .map iframe {
+  height: 100%;
   width: 100%;
+  border-radius: var(--bradout);
+}
+.contacts .inquiry-form {
+  padding: 3rem 2rem;
+}
+.contacts .inquiry-form h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.contacts .inquiry-form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: var(--bradin);
+  height: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.contacts .inquiry-form textarea {
+  outline: none;
+  border: none;
+  width: 100%;
+  min-height: 3rem;
+  border-radius: var(--bradin);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  resize: none;
 }/*# sourceMappingURL=styles.css.map */

@@ -329,13 +329,20 @@
         </div>
     </section>
 
+    <div class="clipped-corners-bottom">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
     <section class="videogallery">
         <div class="hwrapper">
             <h2>GoodWork ТВ</h2>
         </div>
         <div class="boxgrid">
             {% for _ in range(3) %}
-            <a href="#" class="video-item | box w_4 h_3" data-tilt>
+            <a href="#" class="video-item | box w_4 h_3">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
                 <div class="video-description-wrapper">
@@ -348,15 +355,17 @@
         </div>
     </section>
 
-    <section class="reviews" x-data="{ showElement: 0 }">
+    <section class="reviews" x-data="{ showElement: 0, clicked: false }">
         <div class="hwrapper">
             <h2>Отзывы</h2>
         </div>
         <div class="boxgrid">
             {% with customers_length=6 %}
             {% for i in range(customers_length) %}
-            <div class="customer hover3d | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
+            <div class="customer | box w_3 col_1"                
+                :data-chosen="showElement == $el.dataset.id ? true : false"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="{{i}}"
+                :class="showElement != $el.dataset.id ? 'hover3d' : ''"
                 @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <h3><b class="name">Vasily Nurihanovich</b>
@@ -405,45 +414,187 @@
         </div>
     </section>
 
-    <section class="about-us">
-        <div class="hwrapper">
-            <h2>О нашей компании</h2>
+    <div class="clipped-corners-top">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
         </div>
+    </div>
+
+    <section class="about-us merits">
+        {# <div class="hwrapper">
+            <h2>О нашей компании</h2>
+        </div> #}
         <video playsinline autoplay muted loop>
             <source src="img/rain.mp4" type="video/webm">
             Your browser does not support the video tag.
         </video>
-        <div class="boxgrid">
-            <div class="description | box w_6 h_5" data-bg="turquoise">
-                <h3>Знакомьтесь GoodWork!</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam tempore rem repellat recusandae fugit ab nihil, autem distinctio laboriosam cum dolorem explicabo hic eveniet nobis accusamus inventore ea quasi exercitationem ducimus, consectetur, pariatur nisi modi quas. Veniam harum similique minus?</p>
+        <div class="boxgrid">        
+            {# <div class="box w_4 h_2">
+                <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
+            </div> #}
+
+            <div class="text | box w_12 h_1">
+                <h3>Знакомьтесь GoodWork!</h3>                
             </div>
-            <div class="gallery | box w_6 h_5" data-bg="turquoise">
-                <img src="img/radmir-photo.jpg" alt="">
+
+            <div class="text | box w_4 h_6">                
+                <p>Выдержка из политики компании о наших целях (пунктики)
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!</p>
             </div>
+
+            <div class="swiper | box w_8 h_4">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div> 
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div> 
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/calendar.png" alt="">
+                <span>Более</span>
+                <span class="number">11</span>
+                <p class="description">
+                    Лет на рынке спецтехники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/loader.png" alt="">
+                <span>Свыше</span>
+                <span class="number">500</span>
+                <p class="description">
+                    Единиц проданной техники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/engine.png" alt="">
+                <span>До</span>
+                <span class="number">1000</span>
+                <p class="description">
+                    Наименований запчастей в наличии
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/map.png" alt="">
+                <span>Более чем в</span>
+                <span class="number">50</span>
+                <span class="description">
+                    Регионах есть наши клиенты
+                </span>
+            </div>             
+
+               
+            
         </div>
     </section>
+
+    <div class="clipped-corners-bottom">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
     <section class="contacts">
         <div class="hwrapper">
             <h2>Контакты</h2>
         </div>
         <div class="boxgrid">
-            <div class="map | box w_8 h_5" data-bg="yellow">
-            <div class="map-wrapper" style="position:relative;overflow:hidden;"><a
-                        href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a
-                        href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в
-                        Уфе</a><a
-                        href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в
-                        Уфе</a><iframe
-                        src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05"
-                        frameborder="1" allowfullscreen="true"
-                        style="position:relative;"></iframe></div>
+            <div class="box w_12 h_2" data-bg="turquoise">
+            Контакты компании
             </div>
-            <div class="inquiry-form | box w_4 h_5" data-bg="yellow">
-            <h3>Напишите нам!</h3>
+            <div class="map | box w_6 h_4" data-bg="yellow">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c92688988dc55f29bb86a262c2d85961797cc28880bf5d55bbaa186a528bdf&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="inquiry-form | box w_6 h_4" data-bg="yellow">
+                <h3>Свяжитесь с нами!</h3>
+                <form action="action_page.php">
+                    <!-- <label for="fname">Имя</label> -->
+                    <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." />
+
+                    <!-- <label for="lname">Фамилия</label> -->
+                    <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." />
+
+                    <label for="type">Как с вами связаться?</label>
+                    <select id="contact-type" name="Тип">
+                        <option value="telegram">Телеграм</option>
+                        <option value="whatsapp">Ватсап</option>
+                        <option value="phone">Телефонный звонок</option>
+                        <option value="email">Эл. почта</option>
+                    </select>
+
+                    <!-- <label for="subject">Сообщение</label> -->
+                    <textarea id="subject" name="subject" placeholder="Напишите нам.." style="height: 150px"></textarea>
+
+                    <input class="basic-btn" type="submit" value="Отправить" />
+                </form>
 
             </div>
         </div>
