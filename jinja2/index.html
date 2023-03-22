@@ -362,11 +362,9 @@
         <div class="boxgrid">
             {% with customers_length=6 %}
             {% for i in range(customers_length) %}
-            <div class="customer | box w_3 col_1"                
-                :data-chosen="showElement == $el.dataset.id ? true : false"
+            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="{{i}}"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''"
-                @click="showElement = $el.dataset.id">
+                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <h3><b class="name">Vasily Nurihanovich</b>
                     Engineer
@@ -429,25 +427,25 @@
             <source src="img/rain.mp4" type="video/webm">
             Your browser does not support the video tag.
         </video>
-        <div class="boxgrid">        
+        <div class="boxgrid">
             {# <div class="box w_4 h_2">
                 <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
             </div> #}
 
             <div class="text | box w_12 h_1">
-                <h3>Знакомьтесь GoodWork!</h3>                
+                <h3>Знакомьтесь GoodWork!</h3>
             </div>
 
-            <div class="text | box w_4 h_6">                
+            <div class="text | box w_4 h_6">
                 <p>Выдержка из политики компании о наших целях (пунктики)
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Harum ab, culpa voluptatum
-                                quasi doloremque vero!
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Harum ab, culpa voluptatum
-                                quasi doloremque vero!</p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum ab, culpa voluptatum
+                    quasi doloremque vero!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum ab, culpa voluptatum
+                    quasi doloremque vero!</p>
             </div>
 
             <div class="swiper | box w_8 h_4">
@@ -505,14 +503,14 @@
                             </p>
                             <span class="arrow"></span>
                         </a>
-                    </div> 
+                    </div>
                 </div>
                 <div class="swiper-buttons">
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-            </div> 
+            </div>
 
             <div class="merit | box w_2 h_2 hover3d">
                 <img src="img/icons/calendar.png" alt="">
@@ -548,10 +546,10 @@
                 <span class="description">
                     Регионах есть наши клиенты
                 </span>
-            </div>             
+            </div>
 
-               
-            
+
+
         </div>
     </section>
 
@@ -568,10 +566,12 @@
         </div>
         <div class="boxgrid">
             <div class="box w_12 h_2" data-bg="turquoise">
-            Контакты компании
+                Контакты компании
             </div>
             <div class="map | box w_6 h_4" data-bg="yellow">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c92688988dc55f29bb86a262c2d85961797cc28880bf5d55bbaa186a528bdf&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c92688988dc55f29bb86a262c2d85961797cc28880bf5d55bbaa186a528bdf&amp;source=constructor"
+                    width="500" height="400" frameborder="0"></iframe>
             </div>
             <div class="inquiry-form | box w_6 h_4" data-bg="yellow">
                 <h3>Свяжитесь с нами!</h3>
@@ -600,22 +600,28 @@
         </div>
     </section>
 
-    <script src="scripts/vanilla-tilt.js"></script>
-
-    <!-- <section class="contact-us">
-        <div class="hwrapper">
-        </div>
+    <footer>
         <div class="boxgrid">
-            <div class="review-box | box w_4">
-                
+            <div class="box w_4 h_2">
+                Footer text
             </div>
-            <div class="inquiry-form | box w_4">
-                <form action="get">
-                    <input type="Имя" name="" id="">
+            <div class="box w_4 h_2">
+                Useful links
+            </div>
+            <div class="box w_4 h_2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ea!</p>
+                <form action="#">
+                    <input type="text" placeholder="Подпишитесь на рассылку">
+                    <button><i class="fab fa-telegram-plane"></i></button>
                 </form>
             </div>
+            <div class="box w_12 h_1">
+                Copyright section
+            </div>
         </div>
-    </section> -->
+    </footer>
+
+    <script src="scripts/vanilla-tilt.js"></script>
 </body>
 
 </html>
