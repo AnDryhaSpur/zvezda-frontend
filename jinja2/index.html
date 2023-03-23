@@ -372,27 +372,35 @@
             {% endfor %}
             <div class="texts | box w_6 h_6" data-bg="turquoise">
                 <button :disabled="showElement==0" @click="showElement=Math.max(showElement - 1, 0)">
-                    Вверх
+                    <i class="uil uil-angle-up"></i>
                 </button>
                 {% for i in range(customers_length) %}
                 <div class="text" data-id="{{i}}" x-show="$el.dataset.id == showElement" x-transition.opacity>
-                    <h3> {{i}} Отзыв на крутой красный погрузчик</h3>
+                    <h3> {{i}} Модельььь!! v. 3000</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
                         est harum sapiente, dolorem asperiores quisquam maxime cumque,
                         deleniti repellendus eos quaerat sit doloribus illo eius.
                         Temporibus fugit quibusdam ratione laborum.
                     </p>
+                    <p class="date">27/01/2040</p>
                 </div>
                 {% endfor %}
                 <button :disabled="showElement=={{customers_length}}-1"
                     @click="showElement=Math.min(showElement + 1, {{customers_length}})">
-                    Вниз
+                    <i class="uil uil-angle-down"></i>
                 </button>
             </div>
             {% endwith %}
-            <div class="videos | box w_3 h_6" data-bg="red">
-                <h4>Видео отзывы</h4>
+            <div class="videos | box w_3 h_6" data-bg="gray">
+                <h3>Видео отзывы</h3>
+                {% for _ in range(3) %}
+                <iframe src="https://www.youtube.com/embed/97Aq8e8fDqk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                {# <div class="video">
+                </div> #}
+                {% endfor %}
             </div>
         </div>
     </section>
