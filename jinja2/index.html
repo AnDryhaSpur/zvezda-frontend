@@ -170,68 +170,11 @@
         </div>
     </div>
 
-    <section class="merits">
+    <section class="catalog">        
         <div class="boxgrid">
-            <div class="box w_4 h_2">
-                <h2>Компания <b class="brandname">ПромСпецАвто</b></h2>
+            <div class="box w_12">
+                <h2>Каталог</h2>
             </div>
-
-            <div class="merit | box w_2 h_2 hover3d" data-bg="yellow">
-                <img src="img/icons/calendar.png" alt="">
-                <span>Более</span>
-                <span class="number">11</span>
-                <p class="description">
-                    Лет на рынке спецтехники
-                </p>
-            </div>
-
-            <div class="merit | box w_2 h_2 hover3d" data-bg="gray">
-                <img src="img/icons/loader.png" alt="">
-                <span>Свыше</span>
-                <span class="number">500</span>
-                <p class="description">
-                    Единиц проданной техники
-                </p>
-            </div>
-
-            <div class="merit | box w_2 h_2 hover3d" data-bg="red">
-                <img src="img/icons/engine.png" alt="">
-                <span>До</span>
-                <span class="number">1000</span>
-                <p class="description">
-                    Наименований запчастей в наличии
-                </p>
-            </div>
-
-            <div class="merit | box w_2 h_2 hover3d" data-bg="turquoise">
-                <img src="img/icons/map.png" alt="">
-                <span>Более чем в</span>
-                <span class="number">50</span>
-                <span class="description">
-                    Регионах есть наши клиенты
-                </span>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="news">
-        <div class="boxgrid">
-            <div class="box w_2" data-bg="gray">1</div>
-            <div class="box w_6" data-bg="gray">2</div>
-            <div class="box w_2" data-bg="gray">3</div>
-            <div class="box" data-bg="gray">5</div>
-            <div class="box w_2" data-bg="gray">6</div>
-            <div class="box w_2" data-bg="gray">7</div>
-            <div class="box w_2" data-bg="gray">8</div>
-        </div>
-    </section>
-
-    <section class="catalog">
-        <div class="hwrapper">
-            <h2>Каталог</h2>
-        </div>
-        <div class="boxgrid">
             {% for _ in range(5) %}
             <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
                 <div class="description">
@@ -313,7 +256,7 @@
         </div>
     </section>
 
-    <div class="clipped-corners-top">
+    {# <div class="clipped-corners-top">
         <div class="clipped-corners-inner">
             <div class="clip-left"></div>
             <div class="clip-right"></div>
@@ -329,11 +272,18 @@
         </div>
     </section>
 
-    <section class="videogallery">
-        <div class="hwrapper">
-            <h2>GoodWork ТВ</h2>
+    <div class="clipped-corners-bottom">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
         </div>
+    </div> #}
+
+    {# <section class="videogallery">        
         <div class="boxgrid">
+            <div class="box w_12">
+                <h2>GoodWork ТВ</h2>
+            </div>
             {% for _ in range(3) %}
             <a href="#" class="video-item | box w_4 h_3">
                 <img src="img/ZL20GCyan.jpg" alt="">
@@ -346,18 +296,162 @@
             </a>
             {% endfor %}
         </div>
+    </section> #}
+
+    <div class="clipped-corners-top">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
+    <section class="about-us merits">
+        {# <div class="hwrapper">
+            <h2>О нашей компании</h2>
+        </div> #}
+        <video playsinline autoplay muted loop>
+            <source src="img/rain.mp4" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div class="boxgrid">
+            <div class="box w_12 h_1">
+                <h2>Знакомьтесь GoodWork!</h2>
+            </div>
+
+            <div class="text | box w_4 h_6">
+                <p>Выдержка из политики компании о наших целях (пунктики)
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum ab, culpa voluptatum
+                    quasi doloremque vero!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum ab, culpa voluptatum
+                    quasi doloremque vero!</p>
+            </div>
+
+            <div class="swiper | box w_8 h_4">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_1.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на GoodWork LX180F</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/slide_2.jpg" />
+                        <a href="#" class="description">
+                            <h3>Акция на Zvezda ZL20E</h3>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
+                                quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Harum ab, culpa voluptatum
+                                quasi doloremque vero!
+                            </p>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/calendar.png" alt="">
+                <span>Более</span>
+                <span class="number">11</span>
+                <p class="description">
+                    Лет на рынке спецтехники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/loader.png" alt="">
+                <span>Свыше</span>
+                <span class="number">500</span>
+                <p class="description">
+                    Единиц проданной техники
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/engine.png" alt="">
+                <span>До</span>
+                <span class="number">1000</span>
+                <p class="description">
+                    Наименований запчастей в наличии
+                </p>
+            </div>
+
+            <div class="merit | box w_2 h_2 hover3d">
+                <img src="img/icons/map.png" alt="">
+                <span>Более чем в</span>
+                <span class="number">50</span>
+                <span class="description">
+                    Регионах есть наши клиенты
+                </span>
+            </div>
+
+
+
+        </div>
     </section>
 
-    <section class="reviews" x-data="{ showElement: 0 }">
-        <div class="hwrapper">
-            <h2>Отзывы</h2>
+    <div class="clipped-corners-bottom">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
         </div>
+    </div>
+
+    <section class="reviews" x-data="{ showElement: 0, clicked: false }">        
         <div class="boxgrid">
+            <div class="box w_12">
+                <h2>Отзывы</h2>
+            </div>
             {% with customers_length=6 %}
             {% for i in range(customers_length) %}
             <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="{{i}}"
-                @click="showElement = $el.dataset.id">
+                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <h3><b class="name">Vasily Nurihanovich</b>
                     Engineer
@@ -375,7 +469,7 @@
                     <i class="uil uil-angle-up"></i>
                 </button>
                 {% for i in range(customers_length) %}
-                <div class="text" data-id="{{i}}" x-show="$el.dataset.id == showElement" x-transition.opacity>
+                <div class="text" data-id="{{i}}" :data-chosen="$el.dataset.id == showElement">
                     <h3> {{i}} Модельььь!! v. 3000</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
@@ -405,60 +499,121 @@
         </div>
     </section>
 
-    <section class="about-us">
-        <div class="hwrapper">
-            <h2>О нашей компании</h2>
-        </div>
-        <div class="container | boxgrid">
-            <div class="video-wrapper">
-                <video playsinline autoplay muted loop>
-                    <source src="img/rain.mp4" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="description | box w_3 h_1">
-                <p>Текст об истории компании и её ценностях Текст об истории компании и её ценностяхТекст об истории
-                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                    об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
-                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                    об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории
-                    компании и её ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её
-                    ценностяхТекст об истории компании и её ценностяхТекст об истории компании и её ценностяхТекст
-                    об истории компании и её ценностяхТекст об истории компании и её ценностях</p>
-            </div>
-            <div class="gallery | box w_4 h_1">
-                <img src="img/radmir-photo.jpg" alt="">
+    
+
+    <section class="contacts">        
+        <div class="boxgrid">            
+            {# <div class="map | box w_6 h_4">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c92688988dc55f29bb86a262c2d85961797cc28880bf5d55bbaa186a528bdf&amp;source=constructor"
+                    width="500" height="400" frameborder="0"></iframe>
+            </div> #}
+            <div class="inquiry-form | box w_12 h_4" data-bg="turquoise">
+                <h3>Свяжитесь с нами!</h3>
+                <form action="#">
+                    <!-- <label for="fname">Имя</label> -->
+                    <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." />
+
+                    <!-- <label for="lname">Фамилия</label> -->
+                    <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." />
+
+                    <label for="type">Как с вами связаться?</label>
+                    <select id="contact-type" name="Тип">
+                        <option value="telegram">Телеграм</option>
+                        <option value="whatsapp">Ватсап</option>
+                        <option value="phone">Телефонный звонок</option>
+                        <option value="email">Эл. почта</option>
+                    </select>
+
+                    <!-- <label for="subject">Сообщение</label> -->
+                    <textarea id="subject" name="subject" placeholder="Напишите нам.."></textarea>
+
+                    <input class="basic-btn" type="submit" value="Отправить" />
+                </form>
+
             </div>
         </div>
     </section>
 
-    <section class="contact-us">
-        <div class="hwrapper">
+    <div class="clipped-corners-top" data-bg="gray">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
         </div>
+    </div>
+
+
+    <footer data-bg="gray">
         <div class="boxgrid">
-            <div class="review-box | box w_4">
-                <div style="position:relative;overflow:hidden;"><a
-                        href="https://yandex.ru/maps/org/promspetsavto/72828093363/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:0px;">ПромСпецАвто</a><a
-                        href="https://yandex.ru/maps/172/ufa/category/special_equipment_special_vehicles/184106622/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Спецтехника и спецавтомобили в
-                        Уфе</a><a
-                        href="https://yandex.ru/maps/172/ufa/category/road_building_equipment/184107555/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Дорожно-строительная техника в
-                        Уфе</a><iframe
-                        src="https://yandex.ru/map-widget/v1/?ll=56.083916%2C54.805692&mode=search&oid=72828093363&ol=biz&z=17.05"
-                        width="560" height="400" frameborder="1" allowfullscreen="true"
-                        style="position:relative;"></iframe></div>
+            <div class="text | box w_4 h_4">
+                <h3>О компании</h3>
+                <div class="description">         
+                <p>Мы там вообще крутые, делаем погрузчики уже 10 лет! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos magnam laboriosam culpa dolore laudantium tempora sit vero odio repellat explicabo!</p>
+                <div class="logos"> 
+                    <a href="#" class="logo">
+                        <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
+                    </a>
+                    <a href="#" class="logo">
+                        <img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork">
+                    </a>
+                </div> 
+                <span>© 2012-2023 ООО "ПромСпецАвто". Все права защищены</span>
             </div>
-            <div class="inquiry-form | box w_4">
-                <form action="get">
-                    <input type="Имя" name="" id="">
-                </form>
             </div>
+            <div class="menu | box w_4 h_4"> 
+                <h3>Меню</h3> 
+                <div class="links">
+                        <a href="#" class="hoverline">Домой</a>
+                        <a href="#" class="hoverline">О нас</a>
+                        <a href="#" class="hoverline">Каталог</a>
+                        <a href="#" class="hoverline">Сервис</a>
+                        <a href="#" class="hoverline">Запчасти</a>
+                        <a href="#" class="hoverline">Контакты</a>
+                        <a href="#" class="hoverline">Преимущества</a>
+                        <a href="#" class="hoverline">Новости</a>
+                </div>
+            </div>
+            <div class="contacts | box w_4 h_4">
+                <h3>Контакты</h3>
+                <span>Консультация и продажа:</span>
+                <a class="bold" href="tel:+88005116885">8 (800) 511 68 85</a> 
+                <span>Запчасти и сервис:</span>
+                <a class="bold" href="tel:+88005116885">8 (800) 511 68 85</a>
+                <span>Время работы:</span>
+                <span class="bold">Будние дни 9:00 - 17:00</span> 
+                <span>Адрес:</span>
+                <address class="bold">
+                г. Уфа, ​Индустриальное шоссе, 26               
+                </address>
+                <div class="social">
+                    <a href=""><i class="uil uil-youtube"></i></a>
+                    <a href=""><i class="uil uil-whatsapp-alt"></i></a>
+                    <a href=""><i class="uil uil-telegram"></i></a>                    
+                </div>
+                {# <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ea!</p>
+                <form action="#">
+                    <input type="text" placeholder="Подпишитесь на рассылку">
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                </form> #}
+            </div>
+
         </div>
+    </footer>
+
+    <div class="clipped-corners-bottom" data-bg="gray">
+        <div class="clipped-corners-inner">
+            <div class="clip-left"></div>
+            <div class="clip-right"></div>
+        </div>
+    </div>
+
+    <section class="copyright">
+        <div class="boxgrid">
+            <span class="box w_12">Copyright section</span>
+        </div>        
     </section>
+
+    <script src="scripts/vanilla-tilt.js"></script>
 </body>
 
 </html>

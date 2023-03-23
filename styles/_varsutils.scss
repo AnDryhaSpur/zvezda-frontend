@@ -4,13 +4,12 @@
     font-weight: 400;
     --red: #d44128;
     --turquoise: #3cd1c5;
-    --gray: #878787;
+    --gray: #838383;
     --yellow: #f7ce24;
     --text_color: #252525;
-    --bg_red: #ffeaea;
-    --bg_turquoise: #e0f9f7;
-    --bg_gray: #f0f0f0;
-    --bg_yellow: #fff8d3;
+    --bg_red: #ffe3e3;
+    --bg_turquoise: #d3f7f4;
+    --bg_gray: #e8e8f5;    
     --1bx: 6rem;
     @for $i from 2 through 12 {
     --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
@@ -31,6 +30,15 @@
     grid-auto-flow: row dense;
     grid-auto-rows: var(--1bx);
     grid-template-columns: repeat(12, var(--1bx));
+}
+
+.hoverline {
+    text-decoration: underline 0.1rem transparent;    
+    transition: all 0.3s ease;
+
+    &:hover {
+        text-decoration-color: var(--turquoise);       
+    }
 }
 
 .box {
@@ -59,10 +67,6 @@
 
 [data-bg='gray'] {
     background-color: var(--bg_gray) !important;
-}
-
-[data-bg='yellow'] {
-    background-color: var(--bg_yellow) !important;
 }
 
 .hover3d {
