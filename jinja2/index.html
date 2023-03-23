@@ -170,7 +170,7 @@
         </div>
     </div>
 
-    <section class="catalog">        
+    <section class="catalog">
         <div class="boxgrid">
             <div class="box w_12">
                 <h2>Каталог</h2>
@@ -279,7 +279,7 @@
         </div>
     </div> #}
 
-    {# <section class="videogallery">        
+    {# <section class="videogallery">
         <div class="boxgrid">
             <div class="box w_12">
                 <h2>GoodWork ТВ</h2>
@@ -442,7 +442,7 @@
         </div>
     </div>
 
-    <section class="reviews" x-data="{ showElement: 0, clicked: false }">        
+    <section class="reviews" x-data="{ showElement: 0, clicked: false }">
         <div class="boxgrid">
             <div class="box w_12">
                 <h2>Отзывы</h2>
@@ -499,39 +499,65 @@
         </div>
     </section>
 
-    
 
-    <section class="contacts">        
-        <div class="boxgrid">            
+
+    <section class="contacts">
+        <div class="boxgrid">
             {# <div class="map | box w_6 h_4">
                 <iframe
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c92688988dc55f29bb86a262c2d85961797cc28880bf5d55bbaa186a528bdf&amp;source=constructor"
                     width="500" height="400" frameborder="0"></iframe>
             </div> #}
-            <div class="inquiry-form | box w_12 h_4" data-bg="turquoise">
-                <h3>Свяжитесь с нами!</h3>
-                <form action="#">
-                    <!-- <label for="fname">Имя</label> -->
-                    <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." />
+            <form action="#" class="box w_12 h_2" data-bg="turquoise">
+                <div class="text">
+                    <h2>Свяжитесь с нами, пожалуйста.</h2>
+                    <p>Пожалуйста, заполните простую форму
+                        и мы свяжемся с вами в ближайшее время</p>
+                </div>
 
-                    <!-- <label for="lname">Фамилия</label> -->
-                    <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." />
+                <div class="name-and-phone">
+                    <input type="text" name="name" placeholder="Ваше имя" />
 
-                    <label for="type">Как с вами связаться?</label>
-                    <select id="contact-type" name="Тип">
-                        <option value="telegram">Телеграм</option>
-                        <option value="whatsapp">Ватсап</option>
-                        <option value="phone">Телефонный звонок</option>
-                        <option value="email">Эл. почта</option>
-                    </select>
+                    <input type="text" name="phone" placeholder="Номер телефона" />
 
-                    <!-- <label for="subject">Сообщение</label> -->
-                    <textarea id="subject" name="subject" placeholder="Напишите нам.."></textarea>
+                    <fieldset>
+                        <span>Как с вами связаться?</span>
+                        <input type="radio" id="phone" name="method" value="phone" checked>
+                        <label for="phone">Телефон</label>
 
-                    <input class="basic-btn" type="submit" value="Отправить" />
-                </form>
+                        <input type="radio" id="whatsapp" name="method" value="whatsapp">
+                        <label for="whatsapp">Ватсап</label>
 
-            </div>
+
+
+                        <input type="radio" id="viber" name="method" value="viber">
+                        <label for="viber">Вайбер</label>
+
+                        <input type="radio" id="telegram" name="method" value="telegram">
+                        <label for="telegram">Телеграм</label>
+                    </fieldset>
+                </div>
+
+                <div class="comment-and-button">
+                    <textarea id="subject" name="subject" placeholder="Сообщение"></textarea>
+                    <div class="bottom-form">
+                        <input type="checkbox" id="checkbox" name="agree" value="">
+                        <label for="checkbox">
+                            <span>Нажимая на кнопку, я даю согласие<br> на обработку персональных данных</span>
+                        </label>
+
+                        <input class="basic-btn" type="submit" value="Отправить" />
+                    </div>
+                </div>
+
+
+
+
+            </form>
+
+
+
+        </div>
         </div>
     </section>
 
@@ -547,48 +573,50 @@
         <div class="boxgrid">
             <div class="text | box w_4 h_4">
                 <h3>О компании</h3>
-                <div class="description">         
-                <p>Мы там вообще крутые, делаем погрузчики уже 10 лет! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos magnam laboriosam culpa dolore laudantium tempora sit vero odio repellat explicabo!</p>
-                <div class="logos"> 
-                    <a href="#" class="logo">
-                        <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
-                    </a>
-                    <a href="#" class="logo">
-                        <img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork">
-                    </a>
-                </div> 
-                <span>© 2012-2023 ООО "ПромСпецАвто". Все права защищены</span>
+                <div class="description">
+                    <p>Мы там вообще крутые, делаем погрузчики уже 10 лет! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dignissimos magnam laboriosam culpa dolore laudantium tempora sit vero odio
+                        repellat explicabo!</p>
+                    <div class="logos">
+                        <a href="#" class="logo">
+                            <img src="img/logo-gw.png" alt="Логотип компании GoodWork" />
+                        </a>
+                        <a href="#" class="logo">
+                            <img src="img/logo-zvezda.png" alt="Логотип бренда GoodWork">
+                        </a>
+                    </div>
+                    <span>© 2012-2023 ООО "ПромСпецАвто". Все права защищены</span>
+                </div>
             </div>
-            </div>
-            <div class="menu | box w_4 h_4"> 
-                <h3>Меню</h3> 
+            <div class="menu | box w_4 h_4">
+                <h3>Меню</h3>
                 <div class="links">
-                        <a href="#" class="hoverline">Домой</a>
-                        <a href="#" class="hoverline">О нас</a>
-                        <a href="#" class="hoverline">Каталог</a>
-                        <a href="#" class="hoverline">Сервис</a>
-                        <a href="#" class="hoverline">Запчасти</a>
-                        <a href="#" class="hoverline">Контакты</a>
-                        <a href="#" class="hoverline">Преимущества</a>
-                        <a href="#" class="hoverline">Новости</a>
+                    <a href="#" class="hoverline">Домой</a>
+                    <a href="#" class="hoverline">О нас</a>
+                    <a href="#" class="hoverline">Каталог</a>
+                    <a href="#" class="hoverline">Сервис</a>
+                    <a href="#" class="hoverline">Запчасти</a>
+                    <a href="#" class="hoverline">Контакты</a>
+                    <a href="#" class="hoverline">Преимущества</a>
+                    <a href="#" class="hoverline">Новости</a>
                 </div>
             </div>
             <div class="contacts | box w_4 h_4">
                 <h3>Контакты</h3>
                 <span>Консультация и продажа:</span>
-                <a class="bold" href="tel:+88005116885">8 (800) 511 68 85</a> 
+                <a class="bold" href="tel:+88005116885">8 (800) 511 68 85</a>
                 <span>Запчасти и сервис:</span>
                 <a class="bold" href="tel:+88005116885">8 (800) 511 68 85</a>
                 <span>Время работы:</span>
-                <span class="bold">Будние дни 9:00 - 17:00</span> 
+                <span class="bold">Будние дни 9:00 - 17:00</span>
                 <span>Адрес:</span>
                 <address class="bold">
-                г. Уфа, ​Индустриальное шоссе, 26               
+                    г. Уфа, ​Индустриальное шоссе, 26
                 </address>
                 <div class="social">
                     <a href=""><i class="uil uil-youtube"></i></a>
                     <a href=""><i class="uil uil-whatsapp-alt"></i></a>
-                    <a href=""><i class="uil uil-telegram"></i></a>                    
+                    <a href=""><i class="uil uil-telegram"></i></a>
                 </div>
                 {# <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ea!</p>
                 <form action="#">
@@ -609,8 +637,12 @@
 
     <section class="copyright">
         <div class="boxgrid">
-            <span class="box w_12">Copyright section</span>
-        </div>        
+            <p class="box w_12">Любая информация, представленная на данном сайте, носит исключительно информационный
+                характер и не является публичной офертой, определяемой положениями статьи 437 ГК РФ. Все права на
+                публикуемые на сайте материалы принадлежат ООО "ПромСпецАвто". Для получения подробной информации о
+                наличии и стоимости указанных товаров и (или) услуг, пожалуйста, обращайтесь к нам с помощью специальной
+                формы связи или по единому номеру 8 (800) 511 68 85</p>
+        </div>
     </section>
 
     <script src="scripts/vanilla-tilt.js"></script>
