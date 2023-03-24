@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Test</title>
-    <meta charset="UTF-8" />
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -19,7 +19,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="scripts/index.js" defer></script>
-    
+
 </head>
 
 <body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false">
@@ -247,7 +247,7 @@
         </div>
         <div class="swiper">
             <div class="swiper-wrapper">
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="500"
                     data-volume="500" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -277,22 +277,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -321,11 +321,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="600"
                     data-volume="600" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -355,22 +355,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -399,11 +399,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="700"
                     data-volume="700" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -433,22 +433,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -477,11 +477,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="800"
                     data-volume="800" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -511,22 +511,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -555,11 +555,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="900"
                     data-volume="900" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -589,22 +589,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -633,11 +633,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1000"
                     data-volume="1000" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -667,22 +667,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -711,11 +711,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1100"
                     data-volume="1100" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -745,22 +745,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -789,11 +789,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1200"
                     data-volume="1200" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -823,22 +823,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -867,11 +867,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1300"
                     data-volume="1300" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -901,22 +901,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -945,11 +945,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1400"
                     data-volume="1400" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -979,22 +979,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -1023,11 +1023,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1500"
                     data-volume="1500" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1057,22 +1057,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -1101,11 +1101,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1600"
                     data-volume="1600" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1135,22 +1135,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -1179,11 +1179,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1700"
                     data-volume="1700" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1213,22 +1213,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -1257,11 +1257,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1800"
                     data-volume="1800" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1291,22 +1291,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -1335,11 +1335,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="1900"
                     data-volume="1900" data-brand="goodwork" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1369,22 +1369,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_1.jpg" alt="">
@@ -1413,11 +1413,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="swiper-slide vehicle | hover3d " data-bg="turquoise" data-capacity="2000"
                     data-volume="2000" data-brand="zvezda" :data-hidden="
                          $el.dataset.capacity < bottomCapacity |
@@ -1447,22 +1447,22 @@
                     </div>
                     <a href="#" class="gallery" x-data="{ photo: 0 }">
                         <div class="bullets" @mouseleave="photo=0">
-                            
+
                             <span data-id="0" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="1" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="2" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="3" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                             <span data-id="4" :data-active="photo==Number($el.dataset.id)"
                                 @mouseover="photo=Number($el.dataset.id)"></span>
-                            
+
                         </div>
                         <img data-id="0" x-show="photo==Number($el.dataset.id)"
                             src="img/slide_2.jpg" alt="">
@@ -1491,11 +1491,11 @@
 
                     <div class="bottom-line">
                         <button class="base-button">Заказать</button>
-                        
+
                     </div>
 
                 </div>
-                
+
             </div>
             <div class="swiper-scrollbar"></div>
         </div>
@@ -1578,7 +1578,7 @@
                     <span class="see-more">Больше обзоров ⇒</span>
                 </a>
             </div>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1589,7 +1589,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1600,7 +1600,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1611,7 +1611,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1622,7 +1622,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1633,7 +1633,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1644,7 +1644,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1655,7 +1655,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
             <a href="#" class="video-item | box w_3 h_2">
                 <img src="img/ZL20GCyan.jpg" alt="">
                 <span class="play-button fa-solid fa-circle-play"></span>
@@ -1666,7 +1666,7 @@
                     <p class="date">26/02/2023</p>
                 </div>
             </a>
-            
+
         </div>
     </section>
 
@@ -1678,7 +1678,7 @@
     </div>
 
     <section class="about-us merits">
-        
+
         <video playsinline autoplay muted loop>
             <source src="img/rain.mp4" type="video/webm">
             Your browser does not support the video tag.
@@ -1912,87 +1912,87 @@
                     <span class="see-more">Больше отзывов ⇒</span>
                 </a>
             </div>
-            
-            
+
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="0"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
-                
+
+
                 <div class="clip-bottom"></div>
-                
+
             </div>
-            
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="1"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
+
                 <div class="clip-top"></div>
-                
-                
+
+
                 <div class="clip-bottom"></div>
-                
+
             </div>
-            
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="2"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
+
                 <div class="clip-top"></div>
-                
-                
+
+
                 <div class="clip-bottom"></div>
-                
+
             </div>
-            
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="3"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
+
                 <div class="clip-top"></div>
-                
-                
+
+
                 <div class="clip-bottom"></div>
-                
+
             </div>
-            
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="4"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
+
                 <div class="clip-top"></div>
-                
-                
+
+
                 <div class="clip-bottom"></div>
-                
+
             </div>
-            
+
             <div class="customer | box w_2 col_1" :data-active="$el.dataset.id == showElement"
                 :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="5"
                 :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
                 <img src="img/customer avatar.jpg" alt="">
                 <b>Алексей Иванов</b>
-                
+
                 <div class="clip-top"></div>
-                
-                
+
+
             </div>
-            
+
             <div class="texts | box w_6 h_6" data-bg="turquoise">
                 <button :disabled="showElement==0" @click="showElement=Math.max(showElement - 1, 0)">
                     <i class="uil uil-angle-up"></i>
                 </button>
-                
+
                 <div class="text" data-id="0" :data-active="$el.dataset.id == showElement">
                     <h3>0 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2013,7 +2013,7 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <div class="text" data-id="1" :data-active="$el.dataset.id == showElement">
                     <h3>1 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2034,7 +2034,7 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <div class="text" data-id="2" :data-active="$el.dataset.id == showElement">
                     <h3>2 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2055,7 +2055,7 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <div class="text" data-id="3" :data-active="$el.dataset.id == showElement">
                     <h3>3 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2076,7 +2076,7 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <div class="text" data-id="4" :data-active="$el.dataset.id == showElement">
                     <h3>4 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2097,7 +2097,7 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <div class="text" data-id="5" :data-active="$el.dataset.id == showElement">
                     <h3>5 Погрузчик Zvezda ZL20</h3>
                     <p>27/01/2040 - <b>Авито</b></p>
@@ -2118,16 +2118,16 @@
                         <img src="/img/ZL20GCyan.jpg" alt="">
                     </div>
                 </div>
-                
+
                 <button :disabled="showElement==6-1"
                     @click="showElement=Math.min(showElement + 1, 6)">
                     <i class="uil uil-angle-down"></i>
                 </button>
             </div>
-            
+
             <div class="videos | box w_4 h_6" data-bg="gray">
                 <h3>Видео отзывы</h3>
-                
+
             </div>
         </div>
     </section>
@@ -2136,7 +2136,7 @@
 
     <section class="contacts">
         <div class="boxgrid">
-            
+
             <form action="#" class="box w_12 h_2" data-bg="turquoise">
                 <div class="text">
                     <h2>Свяжитесь с нами</h2>
@@ -2269,12 +2269,18 @@
                     <a href=""><i class="uil uil-whatsapp-alt"></i></a>
                     <a href=""><i class="uil uil-telegram"></i></a>
                 </div>
-                
+
             </div>
 
         </div>
     </footer>
 
+        <div class="clipped-corners-bottom" data-bg="gray">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
+        </div>
     <div class="clipped-corners-bottom">
         <div class="clipped-corners-inner">
             <div class="clip-left"></div>
