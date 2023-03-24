@@ -7,10 +7,10 @@
     --gray: #838383;
     --yellow: #f7ce24;
     --text_color: #252525;
-    --bg_red: #ffe3e3;
+    // --bg_red: #ffecf5;
     --bg_turquoise: #d3f7f4;
-    --bg_gray: #e8e8f5;    
-    --1bx: 6rem;
+    --bg_gray: #e8e8f5;
+    --1bx: clamp(4rem, 6.5vw, 6rem);
     @for $i from 2 through 12 {
     --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
     }
@@ -33,11 +33,11 @@
 }
 
 .hoverline {
-    text-decoration: underline 0.1rem transparent;    
+    text-decoration: underline 0.1rem transparent;
     transition: all 0.3s ease;
 
     &:hover {
-        text-decoration-color: var(--turquoise);       
+        text-decoration-color: var(--turquoise);
     }
 }
 
@@ -57,10 +57,6 @@
     background-color: #fff !important;
 }
 
-[data-bg='red'] {
-    background-color: var(--bg_red) !important;
-}
-
 [data-bg='turquoise'] {
     background-color: var(--bg_turquoise) !important;
 }
@@ -69,11 +65,15 @@
     background-color: var(--bg_gray) !important;
 }
 
+[data-bg='black'] {
+    background-color: var(--bg_gray) !important;
+}
+
 .hover3d {
     transition: all 0.2s ease;
 
     &:hover {
-        margin-top: -3px;
+        transform: translateY(-3px);
         box-shadow: 0 3px 6px rgba(#000000, 0.2);
     }
 }
@@ -93,23 +93,19 @@
     }
     .h_#{$i} {
         grid-row: var(--row_start) / span #{$i};
-    }    
-}
-
-@media (max-width: 1400px) {
-    :root {
-        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     :root {
-        font-size: 0.8rem;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 1000px) {
-    :root {
-        font-size: 0.7rem;
-    }
-}
+// @media (max-width: 1200px) {
+//     :root {
+//         font-size: 12px;
+//     }
+// }
+
+
