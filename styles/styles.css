@@ -1047,6 +1047,28 @@ header .bot-row .item:hover .dropdown, header .bot-row .item:focus .dropdown, he
 .about-us h2 {
   color: white;
 }
+.about-us .slider-container {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-columns: 3fr 1fr;
+}
+.about-us .swiper {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--bradout);
+}
+.about-us .thumbs {
+  display: grid;
+  gap: 0.5rem;
+}
+.about-us .thumbs img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--bradin);
+}
 .about-us video {
   width: 100%;
   height: 100%;

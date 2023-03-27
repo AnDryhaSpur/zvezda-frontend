@@ -180,7 +180,7 @@
                     </a>
                     <span x-text="bottom"></span>
                     <div id="slider"
-                    @sliderupdate="
+                         @sliderupdate="
                     values=$el.noUiSlider.get(true);
                     bottom=values[0];
                     top=values[1];"></div>
@@ -191,9 +191,9 @@
                 <div class="swiper-wrapper">
                     {% for i in range(16) %}
                     <div class="swiper-slide vehicle | hover3d "
-                    :class="$el.dataset.mass < bottom | $el.dataset.mass > top ? 'hidden' : ''"
-                        data-bg="turquoise"
-                        data-mass="{{ 1000 + 200 * i }}">
+                         :class="$el.dataset.mass < bottom | $el.dataset.mass > top ? 'hidden' : ''"
+                         data-bg="turquoise"
+                         data-mass="{{ 1000 + 200 * i }}">
                         <div class="slider">
                             <img src="img/slide_1.jpg" alt="">
                         </div>
@@ -298,7 +298,7 @@
 
         <section class="about-us merits">
             <video playsinline autoplay muted loop>
-                <source src="img/rain.mp4" type="video/webm">
+                <source src="img/bg-video.mp4" type="video/webm">
                 Your browser does not support the video tag.
             </video>
             <div class="boxgrid">
@@ -345,7 +345,7 @@
                     </span>
                 </div>
 
-                <div class="text | box w_4 h_5">
+                <div class="text | box w_4 h_6">
                     <p>Выдержка из политики компании о наших целях (пунктики)
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
                         quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -357,67 +357,79 @@
                         quasi doloremque vero!</p>
                 </div>
 
-                <div class="swiper | box w_8 h_4">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="img/slide_1.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на GoodWork LX180F</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
+                <div class="slider-container | box w_8 h_5">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="img/slide_1.jpg" />
+                                <a href="#" class="description">
+                                    <h3>Акция на GoodWork LX180F</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa
+                                        voluptatum
+                                        quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Harum ab, culpa voluptatum
+                                        quasi doloremque vero!
+                                    </p>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/slide_2.jpg" />
+                                <a href="#" class="description">
+                                    <h3>Акция на Zvezda ZL20E</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa
+                                        voluptatum
+                                        quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Harum ab, culpa voluptatum
+                                        quasi doloremque vero!
+                                    </p>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/slide_1.jpg" />
+                                <a href="#" class="description">
+                                    <h3>Акция на GoodWork LX180F</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa
+                                        voluptatum
+                                        quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Harum ab, culpa voluptatum
+                                        quasi doloremque vero!
+                                    </p>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/slide_2.jpg" />
+                                <a href="#" class="description">
+                                    <h3>Акция на Zvezda ZL20E</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa
+                                        voluptatum
+                                        quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Harum ab, culpa voluptatum
+                                        quasi doloremque vero!
+                                    </p>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_2.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на Zvezda ZL20E</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_1.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на GoodWork LX180F</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/slide_2.jpg" />
-                            <a href="#" class="description">
-                                <h3>Акция на Zvezda ZL20E</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ab, culpa voluptatum
-                                    quasi doloremque vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Harum ab, culpa voluptatum
-                                    quasi doloremque vero!
-                                </p>
-                                <span class="arrow"></span>
-                            </a>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
+                    <div class="thumbs">
+                        <img src="/img/lx330.jpg" alt="">
+                        <img src="/img/lx330.jpg" alt="">
+                        <img src="/img/lx330.jpg" alt="">
+                        {# <img src="/img/lx330.jpg" alt=""> #}
                     </div>
                 </div>
             </div>
@@ -605,7 +617,12 @@
 
         <section class="copyright">
             <div class="boxgrid">
-                <span class="box w_12">Copyright section</span>
+                <span class="box w_12">
+                    Любая информация, представленная на данном сайте, носит исключительно информационный характер
+                    и не является публичной офертой, определяемой положениями статьи 437 ГК РФ. Все права на публикуемые
+                    на сайте материалы принадлежат ООО «АМУР-ТОРГ». Для получения подробной информации о наличии и
+                    стоимости указанных товаров и (или) услуг, пожалуйста, обращайтесь к нам с помощью специальной
+                    формы связи или по единому номеру 8 (381) 239-39-52</span>
             </div>
         </section>
     </body>
