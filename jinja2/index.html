@@ -20,7 +20,7 @@
     <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false">
     <header>
         <nav class="top-row | boxgrid"></nav>
         <nav class="mid-row | boxgrid">
@@ -157,7 +157,7 @@
                     commodi aspernatur fugiat, ullam quas quisquam. Soluta commodi
                     aspernatur fugiat, ullam quas quisquam.
                 </p>
-                <button class="basic-btn">Заказать технику</button>
+                <button x-on:click="isModalOpen = true" class="basic-btn">Заказать технику</button>
                 <a href="#" class="basic-btn" data-btn-anchor>Каталог ⇒</a>
             </div>
         </div>
@@ -644,6 +644,56 @@
                 формы связи или по единому номеру 8 (800) 511 68 85</p>
         </div>
     </section>
+
+    <div class="overlay" x-show="isModalOpen" x-cloak></div>
+    <div class="modal" x-show="isModalOpen" x-cloak
+        x-transition>
+        <div class="modal-body" x-on:click.away="isModalOpen = false" data-bg="turquoise">
+            <form action="#" class="box w_12 h_2">
+                <div class="text">
+                    <h2>Свяжитесь с нами!</h2>
+                    <p>Пожалуйста, заполните простую форму
+                        и мы свяжемся с вами в ближайшее время</p>
+                </div>
+
+                <div class="name-and-phone">
+                    <input type="text" name="name" placeholder="Ваше имя" />
+
+                    <input type="text" name="phone" placeholder="Номер телефона" />
+
+                    <fieldset>
+                        <span>Как с вами связаться?</span>
+                        <input type="radio" id="phone" name="method" value="phone" checked>
+                        <label for="phone">Телефон</label>
+
+                        <input type="radio" id="whatsapp" name="method" value="whatsapp">
+                        <label for="whatsapp">Ватсап</label>
+
+
+
+                        <input type="radio" id="viber" name="method" value="viber">
+                        <label for="viber">Вайбер</label>
+
+                        <input type="radio" id="telegram" name="method" value="telegram">
+                        <label for="telegram">Телеграм</label>
+                    </fieldset>
+                </div>
+
+                <div class="comment-and-button">
+                    <textarea id="subject" name="subject" placeholder="Сообщение"></textarea>
+                    <div class="bottom-form">
+                        <input type="checkbox" id="checkbox" name="agree" value="">
+                        <label for="checkbox">
+                            <span>Нажимая на кнопку, я даю согласие<br> на обработку персональных данных</span>
+                        </label>
+
+                        <input class="basic-btn" type="submit" value="Отправить" />
+                    </div>
+                </div>
+            </form>
+            <button class="close" aria-label="Close" x-on:click="isModalOpen=false">✖</button>
+        </div>
+    </div>
 
     <script src="scripts/vanilla-tilt.js"></script>
 </body>
