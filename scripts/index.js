@@ -1,19 +1,36 @@
-let slider = document.getElementById('slider');
+let capacitySlider = document.getElementById('capacity-slider');
+let topCap = Number(capacitySlider.dataset.topCapacity);
+let bottomCap = Number(capacitySlider.dataset.bottomCapacity);
 
-noUiSlider.create(slider, {
-    start: [1000, 5000],
+noUiSlider.create(capacitySlider, {
+    start: [bottomCap, topCap],
     step: 100,
     connect: true,
     range: {
-        'min': 1000,
-        'max': 5000,
+        'min': bottomCap,
+        'max': topCap,
     }
 });
 
-function upd() {
-    slider.dispatchEvent(new Event('sliderupdate'))
-}
-slider.noUiSlider.on('update', upd);
+let volumeSlider = document.getElementById('volume-slider');
+let topVol = Number(volumeSlider.dataset.topVolume);
+let bottomVol = Number(volumeSlider.dataset.bottomVolume);
+
+noUiSlider.create(volumeSlider, {
+    start: [bottomVol, topVol],
+    step: 100,
+    connect: true,
+    range: {
+        'min': bottomVol,
+        'max': topVol,
+    }
+});
+
+capacitySlider.noUiSlider.on('update',
+    () => capacitySlider.dispatchEvent(new Event('capacityupdate')));
+volumeSlider.noUiSlider.on('update',
+    () => volumeSlider.dispatchEvent(new Event('volumeupdate')));
+
 
 
 const heroSwiper = new Swiper(".hero .swiper", {
@@ -23,41 +40,42 @@ const heroSwiper = new Swiper(".hero .swiper", {
     slidesPerView: 1,
     effect: "fade",
     autoplay: {
-        pauseOnMouseEnter: true,
+        delay: 5000,
     },
 
     // If we need pagination
     pagination: {
-        el: ".swiper-pagination",
+        el: ".hero .swiper-pagination",
         type: "fraction"
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        nextEl: ".hero .swiper-button-next",
+        prevEl: ".hero .swiper-button-prev"
     }
 });
 
 const catalogSwiper = new Swiper(".catalog .swiper", {
     // Optional parameters
     speed: 500,
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 16,
     grid: {
-        fill: 'row',
+        fill: 'column',
         rows: 2,
     },
 
     // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
+    scrollbar: {
+        el: ".catalog .swiper-scrollbar",
+        draggable: "true",
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        nextEl: ".catalog .swiper-button-next",
+        prevEl: ".catalog .swiper-button-prev"
     }
 });
 
@@ -73,13 +91,13 @@ const aboutSwiper = new Swiper(".about-us .swiper", {
 
     // If we need pagination
     pagination: {
-        el: ".swiper-pagination",
+        el: ".about-us .swiper-pagination",
         type: "fraction"
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        nextEl: ".about-us .swiper-button-next",
+        prevEl: ".about-us .swiper-button-prev"
     }
 });

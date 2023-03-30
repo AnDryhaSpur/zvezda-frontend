@@ -10,9 +10,9 @@
     // --bg_red: #ffecf5;
     --bg_turquoise: #d3f7f4;
     --bg_gray: #e8e8f5;
-    --1bx: clamp(4rem, 6.5vw, 6rem);
+    --1bx: clamp(4rem, 6.5vw, 6.5rem);
     @for $i from 2 through 12 {
-    --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
+        --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
     }
     --bradout: calc(1.4 * 1rem);
     --bradin: 0.9rem;
@@ -53,24 +53,24 @@
     align-items: center;
 }
 
-[data-bg='white'] {
+[data-bg="white"] {
     background-color: #fff !important;
 }
 
-[data-bg='turquoise'] {
+[data-bg="turquoise"] {
     background-color: var(--bg_turquoise) !important;
 }
 
-[data-bg='gray'] {
+[data-bg="gray"] {
     background-color: var(--bg_gray) !important;
 }
 
-[data-bg='black'] {
+[data-bg="black"] {
     background-color: var(--bg_gray) !important;
 }
 
 .hover3d {
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
         transform: translateY(-3px);
@@ -107,5 +107,3 @@
 //         font-size: 12px;
 //     }
 // }
-
-
