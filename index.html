@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Test</title>
-    <meta charset="UTF-8" />
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet"
+              href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link href="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.css"
+              rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css" />
 
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="scripts/index.js" defer></script>
-    <script src="https://kit.fontawesome.com/2887215a2b.js" crossorigin="anonymous"></script>
-</head>
+        <script src="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.js"
+                defer></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+                defer></script>
+        <script src="scripts/index.js" defer></script>
+        
+    </head>
 
 <body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false">
     <header>
@@ -67,15 +74,67 @@
             </div>
         </nav>
     </header>
+    <body>
+        <header>
+            <nav class="top-row | boxgrid"></nav>
+            <nav class="mid-row | boxgrid">
+                <a href="#" class="logo | box w_2">
+                    <img src="img/logo-gw.png"
+                         alt="Логотип компании GoodWork" />
+                </a>
+                <a href="#" class="box w_2">Свяжитесь с нами <i
+                       class="uil uil-incoming-call"></i></a>
+                <a href="#" class="box w_2">Демонстрация <i
+                       class="uil uil-car-sideview"></i></a>
+                <a href="#" class="box w_2">Расчитать стоимость <i
+                       class="uil uil-bill"></i></a>
+                <a class="base-button phone | box w_2" href="tel:+78005553535">
+                    <i class="uil uil-outgoing-call"></i> 8 800 555-35-35
+                </a>
+            </nav>
+            <nav class="bot-row | boxgrid">
+                <a href="#" class="logo | box"><img src="img/logo-zvezda.png"
+                         alt="Логотип бренда GoodWork"></a>
+                <div class="item">
+                    <a href="#">Каталог</a>
+                    <div class="dropdown">
+                        <a href="#">Фронтальные погрузчики</a>
+                        <a href="#">Бетономешалки</a>
+                        <a href="#">Пирожки</a>
+                        <a href="#">Звезда</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">Сервис</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Запчасти</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Финансирование</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Про компанию</a>
+                    <div class="dropdown"></div>
+                </div>
+                <div class="item">
+                    <a href="#">Про компанию 2</a>
+                    <div class="dropdown"></div>
+                </div>
+            </nav>
+        </header>
 
-    <div class="clipped-corners-top" data-bg="turquoise">
-        <div class="clipped-corners-inner">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
+        <div class="clipped-corners-top">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
 
 
+            </div>
         </div>
-    </div>
 
     <section class="hero">
         <div class="hero-container | boxgrid">
@@ -163,375 +222,1723 @@
         </div>
     </section>
 
-    <div class="clipped-corners-bottom" data-bg="turquoise">
-        <div class="clipped-corners-inner">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
+        <div class="clipped-corners-bottom">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
         </div>
-    </div>
 
-    <section class="catalog">
-        <div class="boxgrid">
-            <div class="box w_12">
-                <h2>Каталог</h2>
+        <section class="catalog"
+                 x-data="{
+                    topCapacity: 0,
+                    bottomCapacity: 0,
+                    topVolume: 0,
+                    bottomVolume: 0,
+                    brands: {},
+                    }">
+            <div class="boxgrid">
+                <div class="heading | box w_12">
+                    <a class="title" href="#">
+                        <h2>Каталог техники</h2>
+                        <span class="see-more">
+                            Больше техники ⇒
+                        </span>
+                    </a>
+
+                    <div class="range">
+                        <span class="range-name">Грузоподъемность</span>
+                        <div id="capacity-slider"
+                             class="range-slider"
+                             data-top-capacity="3000"
+                             data-bottom-capacity="500"
+                             @capacityupdate="
+                            values=$el.noUiSlider.get(true);
+                            bottomCapacity=values[0];
+                            topCapacity=values[1];"></div>
+                        <span class="range-values" x-text="
+                            bottomCapacity.toFixed(0)+' кг' + ' - ' +
+                            topCapacity.toFixed(0)+' кг'"></span>
+                    </div>
+                    <div class="range">
+                        <span class="range-name">Объем ковша</span>
+                        <div id="volume-slider"
+                             class="range-slider"
+                             data-top-volume="3000"
+                             data-bottom-volume="500"
+                             @volumeupdate="
+                            values=$el.noUiSlider.get(true);
+                            bottomVolume=values[0];
+                            topVolume=values[1];"></div>
+                        <span class="range-values" x-text="
+                            (bottomVolume/1000).toFixed(1)+' м³' + ' - ' +
+                            (topVolume/1000).toFixed(1)+' м³'"></span>
+                    </div>
+                    <div class="brand-flags">
+                        <span>Бренд:</span>
+                        <input type="checkbox" name="" id="gw-flag"
+                               value="goodwork"
+                               x-model="brands[$el.value]=$el.checked">
+                        <label for="gw-flag">GoodWork</label>
+                        <input type="checkbox" name="" id="zv-flag"
+                               value="zvezda"
+                               x-model="brands[$el.value]=$el.checked">
+                        <label for="zv-flag">Zvezda</label>
+                    </div>
+                </div>
             </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="500"
+                         data-volume="500"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>500
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>0.5
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="600"
+                         data-volume="600"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>600
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>0.6
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="700"
+                         data-volume="700"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>700
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>0.7
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="800"
+                         data-volume="800"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>800
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>0.8
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="turquoise">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="900"
+                         data-volume="900"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>900
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>0.9
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1000"
+                         data-volume="1000"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1000
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.0
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1100"
+                         data-volume="1100"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1100
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.1
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1200"
+                         data-volume="1200"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1200
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.2
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
-                    </div>
-                </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
-            </div>
-            
-            <div class="catalog-item | box w_4 h_2 hover3d " data-bg="red">
-                <div class="description">
-                    <div class="user-buttons">
-                        <a href="#" class="item-name">
-                            <h4>Zvezda ZL20G</h4>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1300"
+                         data-volume="1300"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
                         </a>
-                        <a href="#" class="icon"><span class="fa-regular fa-copy"></span></a>
-                        <a href="#" class="icon"><span class="fa-regular fa-bookmark"></span></a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1300
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.3
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <div class="tags">
-                        <a href="#" class="new">Новинка</a>
-                        <a href="#" class="hit">Хит-продаж</a>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1400"
+                         data-volume="1400"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1400
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.4
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
-                    <table>
-                        <tr>
-                            <th>Масса </th>
-                            <td>4000 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Грузоподъемность</th>
-                            <td>1500 кг</td>
-                        </tr>
-                        <tr>
-                            <th>Обьем ковша </th>
-                            <td>800 м³</td>
-                        </tr>
-                    </table>
-                    <div class="price">от <span>1 800 000</span> руб.</div>
-                    <div class="buttons">
-                        <button class="basic-btn">Заказать</button>
-                        <a href="#" class="basic-btn" data-btn-anchor>Каталог</a>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1500"
+                         data-volume="1500"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1500
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.5
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
                     </div>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1600"
+                         data-volume="1600"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1600
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.6
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1700"
+                         data-volume="1700"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1700
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.7
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1800"
+                         data-volume="1800"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1800
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.8
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="1900"
+                         data-volume="1900"
+                         data-brand="goodwork"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>GoodWork LX100F
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_1v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_1.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>1900
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>1.9
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-slide vehicle | hover3d "
+                         data-bg="turquoise"
+                         data-capacity="2000"
+                         data-volume="2000"
+                         data-brand="zvezda"
+                         :data-hidden="
+                         $el.dataset.capacity < bottomCapacity |
+                         $el.dataset.capacity > topCapacity |
+                         $el.dataset.volume < bottomVolume |
+                         $el.dataset.volume > topVolume |
+                         !(brands[$el.dataset.brand]===true |
+                         Object.values(brands).every((v) => v === false))
+                         ? true : false">
+                        <div class="model">
+                            <div class="name-type">
+                                <a href="#" class="name">
+                                    <h4>Zvezda ZL20
+                                    </h4>
+                                </a>
+                                <a href="#" class="type">Фронтальный
+                                    погрузчик</a>
+                            </div>
+                            <div class="actions">
+                                <a href="#"><i
+                                       class="uil uil-chart-bar"></i></a>
+                                <a href="#"><i
+                                       class="uil uil-heart-alt"></i></a>
+                            </div>
+                            <div class="tags">
+                                <a href="#" class="new">Новинка</a>
+                                <a href="#" class="hit">Хит-продаж</a>
+                            </div>
+                        </div>
+                        <a href="#" class="gallery" x-data="{ photo: 0 }">
+                            <div class="bullets" @mouseleave="photo=0">
+                                
+                                <span data-id="0"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="1"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="2"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="3"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                                <span data-id="4"
+                                      :data-active="photo==Number($el.dataset.id)"
+                                      @mouseover="photo=Number($el.dataset.id)"></span>
+                                
+                            </div>
+                            <img data-id="0"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="1"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <img data-id="2"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2.jpg"
+                                 alt="">
+                            <img data-id="3"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 src="img/slide_2v2.jpg"
+                                 alt="">
+                            <div class="more" data-id="4"
+                                 x-show="photo==Number($el.dataset.id)"
+                                 style="background-image: url(img/slide_2.jpg)"
+                                 alt="">
+                                <span>Ещё 10 фото</span>
+                            </div>
+                        </a>
+
+                        <ul class="specs">
+                            <li><span>Масса</span>4000 кг</li>
+                            <li><span>Грузоподъемность</span>2000
+                                кг</li>
+                            <li><span>Обьем
+                                    ковша</span>2.0
+                                м³</li>
+                            <li><span>Цена</span>1 800 000 ₽</li>
+                        </ul>
+
+                        <div class="bottom-line">
+                            <button class="base-button">Заказать</button>
+                            
+                        </div>
+
+                    </div>
+                    
                 </div>
-                <div class="slider">
-                    <img src="img/slide_1.jpg" alt="">
-                </div>
+                <div class="swiper-scrollbar"></div>
             </div>
-            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+
+        <div class="clipped-corners-top">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
         </div>
-    </section>
+
+        <section class="benefits"
+                 style="background-image: url(img/benefits_bg.jpeg)"
+                 x-data="{ brand: 'goodwork' }">
+            <div class="boxgrid">
+                <div class="heading | box w_12" data-bg="white">
+                    <a class="title" href="#">
+                        <h2>Преимущества</h2>
+                        <span class="see-more">Подробнее ⇒</span>
+                    </a>
+                    <p class="click-them">Кликните на карточку, чтобы посмотреть
+                        преимущества
+                        другого бренда</p>
+                    <div data-brand="goodwork"
+                         :data-active="$el.dataset.brand==brand"
+                         @click="brand=$el.dataset.brand"
+                         class="heading-card | hover3d">
+                        <img src="/img/logo-gw.png" alt="" class="logo" draggable="false">
+                    </div>
+                    <div data-brand="zvezda"
+                         :data-active="$el.dataset.brand==brand"
+                         @click="brand=$el.dataset.brand"
+                         class="heading-card | hover3d">
+                        <img src="/img/logo-zvezda.png" alt="" class="logo" draggable="false">
+                    </div>
+                </div>
+                <div class="benefit | box w_3 h_3 hover3d" data-bg="white">
+                    <h4>Комфорт</h4>
+                    <p>Адаптированны для российских условий эксплуатации.
+                        Утеплённая кабина; Две жидкостные печки; Подогреватель
+                        двигателя; Вездеходные шины; Биметаллические втулки;
+                        Масла в агрегатах до -35С</p>
+                </div>
+                <div class="images | box w_6 h_6">
+                    <img :data-active="brand=='goodwork'" src="/img/benefits_gw.png" alt="">
+                    <img :data-active="brand=='zvezda'" src="/img/benefits_zv.png" alt="">
+                </div>
+                <div class="benefit | box w_3 h_3 hover3d" data-bg="white">
+                    <h4>Производительность</h4>
+                    <p>Надёжные двигатели мировых производителей DEUTZ
+                        (Германия), WEICHAI (Китай), CUMMINS (США),
+                        YUCHAI (Китай), PERKINS (Англия)</p>
+                </div>
+                <div class="benefit | box w_3 h_3 hover3d" data-bg="white">
+                    <h4>Качество</h4>
+                    <p>Рабочие агрегаты и комплектующие проверенного качества.
+                        Гидравлические насосы (SEM); Ведущие мосты («LAIYANG»
+                        поставщик SEM); Коробка передач («Xin Li De» поставщик
+                        SEM)</p>
+                </div>
+                <div class="benefit | box w_3 h_3 hover3d" data-bg="white">
+                    <h4>Безопасность</h4>
+                    <p>Усиленная рама с запасом прочности. Повышенная
+                        устойчивость к изгибу и скручиванию. При производстве
+                        рамы и ковша погрузчика используются роботы-сварщики
+                        фирмы «Panasonic»(Япония)</p>
+                </div>
+            </div>
+        </section>
 
     
 
-    
-
-    <div class="clipped-corners-top">
-        <div class="clipped-corners-inner">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
+        <div class="clipped-corners-top">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
         </div>
-    </div>
 
     <section class="about-us merits">
         
@@ -646,284 +2053,331 @@
                     Наименований запчастей в наличии
                 </p>
             </div>
+        </section>
 
-            <div class="merit | box w_2 h_2 hover3d">
-                <img src="img/icons/map.png" alt="">
-                <span>Более чем в</span>
-                <span class="number">50</span>
-                <span class="description">
-                    Регионах есть наши клиенты
-                </span>
-            </div>
-
-
-
-        </div>
-    </section>
-
-    <div class="clipped-corners-bottom">
-        <div class="clipped-corners-inner">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
-        </div>
-    </div>
-
-    <section class="reviews" x-data="{ showElement: 0, clicked: false }">
-        <div class="boxgrid">
-            <div class="box w_12">
-                <h2>Отзывы</h2>
-            </div>
-            
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="0"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                
-                <div class="clip-bottom"></div>
-                
-            </div>
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="1"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                <div class="clip-top"></div>
-                
-                
-                <div class="clip-bottom"></div>
-                
-            </div>
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="2"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                <div class="clip-top"></div>
-                
-                
-                <div class="clip-bottom"></div>
-                
-            </div>
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="3"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                <div class="clip-top"></div>
-                
-                
-                <div class="clip-bottom"></div>
-                
-            </div>
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="4"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                <div class="clip-top"></div>
-                
-                
-                <div class="clip-bottom"></div>
-                
-            </div>
-            
-            <div class="customer | box w_3 col_1" :data-chosen="showElement == $el.dataset.id ? true : false"
-                :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'" data-id="5"
-                :class="showElement != $el.dataset.id ? 'hover3d' : ''" @click="showElement = $el.dataset.id">
-                <img src="img/customer avatar.jpg" alt="">
-                <h3><b class="name">Vasily Nurihanovich</b>
-                    Engineer
-                </h3>
-                
-                <div class="clip-top"></div>
-                
-                
-            </div>
-            
-            <div class="texts | box w_6 h_6" data-bg="turquoise">
-                <button :disabled="showElement==0" @click="showElement=Math.max(showElement - 1, 0)">
-                    <i class="uil uil-angle-up"></i>
-                </button>
-                
-                <div class="text" data-id="0" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 0 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <div class="text" data-id="1" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 1 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <div class="text" data-id="2" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 2 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <div class="text" data-id="3" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 3 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <div class="text" data-id="4" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 4 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <div class="text" data-id="5" :data-chosen="$el.dataset.id == showElement">
-                    <h3> 5 Модельььь!! v. 3000</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                        est harum sapiente, dolorem asperiores quisquam maxime cumque,
-                        deleniti repellendus eos quaerat sit doloribus illo eius.
-                        Temporibus fugit quibusdam ratione laborum.
-                    </p>
-                    <p class="date">27/01/2040</p>
-                </div>
-                
-                <button :disabled="showElement==6-1"
-                    @click="showElement=Math.min(showElement + 1, 6)">
-                    <i class="uil uil-angle-down"></i>
-                </button>
-            </div>
-            
-            <div class="videos | box w_3 h_6" data-bg="gray">
-                <h3>Видео отзывы</h3>
-                
-                <iframe src="https://www.youtube.com/embed/97Aq8e8fDqk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                
-                
-                <iframe src="https://www.youtube.com/embed/97Aq8e8fDqk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                
-                
-                <iframe src="https://www.youtube.com/embed/97Aq8e8fDqk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                
-                
+        <div class="clipped-corners-bottom">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
             </div>
         </div>
-    </section>
 
-
-
-    <section class="contacts">
-        <div class="boxgrid">
-            
-            <form action="#" class="box w_12 h_2" data-bg="turquoise">
-                <div class="text">
-                    <h2>Свяжитесь с нами, пожалуйста.</h2>
-                    <p>Пожалуйста, заполните простую форму
-                        и мы свяжемся с вами в ближайшее время</p>
+        <section class="reviews" x-data="{ showElement: 0, clicked: false }">
+            <div class="boxgrid">
+                <div class="heading | box w_12" data-bg="white">
+                    <a class="title" href="">
+                        <h2>Отзывы клиентов</h2>
+                        <span class="see-more">Больше отзывов ⇒</span>
+                    </a>
                 </div>
-
-                <div class="name-and-phone">
-                    <input type="text" name="name" placeholder="Ваше имя" />
-
-                    <input type="text" name="phone" placeholder="Номер телефона" />
-
-                    <fieldset>
-                        <span>Как с вами связаться?</span>
-                        <input type="radio" id="phone" name="method" value="phone" checked>
-                        <label for="phone">Телефон</label>
-
-                        <input type="radio" id="whatsapp" name="method" value="whatsapp">
-                        <label for="whatsapp">Ватсап</label>
-
-
-
-                        <input type="radio" id="viber" name="method" value="viber">
-                        <label for="viber">Вайбер</label>
-
-                        <input type="radio" id="telegram" name="method" value="telegram">
-                        <label for="telegram">Телеграм</label>
-                    </fieldset>
+                
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="0"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    
+                    <div class="clip-bottom"></div>
+                    
                 </div>
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="1"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    <div class="clip-top"></div>
+                    
+                    
+                    <div class="clip-bottom"></div>
+                    
+                </div>
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="2"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    <div class="clip-top"></div>
+                    
+                    
+                    <div class="clip-bottom"></div>
+                    
+                </div>
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="3"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    <div class="clip-top"></div>
+                    
+                    
+                    <div class="clip-bottom"></div>
+                    
+                </div>
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="4"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    <div class="clip-top"></div>
+                    
+                    
+                    <div class="clip-bottom"></div>
+                    
+                </div>
+                
+                <div class="customer | box w_2 col_1"
+                     :data-active="$el.dataset.id == showElement"
+                     :data-bg="showElement == $el.dataset.id ? 'turquoise' : 'gray'"
+                     data-id="5"
+                     :class="showElement != $el.dataset.id ? 'hover3d' : ''"
+                     @click="showElement = $el.dataset.id">
+                    <img src="img/customer avatar.jpg" alt="">
+                    <b>Алексей Иванов</b>
+                    
+                    <div class="clip-top"></div>
+                    
+                    
+                </div>
+                
+                <div class="texts | box w_6 h_6" data-bg="turquoise">
+                    <button :disabled="showElement==0"
+                            @click="showElement=Math.max(showElement - 1, 0)">
+                        <i class="uil uil-angle-up"></i>
+                    </button>
+                    
+                    <div class="text" data-id="0"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>0 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
 
-                <div class="comment-and-button">
-                    <textarea id="subject" name="subject" placeholder="Сообщение"></textarea>
-                    <div class="bottom-form">
-                        <input type="checkbox" id="checkbox" name="agree" value="">
-                        <label for="checkbox">
-                            <span>Нажимая на кнопку, я даю согласие<br> на обработку персональных данных</span>
-                        </label>
-
-                        <input class="basic-btn" type="submit" value="Отправить" />
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
                     </div>
+                    
+                    <div class="text" data-id="1"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>1 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
+
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="text" data-id="2"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>2 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
+
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="text" data-id="3"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>3 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
+
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="text" data-id="4"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>4 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
+
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="text" data-id="5"
+                         :data-active="$el.dataset.id == showElement">
+                        <h3>5 Погрузчик Zvezda ZL20</h3>
+                        <p>27/01/2040 - <b>Авито</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ut,
+                            est harum sapiente, dolorem asperiores quisquam
+                            maxime cumque,
+                            deleniti repellendus eos quaerat sit doloribus illo
+                            eius.
+                            Temporibus fugit quibusdam ratione laborum.
+                        </p>
+
+                        <div class="photos">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                            <img src="/img/ZL20GCyan.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <button :disabled="showElement==6-1"
+                            @click="showElement=Math.min(showElement + 1, 6)">
+                        <i class="uil uil-angle-down"></i>
+                    </button>
                 </div>
+                
+                <div class="videos | box w_4 h_6" data-bg="gray">
+                    <h3>Видео отзывы</h3>
+                    
+                </div>
+            </div>
+        </section>
 
 
 
+        <section class="contacts">
+            <div class="boxgrid">
+                
+                <form action="#" class="box w_12 h_2" data-bg="turquoise">
+                    <div class="text">
+                        <h2>Свяжитесь с нами</h2>
+                        <p>Пожалуйста, заполните простую форму
+                            и мы свяжемся с вами в ближайшее время</p>
+                    </div>
+                    <div class="name-and-phone">
+                        <input type="text" name="name" placeholder="Ваше имя" />
 
-            </form>
+                        <input type="text" name="phone"
+                               placeholder="Номер телефона" />
+
+                        <fieldset>
+                            <span>Как с вами связаться?</span>
+                            <input type="radio" id="phone" name="method"
+                                   value="phone" checked>
+                            <label for="phone">Телефон</label>
+
+                            <input type="radio" id="whatsapp" name="method"
+                                   value="whatsapp">
+                            <label for="whatsapp">Ватсап</label>
 
 
 
+                            <input type="radio" id="viber" name="method"
+                                   value="viber">
+                            <label for="viber">Вайбер</label>
+
+                            <input type="radio" id="telegram" name="method"
+                                   value="telegram">
+                            <label for="telegram">Телеграм</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="comment-and-button">
+                        <textarea id="subject" name="subject"
+                                  placeholder="Сообщение"></textarea>
+                        <div class="bottom-line">
+                            <input type="checkbox" id="checkbox" name="agree"
+                                   value="true">
+                            <label for="checkbox">
+                                Нажимая на кнопку, я даю согласие на обработку
+                                персональных данных
+                            </label>
+                            <input class="base-button" type="submit"
+                                   value="Отправить" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <div class="clipped-corners-top">
+            <div class="clipped-corners-inner">
+                <div class="clip-left"></div>
+                <div class="clip-right"></div>
+            </div>
         </div>
-        </div>
-    </section>
-
-    <div class="clipped-corners-top" data-bg="gray">
-        <div class="clipped-corners-inner">
-            <div class="clip-left"></div>
-            <div class="clip-right"></div>
-        </div>
-    </div>
 
 
     <footer data-bg="gray">
@@ -997,56 +2451,6 @@
                 формы связи или по единому номеру 8 (800) 511 68 85</p>
         </div>
     </section>
-
-    <div class="overlay" x-show="isModalOpen" x-cloak></div>
-    <div class="modal" x-show="isModalOpen" x-cloak
-        x-transition>
-        <div class="modal-body" x-on:click.away="isModalOpen = false" data-bg="turquoise">
-            <form action="#" class="box w_12 h_2">
-                <div class="text">
-                    <h2>Свяжитесь с нами!</h2>
-                    <p>Пожалуйста, заполните простую форму
-                        и мы свяжемся с вами в ближайшее время</p>
-                </div>
-
-                <div class="name-and-phone">
-                    <input type="text" name="name" placeholder="Ваше имя" />
-
-                    <input type="text" name="phone" placeholder="Номер телефона" />
-
-                    <fieldset>
-                        <span>Как с вами связаться?</span>
-                        <input type="radio" id="phone" name="method" value="phone" checked>
-                        <label for="phone">Телефон</label>
-
-                        <input type="radio" id="whatsapp" name="method" value="whatsapp">
-                        <label for="whatsapp">Ватсап</label>
-
-
-
-                        <input type="radio" id="viber" name="method" value="viber">
-                        <label for="viber">Вайбер</label>
-
-                        <input type="radio" id="telegram" name="method" value="telegram">
-                        <label for="telegram">Телеграм</label>
-                    </fieldset>
-                </div>
-
-                <div class="comment-and-button">
-                    <textarea id="subject" name="subject" placeholder="Сообщение"></textarea>
-                    <div class="bottom-form">
-                        <input type="checkbox" id="checkbox" name="agree" value="">
-                        <label for="checkbox">
-                            <span>Нажимая на кнопку, я даю согласие<br> на обработку персональных данных</span>
-                        </label>
-
-                        <input class="basic-btn" type="submit" value="Отправить" />
-                    </div>
-                </div>
-            </form>
-            <button class="close" aria-label="Close" x-on:click="isModalOpen=false">✖</button>
-        </div>
-    </div>
 
     <script src="scripts/vanilla-tilt.js"></script>
 </body>
