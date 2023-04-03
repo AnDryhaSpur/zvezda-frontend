@@ -1520,8 +1520,8 @@ footer {
     position: relative;
     background-color: white;
     border-radius: var(--bradout);
-    max-width: 40rem;
-    padding: 3rem 5rem;
+    width: clamp(25rem, 50vw, 40rem);
+    padding: 2rem;
     margin: auto;
 
     form {
@@ -1529,7 +1529,7 @@ footer {
         flex-direction: column;
         border-radius: 0;
         gap: 1rem;
-        justify-content: start;  
+        justify-content: start;
     }
 
     .text {
@@ -1538,6 +1538,10 @@ footer {
 
         h2 {
             margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
         }
     }
 
@@ -1557,10 +1561,56 @@ footer {
             margin-bottom: 1rem;
         }
 
-        fieldset {
+        .radios {
             display: flex;
             align-items: center;
-            justify-self: end;
+            justify-content: space-between;
+            gap: 0.5rem;
+            padding: 0 0.75rem;
+
+            [type="radio"] {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 0.8rem;
+                font-weight: 600;
+                cursor: pointer;
+                color: var(--gray);
+
+                &:hover {
+                    transform: scale(1.01);
+                    color: var(--turquoise);
+                }
+
+                svg {
+                    fill: currentColor;
+                }
+            }
+
+            [type="radio"]:checked + label {
+                &[for="modal-phone"] {
+                    color: #28d344;
+                }
+
+                &[for="modal-whatsapp"] {
+                    color: #25d366;
+                }
+
+                &[for="modal-viber"] {
+                    color: #8f5db7;
+                }
+
+                &[for="modal-telegram"] {
+                    color: #0088cc;
+                }
+            }
         }
     }
 
@@ -1576,11 +1626,15 @@ footer {
             input[type="checkbox"] {
                 width: 1.5rem;
                 height: 1.5rem;
-                accent-color: var(--red);
+                accent-color: var(--turquoise);
                 cursor: pointer;
             }
 
-            .basic-btn {
+            span {
+                font-size: 0.7rem;
+            }
+
+            .base-button {
                 margin-left: auto;
             }
         }
@@ -1606,9 +1660,13 @@ footer {
         top: 1rem;
         right: 1rem;
         border: none;
-        background-color:#fff;
-        border-radius: 35%;
         cursor: pointer;
+        background-color: transparent;
+
+        &:hover {
+            color: var(--turquoise);
+            transform: scale(1.01);
+        }
     }
 }
 

@@ -1693,8 +1693,8 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   position: relative;
   background-color: white;
   border-radius: var(--bradout);
-  max-width: 40rem;
-  padding: 3rem 5rem;
+  width: clamp(25rem, 50vw, 40rem);
+  padding: 2rem;
   margin: auto;
 }
 .modal-body form {
@@ -1711,6 +1711,9 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
 .modal-body .text h2 {
   margin-bottom: 0.5rem;
 }
+.modal-body .text p {
+  font-size: 0.9rem;
+}
 .modal-body .name-and-phone {
   width: 100%;
 }
@@ -1726,10 +1729,46 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   height: 2.5rem;
   margin-bottom: 1rem;
 }
-.modal-body .name-and-phone fieldset {
+.modal-body .name-and-phone .radios {
   display: flex;
   align-items: center;
-  justify-self: end;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+}
+.modal-body .name-and-phone .radios [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.modal-body .name-and-phone .radios label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray);
+}
+.modal-body .name-and-phone .radios label:hover {
+  transform: scale(1.01);
+  color: var(--turquoise);
+}
+.modal-body .name-and-phone .radios label svg {
+  fill: currentColor;
+}
+.modal-body .name-and-phone .radios [type=radio]:checked + label[for=modal-phone] {
+  color: #28d344;
+}
+.modal-body .name-and-phone .radios [type=radio]:checked + label[for=modal-whatsapp] {
+  color: #25d366;
+}
+.modal-body .name-and-phone .radios [type=radio]:checked + label[for=modal-viber] {
+  color: #8f5db7;
+}
+.modal-body .name-and-phone .radios [type=radio]:checked + label[for=modal-telegram] {
+  color: #0088cc;
 }
 .modal-body .comment-and-button {
   width: 100%;
@@ -1743,10 +1782,13 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
 .modal-body .comment-and-button .bottom-form input[type=checkbox] {
   width: 1.5rem;
   height: 1.5rem;
-  accent-color: var(--red);
+  accent-color: var(--turquoise);
   cursor: pointer;
 }
-.modal-body .comment-and-button .bottom-form .basic-btn {
+.modal-body .comment-and-button .bottom-form span {
+  font-size: 0.7rem;
+}
+.modal-body .comment-and-button .bottom-form .base-button {
   margin-left: auto;
 }
 .modal-body textarea {
@@ -1766,9 +1808,12 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   top: 1rem;
   right: 1rem;
   border: none;
-  background-color: #fff;
-  border-radius: 35%;
   cursor: pointer;
+  background-color: transparent;
+}
+.modal-body .close:hover {
+  color: var(--turquoise);
+  transform: scale(1.01);
 }
 
 .overlay {
