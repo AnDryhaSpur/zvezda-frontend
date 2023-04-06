@@ -1535,6 +1535,52 @@ input[type=checkbox] {
   width: 100%;
   height: 2.5rem;
 }
+.contacts form .name-and-phone .radios {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+}
+.contacts form .name-and-phone .radios span {
+  width: -moz-min-content;
+  width: min-content;
+}
+.contacts form .name-and-phone .radios [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contacts form .name-and-phone .radios label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray);
+  transition: all 0.3s ease;
+}
+.contacts form .name-and-phone .radios label:hover {
+  transform: scale(1.01);
+  color: var(--turquoise);
+}
+.contacts form .name-and-phone .radios label svg {
+  fill: currentColor;
+}
+.contacts form .name-and-phone .radios [type=radio]:checked + label[for=contacts-phone] {
+  color: #28d344;
+}
+.contacts form .name-and-phone .radios [type=radio]:checked + label[for=contacts-whatsapp] {
+  color: #25d366;
+}
+.contacts form .name-and-phone .radios [type=radio]:checked + label[for=contacts-viber] {
+  color: #8f5db7;
+}
+.contacts form .name-and-phone .radios [type=radio]:checked + label[for=contacts-telegram] {
+  color: #28a8e9;
+}
 .contacts form .name-and-phone fieldset {
   align-self: end;
   display: flex;
@@ -1750,6 +1796,7 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   font-weight: 600;
   cursor: pointer;
   color: var(--gray);
+  transition: all 0.3s ease;
 }
 .modal-body .name-and-phone .radios label:hover {
   transform: scale(1.01);
@@ -1768,7 +1815,7 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   color: #8f5db7;
 }
 .modal-body .name-and-phone .radios [type=radio]:checked + label[for=modal-telegram] {
-  color: #0088cc;
+  color: #28a8e9;
 }
 .modal-body .comment-and-button {
   width: 100%;
@@ -1782,7 +1829,7 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
 .modal-body .comment-and-button .bottom-form input[type=checkbox] {
   width: 1.5rem;
   height: 1.5rem;
-  accent-color: var(--turquoise);
+  accent-color: var(--red);
   cursor: pointer;
 }
 .modal-body .comment-and-button .bottom-form span {
@@ -1810,10 +1857,10 @@ footer .contacts .social a .uil-whatsapp-alt:hover {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  transition: all 0.3s ease;
 }
 .modal-body .close:hover {
   color: var(--turquoise);
-  transform: scale(1.01);
 }
 
 .overlay {

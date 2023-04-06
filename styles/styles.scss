@@ -1335,6 +1335,63 @@ input[type="checkbox"] {
                 height: 2.5rem;
             }
 
+            .radios {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.5rem;
+                padding: 0 0.75rem;
+
+                span {
+                width: min-content;
+                }
+
+                [type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+    
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    color: var(--gray);
+                    transition: all 0.3s ease;
+    
+                    &:hover {
+                        transform: scale(1.01);
+                        color: var(--turquoise);
+                    }
+    
+                    svg {
+                        fill: currentColor;
+                    }
+                }
+    
+                [type="radio"]:checked + label {
+                    &[for="contacts-phone"] {
+                        color: #28d344;
+                    }
+    
+                    &[for="contacts-whatsapp"] {
+                        color: #25d366;
+                    }
+    
+                    &[for="contacts-viber"] {
+                        color: #8f5db7;
+                    }
+    
+                    &[for="contacts-telegram"] {
+                        color: #28a8e9;
+                    }
+                }
+            }
+
             fieldset {
                 align-self: end;
                 display: flex;
@@ -1583,6 +1640,7 @@ footer {
                 font-weight: 600;
                 cursor: pointer;
                 color: var(--gray);
+                transition: all 0.3s ease;
 
                 &:hover {
                     transform: scale(1.01);
@@ -1608,7 +1666,7 @@ footer {
                 }
 
                 &[for="modal-telegram"] {
-                    color: #0088cc;
+                    color: #28a8e9;
                 }
             }
         }
@@ -1626,7 +1684,7 @@ footer {
             input[type="checkbox"] {
                 width: 1.5rem;
                 height: 1.5rem;
-                accent-color: var(--turquoise);
+                accent-color: var(--red);
                 cursor: pointer;
             }
 
@@ -1662,10 +1720,10 @@ footer {
         border: none;
         cursor: pointer;
         background-color: transparent;
+        transition: all 0.3s ease;
 
         &:hover {
             color: var(--turquoise);
-            transform: scale(1.01);
         }
     }
 }
@@ -1684,5 +1742,3 @@ footer {
 [x-cloak] {
     display: none !important;
 }
-
-// this is save
