@@ -10,7 +10,7 @@
     // --bg_red: #ffecf5;
     --bg_turquoise: #d3f7f4;
     --bg_gray: #e8e8f5;
-    --1bx: clamp(4rem, 6.5vw, 6.5rem);
+    --1bx: clamp(4.5rem, 6.5vw, 7rem);
     @for $i from 2 through 12 {
         --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
     }
@@ -74,11 +74,10 @@
 }
 
 .hover3d {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
 
     &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 3px 6px rgba(#000000, 0.2);
+        box-shadow: 0 0.2rem 0.4rem rgba(0,0,0, 0.3);
     }
 }
 
@@ -100,14 +99,175 @@
     }
 }
 
-@media (max-width: 1350px) {
-    :root {
-        font-size: 14px;
+// @media only screen and (max-width: 1360px) {
+//     // Only reassign
+//     @for $i from 9 through 12 {
+//         .col_#{$i} {
+//             --col_start: 9;
+//         }
+//     }
+
+//     @for $i from 9 through 12 {
+//         .w_#{$i} {
+//             grid-column: var(--col_start) / span 9;
+//         }
+//     }
+// }
+
+@media screen and (max-width: 1100px) {
+    // Only reassign
+    @for $i from 6 through 12 {
+        .col_#{$i} {
+            --col_start: 6;
+        }
+    }
+
+    @for $i from 6 through 12 {
+        .w_#{$i} {
+            grid-column: var(--col_start) / span 6;
+        }
     }
 }
 
-// @media (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
+    // Only reassign
+    @for $i from 4 through 12 {
+        .col_#{$i} {
+            --col_start: 4;
+        }
+    }
+
+    @for $i from 4 through 12 {
+        .w_#{$i} {
+            grid-column: var(--col_start) / span 4;
+        }
+    }
+}
+
+// @media only screen and (max-width: 1024px) {
 //     :root {
-//         font-size: 12px;
+//         font-size: 20px;
+//         --1bx: clamp(5rem, 8.50vw, 6.5rem);
+//         --12bx: var(--9bx);
+//     }
+
+//     .boxgrid {
+//         grid-template-columns: repeat(9, var(--1bx));
+
+//     }
+
+//     @for $i from 1 through 9 {
+//         .mdcol_#{$i} {
+//             --col_start: #{$i};
+//         }
+//         .mdrow_#{$i} {
+//             --row_start: #{$i};
+//         }
+//     }
+
+//     @for $i from 1 through 9 {
+//         .mdw_#{$i} {
+//             grid-column: var(--col_start) / span #{$i};
+//         }
+//         .mdh_#{$i} {
+//             grid-row: var(--row_start) / span #{$i};
+//         }
 //     }
 // }
+
+@media screen and (max-width: 1100px) {
+    :root {
+        font-size: 18px;
+        --1bx: clamp(5rem, 8.7vw, 6.5rem);
+        --12bx: var(--9bx);
+    }
+
+    .boxgrid {
+        grid-template-columns: repeat(9, var(--1bx));
+
+    }
+
+    @for $i from 6 through 9 {
+        .mdcol_#{$i} {
+            --col_start: 6;
+        }
+        .mdrow_#{$i} {
+            --row_start: 6;
+        }
+    }
+
+    @for $i from 6 through 9 {
+        .mdw_#{$i} {
+            grid-column: var(--col_start) / span 6;
+        }
+        .mdh_#{$i} {
+            grid-row: var(--row_start) / span 6;
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .smcol_#{$i} {
+            --col_start: #{$i};
+        }
+        .smrow_#{$i} {
+            --row_start: #{$i};
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .smw_#{$i} {
+            grid-column: var(--col_start) / span #{$i};
+        }
+        .smh_#{$i} {
+            grid-row: var(--row_start) / span #{$i};
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        font-size: 20px;
+        --1bx: clamp(5rem, 24vw, 7rem);
+        --12bx: var(--4bx);
+    }
+
+    .boxgrid {
+        grid-template-columns: repeat(4, var(--1bx));
+    }
+
+    @for $i from 4 through 9 {
+        .mdcol_#{$i} {
+            --col_start: 4;
+        }
+        .mdrow_#{$i} {
+            --row_start: 4;
+        }
+    }
+
+    @for $i from 4 through 9 {
+        .mdw_#{$i} {
+            grid-column: var(--col_start) / span 4;
+        }
+        .mdh_#{$i} {
+            grid-row: var(--row_start) / span 4;
+        }
+    }
+
+    @for $i from 4 through 6 {
+        .smcol_#{$i} {
+            --col_start: 4;
+        }
+        .smrow_#{$i} {
+            --row_start: 4;
+        }
+    }
+
+    @for $i from 4 through 6 {
+        .smw_#{$i} {
+            grid-column: var(--col_start) / span 4;
+        }
+        .smh_#{$i} {
+            grid-row: var(--row_start) / span 4;
+        }
+    }
+}

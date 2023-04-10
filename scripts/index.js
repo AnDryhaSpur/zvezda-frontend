@@ -32,6 +32,13 @@ volumeSlider.noUiSlider.on('update',
     () => volumeSlider.dispatchEvent(new Event('volumeupdate')));
 
 
+const bgSwiper = new Swiper(".hero .bg-swiper", {
+    // Optional parameters
+    loop: true,
+    speed: 500,
+    slidesPerView: 1,
+    effect: "fade",
+});
 
 const heroSwiper = new Swiper(".hero .swiper", {
     // Optional parameters
@@ -41,29 +48,58 @@ const heroSwiper = new Swiper(".hero .swiper", {
     effect: "fade",
     autoplay: {
         delay: 5000,
+        pauseOnMouseEnter: true,
     },
-
     // If we need pagination
     pagination: {
         el: ".hero .swiper-pagination",
         type: "fraction"
     },
-
     // Navigation arrows
     navigation: {
         nextEl: ".hero .swiper-button-next",
         prevEl: ".hero .swiper-button-prev"
-    }
+    },
+    // Other swiper to control
+    controller: {
+        control: bgSwiper,
+    },
 });
 
 const catalogSwiper = new Swiper(".catalog .swiper", {
     // Optional parameters
     speed: 500,
-    slidesPerView: 3,
+    slidesPerView: 4,
     spaceBetween: 16,
     grid: {
         fill: 'column',
         rows: 2,
+    },
+    breakpoints: {
+        50: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            grid: {
+                fill: 'column',
+                rows: 2,
+            },
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 18,
+            grid: {
+                fill: 'column',
+                rows: 2,
+            },
+        },
+        1100: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+            grid: {
+                fill: 'column',
+                rows: 2,
+            },
+        },
     },
 
     // If we need pagination

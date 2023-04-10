@@ -1,0 +1,25 @@
+@import "styles.scss";
+
+// Page heading
+.page-heading {
+    z-index: 0;
+    width: 100%;
+    margin-top: calc(0rem - var(--1bx));
+    margin-bottom: calc(0rem - var(--1bx));
+    padding-top: calc(1rem + var(--1bx));
+    padding-bottom: calc(1rem + var(--1bx));
+}
+
+.catalog {
+    padding: 0 1rem;
+
+    .boxgrid {
+        padding: 0;
+    }
+
+    .vehicle {
+        margin: 0;
+        height: auto;
+        width: auto;
+    }
+}
