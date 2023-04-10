@@ -53,6 +53,7 @@ const heroSwiper = new Swiper(".hero .swiper", {
     // If we need pagination
     pagination: {
         el: ".hero .swiper-pagination",
+        el: ".hero .swiper-pagination",
         type: "fraction"
     },
     // Navigation arrows
@@ -115,51 +116,6 @@ const catalogSwiper = new Swiper(".catalog .swiper", {
     }
 });
 
-const catalogSwiper = new Swiper(".catalog .swiper", {
-    // Optional parameters
-    speed: 500,
-    slidesPerView: 4,
-    spaceBetween: 16,
-    grid: {
-        fill: 'row',
-        rows: 2,
-    },
-
-    // If we need pagination
-    pagination: {
-        el: ".hero .swiper-pagination",
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: ".hero .swiper-button-next",
-        prevEl: ".hero .swiper-button-prev"
-    }
-});
-
-const catalogSwiper = new Swiper(".catalog .swiper", {
-    // Optional parameters
-    speed: 500,
-    slidesPerView: 3,
-    spaceBetween: 16,
-    grid: {
-        fill: 'column',
-        rows: 2,
-    },
-
-    // If we need pagination
-    scrollbar: {
-        el: ".catalog .swiper-scrollbar",
-        draggable: "true",
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: ".catalog .swiper-button-next",
-        prevEl: ".catalog .swiper-button-prev"
-    }
-});
-
 const aboutSwiper = new Swiper(".about-us .swiper", {
     // Optional parameters
     loop: true,
@@ -182,3 +138,4 @@ const aboutSwiper = new Swiper(".about-us .swiper", {
         prevEl: ".about-us .swiper-button-prev"
     }
 });
+

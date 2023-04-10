@@ -8,10 +8,12 @@
     --yellow: #f7ce24;
     --text_color: #252525;
     // --bg_red: #ffecf5;
+    // --bg_red: #ffecf5;
     --bg_turquoise: #d3f7f4;
     --bg_gray: #e8e8f5;
     --1bx: clamp(4.5rem, 6.5vw, 7rem);
     @for $i from 2 through 12 {
+        --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
         --#{$i}bx: calc(#{$i} * var(--1bx) + #{$i - 1} * 1rem);
     }
     --bradout: calc(1.4 * 1rem);
@@ -34,9 +36,11 @@
 
 .hoverline {
     text-decoration: underline 0.1rem transparent;
+    text-decoration: underline 0.1rem transparent;
     transition: all 0.3s ease;
 
     &:hover {
+        text-decoration-color: var(--turquoise);
         text-decoration-color: var(--turquoise);
     }
 }
@@ -54,9 +58,11 @@
 }
 
 [data-bg="white"] {
+[data-bg="white"] {
     background-color: #fff !important;
 }
 
+[data-bg="turquoise"] {
 [data-bg="turquoise"] {
     background-color: var(--bg_turquoise) !important;
 }
@@ -96,6 +102,7 @@
     }
     .h_#{$i} {
         grid-row: var(--row_start) / span #{$i};
+    }
     }
 }
 
